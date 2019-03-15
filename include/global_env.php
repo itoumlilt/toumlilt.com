@@ -45,7 +45,6 @@ define("PATH_CSS", PATH_ASSETS . "/css");
 
 /************** Specific external URLs ***************/
 define("URL_TWITTER", "http://twitter.com/ilyasToumlilt");
-define("URL_GPLUS", "http://plus.google.com/111233966230992994575");
 define("URL_LINKEDIN", "http://fr.linkedin.com/in/ilyastoumlilt");
 define("URL_GITHUB", "https://github.com/ilyasToumlilt");
 define("URL_CODERWALL", "https://coderwall.com/ilyastoumlilt");

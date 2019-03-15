@@ -65,7 +65,6 @@ function get_header_banner_html()
                 <h2 class="desc">Distributed and Operating Systems PhD Student</h2>
                 <ul class="social list-inline">
                     <li><a href="<?php echo URL_TWITTER;?>"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="<?php echo URL_GPLUS;?>"><i class="fa fa-google-plus"></i></a></li>
                     <li><a href="<?php echo URL_LINKEDIN;?>"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="<?php echo URL_GITHUB;?>"><i class="fa fa-github-alt"></i></a></li>
                     <li class="last-item"><a href="<?php echo URL_CODERWALL;?>"><i class="fa fa-hacker-news"></i></a></li>
