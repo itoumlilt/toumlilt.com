@@ -10,7 +10,7 @@
  */
 $PATH_TO_BASE="../"; // must end with "/"
 
-$ABS_PATH_TO_BASE = dirname(__FILE__) . "/";
+$ABS_PATH_TO_BASE = dirname(__FILE__) . "/" . $PATH_TO_BASE;
 
 require_once $ABS_PATH_TO_BASE . 'config.php';
 
