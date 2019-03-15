@@ -1,0 +1,17 @@
+## Default .htaccess file
+Options +FollowSymLinks
+RewriteEngine On
+
+## RewriteBase values :
+## dev : /toumlilt.com/
+## prod : /
+RewriteBase /
+
+# default www/topnav stuff :
+RewriteRule ^index$ index.php
+RewriteRule ^blog$ www/articles/articles.php
+
+#remove the need for .php extention
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php

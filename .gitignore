@@ -1,0 +1,4 @@
+# config files are pushed as examples that has to be
+# updated when deployed in production
+config.php
+.htaccess
