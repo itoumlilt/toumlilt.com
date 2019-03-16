@@ -39,7 +39,7 @@ function get_topnav_html($current = 0) {
                     <h4 class="modal-title" id="myModalLabel">Oups!</h4>
                 </div>
                 <div class="modal-body">
-                    For maintenance reasons, this page is currently unavailable.
+                    This page is currently unavailable.
                 </div>
             </div>
         </div>
