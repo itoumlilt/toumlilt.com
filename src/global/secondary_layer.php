@@ -1,9 +1,5 @@
 <?php
-/**
- * User: itoumlilt
- * Date: 25/04/2018
- * Version: 1.1
- */
+
 $PATH_TO_BASE = "../../";
 
 $ABS_PATH_TO_BASE = dirname(__FILE__) . "/" . $PATH_TO_BASE;

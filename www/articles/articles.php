@@ -1,8 +1,5 @@
 <?php
 /**
- * User: itoumlilt
- * Date: 26/04/2018
- * Version: 1.1
  */
 
 $PATH_TO_BASE = "../../"; // must end with "/"

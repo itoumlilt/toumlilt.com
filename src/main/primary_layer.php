@@ -1,8 +1,5 @@
 <?php
 /**
- * User: itoumlilt
- * Date: 16/03/2019
- * Version: 1.2
  */
 $PATH_TO_BASE = "../../";
 

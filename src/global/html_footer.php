@@ -1,9 +1,5 @@
 <?php
 /**
- * User: itoumlilt
- * Date: 25/04/2018
- * Version: 1.1
- *
  * This file contains the default HTML footer part
  * for all websites www
  * to be included everywhere

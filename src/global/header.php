@@ -1,9 +1,5 @@
 <?php
 /**
- * User: itoumlilt
- * Date: 25/04/2018
- * Version: 1.1
- *
  * Page header components
  * To be included everywhere
  */

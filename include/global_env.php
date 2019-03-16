@@ -3,10 +3,6 @@
 /**
  * Global Env set
  * Must be included in all php files
- *
- * Created By: itoumlilt
- * Date: 25/04/2018
- * Version: 1.1
  */
 $PATH_TO_BASE="../"; // must end with "/"
 
