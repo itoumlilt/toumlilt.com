@@ -19,12 +19,12 @@ function HV_main_pl_about_me() {
         <div class="section-inner">
             <h2 class="heading">About Me</h2>
             <div class="content">
-                <p>Hello World! Welcome to my personnal website.</p>
+                <p>Hello World! Welcome to my personal website.</p>
                 <p>I'm currently a PhD Student in computer science
                     at <a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a>
                     (previously UPMC).
                     I am part of the <a href="https://team.inria.fr/regal/fr/">
-                        Regal INRIA team</a> at Laboratoire d'Informatique de Paris 6
+                        Delys INRIA team</a> at Laboratoire d'Informatique de Paris 6
                     (<a href="https://lip6.fr">LIP6</a>), under the supervision
                     of <a href="https://pages.lip6.fr/Marc.Shapiro/">Marc Shapiro</a>.
                 </p>
