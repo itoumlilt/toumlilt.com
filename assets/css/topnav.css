@@ -5,7 +5,7 @@
     position: fixed;
     z-index: 100;
     width: 100%;
-    border-bottom: 4px solid #669999;
+    border-bottom: 4px solid #866AA0;
     height: 60px;
 }
 
@@ -45,7 +45,7 @@
 
 /* current page's link should take a different bg-color */
 .topnav .topnav-current {
-    background-color: #669999;
+    background-color: #866AA0;
     pointer-events: none;
 }
 
