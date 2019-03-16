@@ -36,6 +36,7 @@ define("URL_JS", URL_ASSETS. "/js");
 
 define("URL_HOME", BASE_URL . "/index");
 define("URL_BLOG", BASE_URL . "/blog");
+define("URL_ABOUT_ME", BASE_URL . "/about-me");
 
 /************** Specific internal PATHs ***************/
 define("PATH_ASSETS", ABS_PATH . "/assets");

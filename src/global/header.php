@@ -24,6 +24,8 @@ function get_topnav_html($current = 0) {
                 href="<?php echo URL_BLOG; ?>">Blog</a>
         <a <?php echo ($current == 3) ? "class='topnav-current'" : ""; ?>
                 href="#" data-toggle="modal" data-target=".no-page-modal">Teaching</a>
+        <a <?php echo ($current == 4) ? "class='topnav-current'" : ""; ?>
+                href="<?php echo URL_ABOUT_ME; ?>">About Me</a>
         <a href="javascript:void(0);" class="icon" onclick="topnavFunction()">&#9776;</a>
     </div>
     <div class="modal fade no-page-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"

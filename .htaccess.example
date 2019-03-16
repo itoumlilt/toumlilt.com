@@ -10,6 +10,7 @@ RewriteBase /
 # default www/topnav stuff :
 RewriteRule ^index$ index.php
 RewriteRule ^blog$ www/articles/articles.php
+RewriteRule ^about-me$ www/aboutme/aboutme.php
 
 #remove the need for .php extention
 RewriteCond %{REQUEST_FILENAME} !-d

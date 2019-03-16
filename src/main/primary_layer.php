@@ -34,6 +34,12 @@ function HV_main_pl_about_me() {
                 <p>
                     My current thesis work is part of <a href="https://www.lightkone.eu/" target="_blank">LightKone EU Project</a>.
                 </p>
+                <a class="btn btn-cta-secondary"
+                   href="<?php echo URL_ABOUT_ME; ?>"
+                   target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                    More details
+                </a>
             </div><!--//content-->
         </div><!--//section-inner-->
     </section><!--//section-->
@@ -199,6 +205,14 @@ function HV_main_pl_work_experience() {
                 <h3 class="title">Internship - <span class="place">COM</span> <span class="year">(June 2014 - August 2014)</span></h3>
                 <p>Automating forms processing of market studies, from a web based application.</p>
             </div><!--//item-->
+
+            <p>
+                <a class="btn btn-cta-secondary"
+                   href="<?php echo URL_LINKEDIN; ?>"
+                   target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                    More on LinkedIn
+                </a></p>
 
         </div><!--//content-->
     </div><!--//section-inner-->
