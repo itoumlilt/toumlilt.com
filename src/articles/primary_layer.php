@@ -70,7 +70,7 @@ function HV_articles_pl_back_home() {
         <div class="section-inner">
             <h2 class="heading">
                 <a href="<?php echo URL_HOME; ?>">
-                    <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Home Page
+                    <i class="fas fa-chevron-circle-left" aria-hidden="true"></i> Home Page
                 </a>
             </h2>
         </div><!--//section-inner-->

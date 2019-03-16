@@ -148,7 +148,7 @@ function article_xpath_to_wide_html($article_xpath, $full_text = false)
             <a class="btn btn-cta-secondary"
                href="<?php echo $article_xpath['githublink']; ?>"
                target="_blank">
-                <i class="fa fa-github"></i>
+                <i class="fas fa-github"></i>
                 View on Github
             </a>
             <?php
@@ -158,7 +158,7 @@ function article_xpath_to_wide_html($article_xpath, $full_text = false)
             <a class="btn btn-cta-secondary"
                href="<?php echo $article_xpath['externallink']; ?>"
                target="_blank">
-                <i class="fa fa-external-link"></i>
+                <i class="fas fa-external-link-alt"></i>
                 More details
             </a>
             <?php
@@ -170,7 +170,7 @@ function article_xpath_to_wide_html($article_xpath, $full_text = false)
             <a class="btn btn-cta-secondary"
                href="<?php echo article_id_to_URL($article_xpath['id']); ?>"
                target="_blank">
-                <i class="fa fa-external-link"></i>
+                <i class="fas fa-external-link-alt"></i>
                 More details
             </a>
             <?php
@@ -214,7 +214,7 @@ function article_xpath_to_small_html($article_xpath)
                 ?>
                 <p><a class="more-link"
                       href="<?php echo $article_xpath['githublink']; ?>"
-                      target="_blank"><i class="fa fa-external-link">
+                      target="_blank"><i class="fas fa-external-link-alt">
                         </i> View on github</a>
                 </p>
                 <?php
@@ -223,7 +223,7 @@ function article_xpath_to_small_html($article_xpath)
                 ?>
                 <p><a class="more-link"
                       href="<?php echo $article_xpath['externallink']; ?>"
-                      target="_blank"><i class="fa fa-external-link">
+                      target="_blank"><i class="fas fa-external-link-alt">
                         </i> External link</a>
                 </p>
                 <?php
@@ -232,7 +232,7 @@ function article_xpath_to_small_html($article_xpath)
             ?>
             <p><a class="more-link"
                   href="<?php echo article_id_to_URL($article_xpath['id']); ?>"
-                  ><i class="fa fa-external-link">
+                  ><i class="fas fa-external-link-alt">
                     </i> More details ...</a>
             </p>
         </div><!--//desc-->

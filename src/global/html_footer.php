@@ -19,7 +19,7 @@ function get_html_footer() {
     <!-- ******FOOTER****** -->
     <footer class="footer">
         <div class="container text-center">
-            <small class="copyright">Handcrafted with <span class="doc-heart"><i class="fa fa-heart"></i></span> and a lot of <i class="fa fa-coffee"></i> by Ilyas Toumlilt</small>
+            <small class="copyright">Handcrafted with <span class="doc-heart"><i class="fas fa-heart"></i></span> and a lot of <i class="fas fa-coffee"></i> by Ilyas Toumlilt</small>
         </div><!--//container-->
     </footer><!--//footer-->
 

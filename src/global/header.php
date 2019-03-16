@@ -64,15 +64,16 @@ function get_header_banner_html()
                 <h1 class="name">Ilyas Toumlilt</h1>
                 <h2 class="desc">Distributed and Operating Systems PhD Student</h2>
                 <ul class="social list-inline">
-                    <li><a href="<?php echo URL_TWITTER;?>"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="<?php echo URL_LINKEDIN;?>"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="<?php echo URL_GITHUB;?>"><i class="fa fa-github-alt"></i></a></li>
-                    <li class="last-item"><a href="<?php echo URL_CODERWALL;?>"><i class="fa fa-hacker-news"></i></a></li>
+                    <li><a href="<?php echo URL_TWITTER;?>"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="<?php echo URL_LINKEDIN;?>"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="<?php echo URL_GITHUB;?>"><i class="fab fa-github"></i></a></li>
+                    <li><a href="<?php echo URL_GITLAB;?>"><i class="fab fa-gitlab"></i></a></li>
+                    <li class="last-item"><a href="<?php echo URL_CODERWALL;?>"><i class="fas fa-code"></i></a></li>
                 </ul>
             </div><!--//profile-->
             <a class="btn btn-cta-primary pull-right"
                href="mailto:<?php echo EMAIL_DEFAULT; ?>" target="_blank"><i
-                    class="fa fa-paper-plane"></i> Contact Me</a>
+                    class="fas fa-paper-plane"></i> Contact Me</a>
         </div><!--//container-->
     </header><!--//header-->
     <!-- *********** END HEADER BANNER ************** -->

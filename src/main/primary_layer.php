@@ -112,7 +112,7 @@ function HV_main_pl_latest_projects() {
                 <div class="desc col-md-8 col-sm-8 col-xs-12">
                     <h3 class="title"><a href="https://github.com/tnajdek/angular-requirejs-seed" target="_blank">Angular-RequireJS seed project</a> <span class="label label-theme">open source</span></h3>
                     <p>Running AngularJS paired up with RequireJS involves configuring few tweaks and hacks, especially if trying to preserve testability of Angular app. This seed project has been created to setup the entire front-end stack correctly and help developers get started with their projects.</p>
-                    <p><a class="more-link" href="https://github.com/tnajdek/angular-requirejs-seed" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
+                    <p><a class="more-link" href="https://github.com/tnajdek/angular-requirejs-seed" target="_blank"><i class="fas fa-external-link-alt"></i> Find out more</a></p>
                 </div><!--//desc-->
             </div><!--//item-->
 
@@ -123,7 +123,7 @@ function HV_main_pl_latest_projects() {
                 <div class="desc col-md-8 col-sm-8 col-xs-12">
                     <h3 class="title"><a href="http://gl.gg/" target="_blank">GL &amp; GG [mvp]</a></h3>
                     <p>Simple web-based app that allows you to team up, organize and prepare for online, competetive gameplay. Implemented only to an MVP stage in order to test it with a small group of gamers, it has turned out to be impractical. Build with AngularJS and Semantic UI.</p>
-                    <p><a class="more-link" href="http://gl.gg/" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
+                    <p><a class="more-link" href="http://gl.gg/" target="_blank"><i class="fas fa-external-link-alt"></i> Find out more</a></p>
                 </div><!--//desc-->
             </div><!--//item-->
 
@@ -134,7 +134,7 @@ function HV_main_pl_latest_projects() {
                 <div class="desc col-md-8 col-sm-8 col-xs-12">
                     <h3 class="title"><a href="http://spellstack.com" target="_blank">Spellstack</a></h3>
                     <p>Spellstack is a web-based toolset for Magic: The Gathering players. Using Spellstack users can put together a well-balanced, powerful deck for your next casual or tournament game. Additional tools such as random hand, statistics etc. help users evaluate deck's potential and performance.</p>
-                    <p><a class="more-link" href="http://spellstack.com" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
+                    <p><a class="more-link" href="http://spellstack.com" target="_blank"><i class="fas fa-external-link-alt"></i> Find out more</a></p>
                 </div><!--//desc-->
             </div><!--//item-->
 

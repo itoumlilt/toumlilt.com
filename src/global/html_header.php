@@ -46,7 +46,7 @@ function get_global_html_header($page_title) {
         <!-- Global CSS -->
         <link rel="stylesheet" href="<?php echo URL_LIBS . "/bootstrap/css/bootstrap.css";?>">
         <!-- Plugins CSS -->
-        <link rel="stylesheet" href="<?php echo URL_LIBS . "/font-awesome/css/font-awesome.css";?>">
+        <link rel="stylesheet" href="<?php echo URL_LIBS . "/font-awesome/css/all.css";?>">
         <!-- github acitivity css -->
         <link rel="stylesheet" href="<?php echo URL_LIBS . "/github-activity/github-activity.css";?>">
         <!-- Theme CSS -->
@@ -72,6 +72,15 @@ function get_global_html_header($page_title) {
             type="text/javascript"
             src="<?php echo URL_LIBS . "/jquery-rss/dist/jquery.rss.min.js"; ?>">
         </script>
+        <!-- Font Awesome SVG -->
+        <?php // --- DISABLED
+        /*
+        <script
+                type="text/javascript"
+                src="<?php echo URL_LIBS . "/font-awesome/js/all.js"; ?>">
+        </script>
+        */
+        ?>
         <!-- Github Activity JS -->
         <script
                 type="text/javascript"

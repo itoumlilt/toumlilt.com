@@ -35,6 +35,12 @@ a:hover {
 .btn .fa,a.btn .fa {
     margin-right:5px
 }
+.btn .fas,a.btn .fas {
+    margin-right:5px
+}
+.btn .fab,a.btn .fab {
+    margin-right:5px
+}
 .btn:focus,a.btn:focus {
     color:#fff
 }
@@ -126,6 +132,14 @@ a.dotted-link:hover {
     font-size:20px;
     padding-top:8px
 }
+.header .profile-content .social a .fas {
+    font-size:20px;
+    padding-top:8px
+}
+.header .profile-content .social a .fab {
+    font-size:20px;
+    padding-top:8px
+}
 .sections-wrapper {
     padding-top:60px;
     padding-bottom:60px
@@ -152,6 +166,14 @@ a.dotted-link:hover {
     font-size:24px
 }
 .section .content .more-link .fa {
+    margin-right:5px;
+    font-size:14px
+}
+.section .content .more-link .fas {
+    margin-right:5px;
+    font-size:14px
+}
+.section .content .more-link .fab {
     margin-right:5px;
     font-size:14px
 }
@@ -303,6 +325,20 @@ a.dotted-link:hover {
 .info .fa.fa-envelope-o {
     font-size:14px
 }
+.info .fas {
+    margin-right:15px;
+    color:#bec0cd
+}
+.info .fas.fa-envelope-o {
+    font-size:14px
+}
+.info .fab {
+    margin-right:15px;
+    color:#bec0cd
+}
+.info .fab.fa-envelope-o {
+    font-size:14px
+}
 .info ul {
     margin-bottom:0
 }
@@ -357,6 +393,14 @@ a.dotted-link:hover {
     color:#7db5e5;
     margin-right:15px
 }
+.testimonials .item .quote .fas {
+    color:#7db5e5;
+    margin-right:15px
+}
+.testimonials .item .quote .fab {
+    color:#7db5e5;
+    margin-right:15px
+}
 .testimonials .item .source {
     font-size:14px;
     padding-left:30px;
@@ -403,6 +447,12 @@ a.dotted-link:hover {
     margin-bottom:0
 }
 .languages .item .fa {
+     color:#7db5e5
+ }
+.languages .item .fas {
+    color:#7db5e5
+}
+.languages .item .fab {
     color:#7db5e5
 }
 .blog .item {
@@ -427,6 +477,12 @@ a.dotted-link:hover {
 .list ul li .fa {
     margin-right:5px
 }
+.list ul li .fas {
+    margin-right:5px
+}
+.list ul li .fab {
+    margin-right:5px
+}
 .list ul li a {
     color:#696D89
 }
@@ -437,6 +493,12 @@ a.dotted-link:hover {
     margin-bottom:10px
 }
 .credits ul li .fa {
+    margin-right:5px
+}
+.credits ul li .fas {
+    margin-right:5px
+}
+.credits ul li .fab {
     margin-right:5px
 }
 .credits ul li a {
