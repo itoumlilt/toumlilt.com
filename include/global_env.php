@@ -49,6 +49,8 @@ define("URL_LINKEDIN", "http://fr.linkedin.com/in/ilyastoumlilt");
 define("URL_GITHUB", "https://github.com/ilyasToumlilt");
 define("URL_GITLAB", "https://gitlab.com/itoumlilt");
 define("URL_CODERWALL", "https://coderwall.com/ilyastoumlilt");
+define("URL_INSTAGRAM", "https://www.instagram.com/ilyas.rp/");
+define("URL_G_SCHOLAR", "https://scholar.google.fr/citations?user=067J9hgAAAAJ&hl=en");
 
 /************** EMAILs ***************/
 define("EMAIL_DEFAULT", "ilyas@toumlilt.com");
