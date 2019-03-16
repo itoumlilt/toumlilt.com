@@ -51,13 +51,13 @@ function htmlview_sl_education() {
             <div class="content">
                 <div class="item">
                     <!-- PhD -->
-                    <h3 class="title"><i class="fas fa-graduation-cap"></i> Distributed and Operating Systems - PhD Student</h3>
+                    <h3 class="title"><i class="fas fa-graduation-cap"></i> PhD Student - Distributed and Operating Systems</h3>
                     <h4 class="university">Sorbonne Université, LIP6, INRIA <span class="year">(2017 - today)</span></h4>
                     <!-- Master -->
-                    <h3 class="title"><i class="fas fa-graduation-cap"></i> Distributed Systems and Applications - Master</h3>
+                    <h3 class="title"><i class="fas fa-graduation-cap"></i> Master - Distributed Systems and Applications</h3>
                     <h4 class="university">Sorbonne Université (previously UPMC) <span class="year">(2014-2016)</span></h4>
                     <!-- Licence -->
-                    <h3 class="title"><i class="fas fa-graduation-cap"></i> Computer Science - Licence</h3>
+                    <h3 class="title"><i class="fas fa-graduation-cap"></i> Licence - Computer Science</h3>
                     <h4 class="university">Sorbonne Université (previously UPMC) <span class="year">(2011-2014)</span></h4>
                 </div><!--//item-->
             </div><!--//content-->
@@ -144,7 +144,7 @@ function HV_sl_skills() {
             <div class="content"><div class="skillset">
 
                     <div class="item">
-                        <h3 class="level-title">C &amp; Bash<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="" data-original-title="">Expert</span></h3>
+                        <h3 class="level-title">Distributed Systems<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="" data-original-title="">Expert</span></h3>
                         <div class="level-bar">
                             <div class="level-bar-inner" data-level="90%" style="width: 90%;">
                             </div>
@@ -160,7 +160,7 @@ function HV_sl_skills() {
                     </div><!--//item-->
 
                     <div class="item">
-                        <h3 class="level-title">Java &amp; Erlang<span class="level-label" data-original-title="" title="">Pro</span></h3>
+                        <h3 class="level-title">C, Bash & Erlang<span class="level-label" data-original-title="" title="">Pro</span></h3>
                         <div class="level-bar">
                             <div class="level-bar-inner" data-level="80%" style="width: 80%;">
                             </div>
@@ -168,26 +168,26 @@ function HV_sl_skills() {
                     </div><!--//item-->
 
                     <div class="item">
-                        <h3 class="level-title">Perl, Python, C++ &amp; Objective-C
+                        <h3 class="level-title">Operating Systems, Linux Kernel
                             <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="" data-original-title="I used to be good at these but I haven't used them for while."><i class="fas fa-info-circle"></i></span>
                         </h3>
                         <div class="level-bar">
-                            <div class="level-bar-inner" data-level="55%" style="width: 55%;">
+                            <div class="level-bar-inner" data-level="65%" style="width: 55%;">
                             </div>
                         </div><!--//level-bar-->
                     </div><!--//item-->
 
                     <div class="item">
-                        <h3 class="level-title">Ada, OCaml &amp; Swift
+                        <h3 class="level-title">Java, Perl, Python, C++ &amp; Objective-C
                             <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="" data-original-title="I used to be good at these but I haven't used them for while."><i class="fas fa-info-circle"></i></span>
                         </h3>
                         <div class="level-bar">
-                            <div class="level-bar-inner" data-level="30%" style="width: 30%;">
+                            <div class="level-bar-inner" data-level="60%" style="width: 30%;">
                             </div>
                         </div><!--//level-bar-->
                     </div><!--//item-->
 
-                    <p><a class="more-link" href="<?php echo URL_CODERWALL; ?>"><i class="fas fa-external-link-alt"></i> More on Coderwall</a></p>
+                    <p><a class="more-link" href="<?php echo URL_CODERWALL; ?>" target="_blank"><i class="fas fa-external-link-alt"></i> More on Coderwall</a></p>
                 </div>
             </div><!--//content-->
         </div><!--//section-inner-->
@@ -208,7 +208,7 @@ function HV_sl_favourite_music()
             <div class="content">
                 <ul class="list-unstyled">
                     <li><i class="fas fa-headphones"></i> <a
-                                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Youtube Link</a></li>
+                                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Youtube Link</a></li>
                 </ul>
             </div><!--//content-->
         </div><!--//section-inner-->
