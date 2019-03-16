@@ -1,7 +1,7 @@
 <?php
 
 $PATH_TO_BASE = "../../"; // must end with "/"
-$PAGE_TITLE = "Blog"; // set this var if you wan't to append the page nav title
+$PAGE_TITLE = "About Me"; // set this var if you wan't to append the page nav title
 
 $ABS_PATH_TO_BASE = dirname(__FILE__) . "/" . $PATH_TO_BASE;
 require_once $ABS_PATH_TO_BASE . "include/global_env.php";
