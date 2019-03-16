@@ -8,13 +8,15 @@ Author :
 
 Versions :
 =======================================================================
-- v1.1 (stable)(current)
+- v1.2 (stable)(current)
+- v1.1
 - v1.0.1 
 - v1.0
 
 Releases :
 =======================================================================
-- 24 Apr 2018 : v1.1 : blog section
+- 16 Mar 2019 : v1.2 : About Me section, new picture, Update descriptions, update social links, update font awesome to v5.7.2, new template colors
+- 24 Apr 2018 : v1.1 : blog section, template update (material design)
 - 26 Dec 2016 : v1.0.1 : thesis start version
 - 12 Jan 2015 : v1.0
 
