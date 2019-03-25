@@ -67,7 +67,7 @@
 
         <p>
             <script type="application/javascript">
-                document.write('<img src="' + window.location.protocol + '//' + window.location.host + '/assets/images/blogarticles/blogarticle_2_fig_1.png" alt="figure 1"/>' )
+                document.write('<img src="' + window.location.protocol + '//' + window.location.host + '/assets/images/blogarticles/blogarticle_2_fig_1.png" alt="figure 1" style="width: 100%"/>' )
             </script>
         </p>
 
@@ -78,7 +78,7 @@
         </p>
         <p>
             <script type="application/javascript">
-                document.write('<img src="' + window.location.protocol + '//' + window.location.host + '/assets/images/blogarticles/blogarticle_2_fig_2.png" alt="figure 2"/>' )
+                document.write('<img src="' + window.location.protocol + '//' + window.location.host + '/assets/images/blogarticles/blogarticle_2_fig_2.png" alt="figure 2" style="width: 100%"/>' )
             </script>
         </p>
         <p>
