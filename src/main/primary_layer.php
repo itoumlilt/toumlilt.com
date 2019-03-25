@@ -107,6 +107,10 @@ function HV_main_pl_latest_projects() {
         <h2 class="heading">Latest Projects & Blog posts</h2>
         <div class="content">
             <?php
+            echo article_xpath_to_wide_html(parse_article_xml(article_id_to_filepath(2)), false);
+            ?>
+            <hr class="divider">
+            <?php
             echo article_xpath_to_wide_html(parse_article_xml(article_id_to_filepath(1)), false);
             ?>
             <hr class="divider">
