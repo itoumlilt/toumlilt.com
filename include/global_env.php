@@ -46,7 +46,7 @@ define("URL_LINKEDIN", "http://fr.linkedin.com/in/ilyastoumlilt");
 define("URL_GITHUB", "https://github.com/ilyasToumlilt");
 define("URL_GITLAB", "https://gitlab.com/itoumlilt");
 define("URL_CODERWALL", "https://coderwall.com/ilyastoumlilt");
-define("URL_INSTAGRAM", "https://www.instagram.com/ilyas.rp/");
+define("URL_INSTAGRAM", "https://www.instagram.com/ilyas.pibi/");
 define("URL_STRAVA", "https://www.strava.com/athletes/22914252");
 define("URL_G_SCHOLAR", "https://scholar.google.fr/citations?user=067J9hgAAAAJ&hl=en");
 

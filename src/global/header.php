@@ -67,7 +67,6 @@ function get_header_banner_html()
                     <li><a href="<?php echo URL_G_SCHOLAR;?>" target="_blank"><i class="fab fa-google"></i></a></li>
                     <li><a href="<?php echo URL_GITHUB;?>" target="_blank"><i class="fab fa-github"></i></a></li>
                     <li><a href="<?php echo URL_GITLAB;?>" target="_blank"><i class="fab fa-gitlab"></i></a></li>
-                    <li><a href="<?php echo URL_CODERWALL;?>" target="_blank"><i class="fas fa-code"></i></a></li>
                     <li><a href="<?php echo URL_INSTAGRAM;?>" target="_blank"><i class="fab fa-instagram"></i></a></li>
                     <li class="last-item"><a href="<?php echo URL_STRAVA;?>" target="_blank"><i class="fab fa-strava"></i></a></li>
                 </ul>
