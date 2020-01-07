@@ -240,6 +240,7 @@ function HV_sl_conferences() {
             <h2 class="heading">Conferences & Workshops</h2>
             <div class="content">
                 <ul class="list-unstyled">
+                    <li><i class="fas fa-calendar"></i> <a href="https://http://eurosys2019.org/" target="_blank">Eurosys 2019</a> (Dresden)</li>
                     <li><i class="fas fa-calendar"></i> <a href="https://http://eurosys2018.org/" target="_blank">Eurosys 2018</a> (Porto)</li>
                     <li><i class="fas fa-calendar"></i> <a href="https://papoc-workshop.github.io/2018/">Papoc 2018</a> (Porto)</li>
                     <li><i class="fas fa-calendar"></i> <a href="http://compas2017.sciencesconf.org">Compas 2017</a> (Nice)</li>
