@@ -37,8 +37,8 @@ function get_global_html_header($page_title) {
         <meta name="description" content="Ilyas Toumlilt personal website">
         <meta name="author" content="itoumlilt">
         <link rel="shortcut icon" href="<?php echo URL_IMAGES . "/favicon.ico";?>">
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <!-- Global CSS -->
         <link rel="stylesheet" href="<?php echo URL_LIBS . "/bootstrap/css/bootstrap.css";?>">
         <!-- Plugins CSS -->
