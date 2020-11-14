@@ -7,6 +7,10 @@ RewriteEngine On
 ## prod : /
 RewriteBase /
 
+# redirect all HTTP to HTTPS
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://toumlilt.com/$1 
+
 # default www/topnav stuff :
 RewriteRule ^index$ index.php
 RewriteRule ^blog$ www/articles/articles.php
