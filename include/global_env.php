@@ -4,14 +4,14 @@
  * Global Env set
  * Must be included in all php files
  */
-$PATH_TO_BASE="../"; // must end with "/"
+$PATH_TO_BASE = "../"; // must end with "/"
 
 $ABS_PATH_TO_BASE = dirname(__FILE__) . "/" . $PATH_TO_BASE;
 
 require_once $ABS_PATH_TO_BASE . 'config.php';
 
 /* DEBUG MODE, do not uncomment if pushed to the server ! */
-if(CONFIG_DEBUG_MODE == 1) {
+if (CONFIG_DEBUG_MODE == 1) {
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
 }
@@ -28,7 +28,7 @@ define("URL_ASSETS", BASE_URL . "/assets");
 define("URL_IMAGES", URL_ASSETS . "/images");
 define("URL_LIBS", URL_ASSETS . "/libs");
 define("URL_CSS", URL_ASSETS . "/css");
-define("URL_JS", URL_ASSETS. "/js");
+define("URL_JS", URL_ASSETS . "/js");
 
 define("URL_HOME", BASE_URL . "/index");
 define("URL_BLOG", BASE_URL . "/blog");
@@ -49,6 +49,7 @@ define("URL_CODERWALL", "https://coderwall.com/ilyastoumlilt");
 define("URL_INSTAGRAM", "https://www.instagram.com/ilyas.pibi/");
 define("URL_STRAVA", "https://www.strava.com/athletes/22914252");
 define("URL_G_SCHOLAR", "https://scholar.google.fr/citations?user=067J9hgAAAAJ&hl=en");
+define("URL_MEDIUM", "https://itoumlilt.medium.com/");
 
 /************** EMAILs ***************/
 define("EMAIL_DEFAULT", "ilyas@toumlilt.com");
