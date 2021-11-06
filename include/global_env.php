@@ -43,10 +43,10 @@ define("PATH_CSS", PATH_ASSETS . "/css");
 /************** Specific external URLs ***************/
 define("URL_TWITTER", "https://twitter.com/ilyasToumlilt");
 define("URL_LINKEDIN", "https://www.linkedin.com/in/ilyastoumlilt/");
-define("URL_GITHUB", "https://github.com/ilyasToumlilt");
+define("URL_GITHUB", "https://github.com/itoumlilt");
 define("URL_GITLAB", "https://gitlab.com/itoumlilt");
 define("URL_CODERWALL", "https://coderwall.com/ilyastoumlilt");
-define("URL_INSTAGRAM", "https://www.instagram.com/ilyas.pibi/");
+define("URL_INSTAGRAM", "https://www.instagram.com/ilyas.tw/");
 define("URL_STRAVA", "https://www.strava.com/athletes/22914252");
 define("URL_G_SCHOLAR", "https://scholar.google.fr/citations?user=067J9hgAAAAJ&hl=en");
 define("URL_MEDIUM", "https://itoumlilt.medium.com/");
