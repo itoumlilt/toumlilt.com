@@ -144,18 +144,18 @@ function HV_main_pl_latest_projects()
 
                 <!--//item: MD Editor -->
                 <div class="item row">
-                    <a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/ilyasToumlilt/crdt-md-editor" target="_blank">
+                    <a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/itoumlilt/crdt-md-editor" target="_blank">
                         <img class="img-responsive project-image" src="assets/images/projects/project-crdt-mded.png" alt="project name">
                     </a>
                     <div class="desc col-md-8 col-sm-8 col-xs-12">
                         <h3 class="title">
-                            <a href="https://github.com/ilyasToumlilt/crdt-md-editor" target="_blank">CRDT Markdown Editor</a>
+                            <a href="https://github.com/itoumlilt/crdt-md-editor" target="_blank">CRDT Markdown Editor</a>
                             <span class="label label-theme">open source</span>
                         </h3>
                         <p>
                             Collaborative text editing application using two eventual consitency backends: revision-based and CRDT-based. This demo shows that with a revision based approach, the user loses updates, either if updates are executed concurrently online, or if multiple users edit the document offline. To have an adequate semantics, the user needs to provide custom, non-trivial, code to merge the updates executed by each user. With the CRDT-based backend, update convergence is available out-of-the-box.
                         </p>
-                        <p><a class="more-link" href="https://github.com/ilyasToumlilt/crdt-md-editor" target="_blank"><i class="fas fa-external-link-alt"></i> Find out more</a></p>
+                        <p><a class="more-link" href="https://github.com/itoumlilt/crdt-md-editor" target="_blank"><i class="fas fa-external-link-alt"></i> Find out more</a></p>
                     </div>
                     <!--//desc-->
                 </div>
