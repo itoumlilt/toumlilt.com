@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<blogarticle>
+    <name>2021_11_01 Colony Paper</name>
+    <date>01/11/2021</date>
+    <etitle>Highly-Available and Consistent Group Collaboration at the Edge with Colony</etitle>
+    <esummary>Published at the 22nd International Middleware, Dec 2021, Québec, Canada</esummary>
+    <externallink>https://hal.inria.fr/hal-03353663v3</externallink>
+    <githublink>null</githublink>
+    <smallimg>/blogarticle_4_small.png</smallimg>
+    <wideimg>/blogarticle_4_wide.png</wideimg>
+    <fulltext>
+        <p>
+            <h3 class="title">Abstract:</h3>
+            Edge applications, such as gaming, cooperative engineering, or in-the-field information sharing, enjoy immediate response, autonomy and availability by distributing and replicating data at the edge. However, application developers and users demand the highest possible consistency guarantees, and specific support for group collaboration. To address this challenge, Colony guarantees Transactional Causal Plus Consistency (TCC+) globally, strengthened to Snapshot Isolation within edge groups. To help with scalability, fault tolerance and security, its logical communication topology is forest-like, with replicated roots in the core cloud, but with the flexibility to migrate a node or a group. Despite this hybrid approach, applications enjoy the same semantics everywhere in the topology. Our experiments show that local caching and peer groups improve throughput and response time significantly, performance is not affected in offline mode, and that migration is seamless.
+        </p>
+        <p>    
+            View the full paper at <a href="https://hal.inria.fr/hal-03353663v3">this link.</a>
+        </p>
+    </fulltext>
+    <shorttext>
+        <p>
+            Edge applications, such as gaming, cooperative engineering, or in-the-field information sharing, enjoy immediate response, autonomy and availability by distributing and replicating data at the edge. However, application developers and users demand the highest possible consistency guarantees, and specific support for group collaboration. To address this challenge, Colony guarantees Transactional Causal Plus Consistency (TCC+) globally, strengthened to Snapshot Isolation within edge groups. To help with scalability, fault tolerance and security, its logical communication topology is forest-like, with replicated roots in the core cloud, but with the flexibility to migrate a node or a group. Despite this hybrid approach, applications enjoy the same semantics everywhere in the topology. Our experiments show that local caching and peer groups improve throughput and response time significantly, performance is not affected in offline mode, and that migration is seamless.
+            <br/>
+            <br/>
+            <b>Keywords :</b> Causal Consistency, Collaborative Computing, Edge Computing, CRDTs, Peer-to-Peer Systems.
+        </p>
+    </shorttext>
+    <veryshorttext>
+        <p>
+            Causal Consistency, Collaborative Computing, Edge Computing, CRDTs, Peer-to-Peer Systems.
+        </p>
+    </veryshorttext>
+</blogarticle>
