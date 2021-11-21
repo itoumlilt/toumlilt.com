@@ -3,7 +3,7 @@
 <blogarticle>
     <name>2018_09_23 EdgeAnt Spec</name>
     <date>23/09/2018</date>
-    <etitle>﻿EdgeAnt: pushing AntidoteDB to the Edge</etitle>
+    <etitle>EdgeAnt: pushing AntidoteDB to the Edge</etitle>
     <esummary>Pre-implementation: System specification and design</esummary>
     <externallink>null</externallink>
     <githublink>null</githublink>
@@ -14,7 +14,7 @@
 
         <h3 class="title">1. Introduction :</h3>
 
-            ﻿Cloud-scale services improve availability and latency by geo-replicating data in several data centers (DC) across the world. Nevertheless, the closest DC is often still too far away for an optimal user experience. To remain available at all times, client-side applications need to cache data at client machines, caching data at client machines can improve availability and latency for many applications, and also allow for temporary disconnection. This approach is used in many recent cloud services, like Google Drive RT API or Mobius [3, 5, 9, 16], where developers implement caching and buffering at application level, but it doesn’t ensure system-wide consistency guarantees.
+            Cloud-scale services improve availability and latency by geo-replicating data in several data centers (DC) across the world. Nevertheless, the closest DC is often still too far away for an optimal user experience. To remain available at all times, client-side applications need to cache data at client machines, caching data at client machines can improve availability and latency for many applications, and also allow for temporary disconnection. This approach is used in many recent cloud services, like Google Drive RT API or Mobius [3, 5, 9, 16], where developers implement caching and buffering at application level, but it doesn’t ensure system-wide consistency guarantees.
         </p>
         <p>
             Although pushing geo-replication to the Edge client machine seems natural, it raises two main challenges. The first one is to provide programming guarantees for applications running on client machines, at a reasonable cost at scale and under churn. Recent DC centralized storage systems in literature [8, 6, 14, 15, 19] provide transactions and combine support for causal consistency with mergeable objects. Extending these guarantees to the client is problematic for a number of reasons: standard approaches to support causality in client nodes require vector clocks entries proportional to the number of replicas; seamless access to client and server replicas require careful maintenance of object versions; fast execution in the client requires asynchronous commit. We developed a framework, called EdgeAnt, that efficiently address these issues despite failure, by extending a set of techniques designed in the previous SwiftCloud work [21].
@@ -47,7 +47,7 @@
         <h6 class="title">2.1. Backend Storage</h6>
 
         <p>
-            ﻿Cloud applications are generally built on top of a distributed database running in a Data Center (DC). Developers of cloud applications face a difficult decision of which kind of storage to use, defined by the CAP theorem [12], according to which distributed database design must sacrifice either string consistency or availability, since network failures are unavoidable. Traditional databases are ”CP”, they provide strong consistency and a simple SQL interface, but are slow and unavailable under partition. NoSQL databases are ”AP”, fast and available under partition, but too hard to program against as it expose application developers to inconsistency low-level anomalies.
+            Cloud applications are generally built on top of a distributed database running in a Data Center (DC). Developers of cloud applications face a difficult decision of which kind of storage to use, defined by the CAP theorem [12], according to which distributed database design must sacrifice either string consistency or availability, since network failures are unavoidable. Traditional databases are ”CP”, they provide strong consistency and a simple SQL interface, but are slow and unavailable under partition. NoSQL databases are ”AP”, fast and available under partition, but too hard to program against as it expose application developers to inconsistency low-level anomalies.
         </p>
         <p>
             Recent literature focused on adding strong semantics to AP databases design [15, 14, 10]. Our system goes in the same direction, we want to provide the highest level of consistency guarantees that remains compatible with availability.
@@ -74,7 +74,7 @@
         <h6 class="title">2.2. Client side design: The SwiftCloud approach</h6>
 
         <p>
-            ﻿Introduced by Zawirski et al. [21], the goal of the SwiftCloud approach is to extend geo-replication all the way to the client machine, pushing consistency, convergence and availability guarantees to the client cache, at a reasonable cost.
+            Introduced by Zawirski et al. [21], the goal of the SwiftCloud approach is to extend geo-replication all the way to the client machine, pushing consistency, convergence and availability guarantees to the client cache, at a reasonable cost.
         </p>
         <p>
             <script type="application/javascript">
@@ -138,11 +138,11 @@
         <h3 class="title">3. Ongoing and future work</h3>
 
         <p>
-            ﻿<b>Moving computation</b> Client computation resources can be poor and limited, although being resource-friendly and metadata lightweight, in EdgeAnt, some heavy operation can be done faster using the DC power. We are currently exploring a hybrid model where we can move computation from the client to the server in the heavy jobs case. This raises some interesting challenges like preserving the causal state of the client, handling updates and scheduling operations.
+            <b>Moving computation</b> Client computation resources can be poor and limited, although being resource-friendly and metadata lightweight, in EdgeAnt, some heavy operation can be done faster using the DC power. We are currently exploring a hybrid model where we can move computation from the client to the server in the heavy jobs case. This raises some interesting challenges like preserving the causal state of the client, handling updates and scheduling operations.
         </p>
 
         <p>
-            ﻿<b>Clients groups</b> Today, many cloud applications are designed around collaborative interactions between users, from distributed file systems, to multi-player games. For many web services, relying on centralized servers for mediating user interactions among each other leads to unnecessarily latency: as the servers have to manage all the transactions synchronization, the latency increases with clients requests number, with servers availability and in most cases the closest server is still far away compared to the closest client.
+            <b>Clients groups</b> Today, many cloud applications are designed around collaborative interactions between users, from distributed file systems, to multi-player games. For many web services, relying on centralized servers for mediating user interactions among each other leads to unnecessarily latency: as the servers have to manage all the transactions synchronization, the latency increases with clients requests number, with servers availability and in most cases the closest server is still far away compared to the closest client.
         </p>
 
         <p>
