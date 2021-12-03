@@ -283,7 +283,9 @@ function HV_sl_conferences()
             <h2 class="heading">Conferences & Workshops</h2>
             <div class="content">
                 <ul class="list-unstyled">
+                    <li><i class="fas fa-calendar"></i> <a href="https://middleware-conf.github.io/2021/" target="_blank">Middleware 2021</a> (Québec)</li>
                     <li><i class="fas fa-calendar"></i> <a href="https://http://eurosys2020.org/" target="_blank">Eurosys 2020</a> (Virtual)</li>
+                    <li><i class="fas fa-calendar"></i> <a href="https://2019.compas-conference.fr/">Compas 2019</a> (Biarritz)</li>
                     <li><i class="fas fa-calendar"></i> <a href="https://http://eurosys2019.org/" target="_blank">Eurosys 2019</a> (Dresden)</li>
                     <li><i class="fas fa-calendar"></i> <a href="https://http://eurosys2018.org/" target="_blank">Eurosys 2018</a> (Porto)</li>
                     <li><i class="fas fa-calendar"></i> <a href="https://papoc-workshop.github.io/2018/">Papoc 2018</a> (Porto)</li>
