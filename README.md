@@ -4,7 +4,9 @@ My personal website
 
 ## Versions
 
-- v1.2.3 (stable)(current)
+- v1.3.2 (stable)(current)
+- v1.3.1
+- v1.2.3
 - v1.2.2
 - v1.2.1 (stable php7.1)
 - v1.2
@@ -20,6 +22,7 @@ Note: default htaccess config requires SSL, or disable the http->https rewriteRu
 
 ## CHANGELOG
 
+- 02 Dec 2021 : v1.3.2 : Remove Skills from secondary layer + small fixes
 - 02 Dec 2021 : v1.3.1 : Add Thesis page and prepare livestream
 - 21 Nov 2021 : v1.2.3 : Add Colony related articles
 - 06 Nov 2021 : v1.2.2 : Update CV + social handles and URLs
