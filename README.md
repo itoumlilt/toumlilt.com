@@ -20,6 +20,7 @@ Note: default htaccess config requires SSL, or disable the http->https rewriteRu
 
 ## CHANGELOG
 
+- 02 Dec 2021 : v1.3.1 : Add Thesis page and prepare livestream
 - 21 Nov 2021 : v1.2.3 : Add Colony related articles
 - 06 Nov 2021 : v1.2.2 : Update CV + social handles and URLs
 - 14 Nov 2020 : v1.2.1 : RewriteRule for HTTP to HTTPS
