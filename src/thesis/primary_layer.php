@@ -66,6 +66,33 @@ function HV_thesis_pl_livestream_event()
                     </p>
                     <p>
                     <h3 class="title">
+                        Jury Members
+                    </h3>
+                        <b>President:</b> <a href="http://valerie-issarny.me/">Valérie Issarny</a><br />
+                        Senior Research Scientist, INRIA<br />
+                        <br />
+                        <b>Reviewer:</b> <a href="https://www.univ-smb.fr/listic/pages-fr/sebastien-monnet-fr/">Sébastien Monnet</a><br />
+                        Full Professor, Université Savoie Mont Blanc<br />
+                        <br />
+                        <b>Reviewer:</b> <a href="https://cloudlargescale-uclouvain.github.io/Etienne_Riviere">Etienne Rivière</a><br />
+                        Full Professor, UCLouvain<br />
+                        <br />
+                        <b>Examiner:</b> <a href="https://sites.google.com/site/soniabm/">Sonia Ben Mokhtar</a><br />
+                        Senior Research Scientist, Laboratoire d'InfoRmatique en Image et Systèmes d’information<br />
+                        <br />
+                        <b>Examiner:</b> <a href="https://softech.informatik.uni-kl.de/homepage/de/staff/AnnetteBieniusa/">Annette Bieniusa</a><br />
+                        Senior Research Scientist, Technische Universität Kaiserslautern<br />
+                        <br />
+                        <b>Supervisor:</b> <a href="https://lip6.fr/Marc.Shapiro/">Marc Shapiro</a><br />
+                        Distinguished Research Scholar (Emeritus), Sorbonne Université, LIP6, INRIA<br />
+                        <br />
+                        <b>Invited:</b> <a href="https://sites.google.com/site/0track/">Pierre Sutra</a><br />
+                        Associate Professor, Télécom SudParis<br />
+                        <br />
+                        <b>Invited:</b> <a href="https://pages.lip6.fr/Marek.Zawirski/">Marek Zawirsky</a><br />
+                        Software Engineer, Google<br />
+                        <br />
+                    <h3 class="title">
                         Abstract
                     </h3>
                     Edge applications, such as gaming, cooperative engineering, or in-the-field information sharing, enjoy immediate response, autonomy and availability by distributing and replicating data at the edge. However, application developers and users demand the highest possible consistency guarantees, and specific support for group collaboration. To address this challenge, Colony guarantees Transactional Causal Plus Consistency (TCC+) globally, strengthened to Snapshot Isolation within edge groups. To help with scalability, fault tolerance and security, its logical communication topology is forest-like, with replicated roots in the core cloud, but with the flexibility to migrate a node or a group. Despite this hybrid approach, applications enjoy the same semantics everywhere in the topology. Our experiments show that local caching and peer groups improve throughput and response time significantly, performance is not affected in offline mode, and that migration is seamless.
