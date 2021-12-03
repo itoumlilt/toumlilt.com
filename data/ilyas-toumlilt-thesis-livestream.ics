@@ -1,0 +1,66 @@
+BEGIN:VCALENDAR
+CALSCALE:GREGORIAN
+VERSION:2.0
+X-WR-CALNAME:[livestream] Soutenance de thèse de Ilyas Toumlilt
+METHOD:PUBLISH
+PRODID:-//Apple Inc.//macOS 12.0.1//EN
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+DTSTART:19810329T020000
+TZNAME:CEST
+TZOFFSETTO:+0200
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+DTSTART:19961027T030000
+TZNAME:CET
+TZOFFSETTO:+0100
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+TRANSP:OPAQUE
+DTEND;TZID=Europe/Paris:20211221T160000
+UID:6DA1FCB5-F68B-4870-9BE2-89C1EB8CEF2C
+DTSTAMP:20211203T092038Z
+LOCATION:https://toumlilt.com/thesis-defense-livestream
+DESCRIPTION:\nIt is my pleasure to invite you to the livestream of my th
+ esis defense\,\n           completed within the LIP6 Delys INRIA team an
+ d titled "Colony: A Hybrid Consistency System for Highly-Available Colla
+ borative Edge Computing".\n\n           The defense will be in english a
+ nd take place on Tuesday\, Decembre 21\, 2021 at 13:00 (Paris Time).\n\n
+ Livestream video link: https://toumlilt.com/thesis-defense-livestream\n\
+ nEdge applications\, such as gaming\, cooperative engineering\, or in-th
+ e-field information sharing\, enjoy immediate response\, autonomy and av
+ ailability by distributing and replicating data at the edge. However\, a
+ pplication developers and users demand the highest possible consistency 
+ guarantees\, and specific support for group collaboration. To address th
+ is challenge\, Colony guarantees Transactional Causal Plus Consistency (
+ TCC+) globally\, strengthened to Snapshot Isolation within edge groups. 
+ To help with scalability\, fault tolerance and security\, its logical co
+ mmunication topology is forest-like\, with replicated roots in the core 
+ cloud\, but with the flexibility to migrate a node or a group. Despite t
+ his hybrid approach\, applications enjoy the same semantics everywhere i
+ n the topology. Our experiments show that local caching and peer groups 
+ improve throughput and response time significantly\, performance is not 
+ affected in offline mode\, and that migration is seamless.
+URL;VALUE=URI:https://toumlilt.com/thesis-defense-livestream
+STATUS:CONFIRMED
+SEQUENCE:2
+SUMMARY:[livestream] Soutenance de thèse de Ilyas Toumlilt
+LAST-MODIFIED:20211203T092038Z
+DTSTART;TZID=Europe/Paris:20211221T130000
+CREATED:20211101T131111Z
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+UID:34BFACD9-E2E8-4A2A-9D00-5D68F745C7AD
+ACTION:DISPLAY
+TRIGGER:-PT30M
+DESCRIPTION:This is an event reminder
+X-WR-ALARMUID:34BFACD9-E2E8-4A2A-9D00-5D68F745C7AD
+END:VALARM
+END:VEVENT
+END:VCALENDAR

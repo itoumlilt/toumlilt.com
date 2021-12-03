@@ -19,8 +19,10 @@ function get_topnav_html($current = 0) {
         <a <?php echo ($current == 2) ? "class='topnav-current'" : ""; ?>
                 href="<?php echo URL_BLOG; ?>">Blog</a>
         <a <?php echo ($current == 3) ? "class='topnav-current'" : ""; ?>
-                href="#" data-toggle="modal" data-target=".no-page-modal">Teaching</a>
+                href="<?php echo URL_THESIS; ?>">Thesis</a>
         <a <?php echo ($current == 4) ? "class='topnav-current'" : ""; ?>
+                href="#" data-toggle="modal" data-target=".no-page-modal">Teaching</a>
+        <a <?php echo ($current == 5) ? "class='topnav-current'" : ""; ?>
                 href="<?php echo URL_ABOUT_ME; ?>">About Me</a>
         <a href="javascript:void(0);" class="icon" onclick="topnavFunction()">&#9776;</a>
     </div>
