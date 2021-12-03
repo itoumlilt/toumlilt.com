@@ -35,7 +35,8 @@ function HV_thesis_pl_livestream_event()
 
 
                 <p class="summary" id="calendar-links">
-                    <i>(*) Soutenance de thèse pour l'obtention du grade docteur en informatique de Sorbonne Université</i>
+                    <i>Soutenance de thèse pour l'obtention du grade de
+                        <br />docteur en informatique de Sorbonne Université</i>
                 </p>
 
                 <div class="desc text-left">
