@@ -314,7 +314,7 @@ function htmlview_default_secondary_layer()
         <?php
         echo htmlview_sl_basic_information();
         echo htmlview_sl_education();
-        echo HV_sl_skills();
+        // echo HV_sl_skills();
         echo HV_sl_conferences();
         echo HV_sl_latest_blog_posts();
         echo HV_sl_favourite_music();
