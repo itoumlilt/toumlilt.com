@@ -89,7 +89,7 @@ function HV_thesis_pl_livestream_event()
                         <b>Invited:</b> <a href="https://sites.google.com/site/0track/">Pierre Sutra</a><br />
                         Associate Professor, Télécom SudParis<br />
                         <br />
-                        <b>Invited:</b> <a href="https://pages.lip6.fr/Marek.Zawirski/">Marek Zawirsky</a><br />
+                        <b>Invited:</b> <a href="https://pages.lip6.fr/Marek.Zawirski/">Marek Zawirski</a><br />
                         Software Engineer, Google<br />
                         <br />
                     <h3 class="title">
