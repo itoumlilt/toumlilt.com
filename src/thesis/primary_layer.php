@@ -7,6 +7,7 @@ require_once $ABS_PATH_TO_BASE . "include/global_env.php";
 require_once $ABS_PATH_TO_BASE . "src/articles/articles_env.php";
 require_once $ABS_PATH_TO_BASE . "src/articles/articles_api.php";
 require_once $ABS_PATH_TO_BASE . "src/main/primary_layer.php";
+require_once $ABS_PATH_TO_BASE . "include/thesis-live-env.php";
 
 function HV_thesis_pl_livestream_event()
 {
@@ -17,13 +18,22 @@ function HV_thesis_pl_livestream_event()
         <div class="section-inner">
             <!-- <h2 class="heading">Description</h2> -->
             <div class="item featured text-center">
+                <?php
+                if( YT_THESIS_SHOW_VID != 1) {
+                ?>
                 <div class="alert alert-info" role="alert">
                     <i class="fas fa-video"></i> The livestream video will start on this page on
                     <a href="#calendar-links">December 21, 2021 at 1:00 p.m.</a>
                 </div>
+                <?php
+                }
+                ?>
                 <h3 class="title">
                     Thesis Defense Live Video
                 </h3>
+                <?php
+                if( YT_THESIS_SHOW_VID != 1) {
+                ?>
                 <div class="featured-image">
                     <a href="#" target="_blank">
                         <img class="img-responsive project-image" src="<?php echo PATH_IMG_ARTICLES . "/blogarticle_5_wide.png"; ?>" alt="2021_12_21 Thesis Defense" />
@@ -32,7 +42,14 @@ function HV_thesis_pl_livestream_event()
                         <div class="text">21/12/2021</div>
                     </div> -->
                 </div>
-
+                <?php
+                } else {
+                    $YT_THESIS_LINK = "https://www.youtube.com/embed/" . YT_THESIS_URL_ID;
+                ?>
+                <iframe width="560" height="315" src="<?php echo $YT_THESIS_LINK; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <?php
+                }
+                ?>
 
                 <p class="summary" id="calendar-links">
                     <i>Soutenance de thèse pour l'obtention du grade de
