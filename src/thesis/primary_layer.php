@@ -7,7 +7,6 @@ require_once $ABS_PATH_TO_BASE . "include/global_env.php";
 require_once $ABS_PATH_TO_BASE . "src/articles/articles_env.php";
 require_once $ABS_PATH_TO_BASE . "src/articles/articles_api.php";
 require_once $ABS_PATH_TO_BASE . "src/main/primary_layer.php";
-require_once $ABS_PATH_TO_BASE . "include/thesis-live-env.php";
 
 function HV_thesis_pl_livestream_event()
 {
@@ -18,38 +17,10 @@ function HV_thesis_pl_livestream_event()
         <div class="section-inner">
             <!-- <h2 class="heading">Description</h2> -->
             <div class="item featured text-center">
-                <?php
-                if( YT_THESIS_SHOW_VID != 1) {
-                ?>
-                <div class="alert alert-info" role="alert">
-                    <i class="fas fa-video"></i> The livestream video will start on this page on
-                    <a href="#calendar-links">December 21, 2021 at 1:00 p.m.</a>
-                </div>
-                <?php
-                }
-                ?>
                 <h3 class="title">
                     Thesis Defense Live Video
                 </h3>
-                <?php
-                if( YT_THESIS_SHOW_VID != 1) {
-                ?>
-                <div class="featured-image">
-                    <a href="#" target="_blank">
-                        <img class="img-responsive project-image" src="<?php echo PATH_IMG_ARTICLES . "/blogarticle_5_wide.png"; ?>" alt="2021_12_21 Thesis Defense" />
-                    </a>
-                    <!-- <div class="ribbon">
-                        <div class="text">21/12/2021</div>
-                    </div> -->
-                </div>
-                <?php
-                } else {
-                    $YT_THESIS_LINK = "https://www.youtube.com/embed/" . YT_THESIS_URL_ID;
-                ?>
-                <iframe width="560" height="315" src="<?php echo $YT_THESIS_LINK; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <?php
-                }
-                ?>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bXCFtlgt69s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                 <p class="summary" id="calendar-links">
                     <i>Soutenance de thèse pour l'obtention du grade de
@@ -64,7 +35,7 @@ function HV_thesis_pl_livestream_event()
                     Add to your <a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=XzZwMjQyY2E2OGQxM2FiYTY2b3M0NGI5azcwcmowYjlwODkyajRiOW83NTFqMmhhMjcxMWthaGhpOGMgYnQ1ampzYWlvdWZlNHZnNDVyM3FtcGQwYm9AZw&amp;tmsrc=bt5jjsaioufe4vg45r3qmpd0bo%40group.calendar.google.com"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a>
                     <br />
                     or
-                    <a class="btn btn-default btn-xs" href="<?php echo BASE_URL . '/data/ilyas-toumlilt-thesis-livestream.ics'; ?>" role="button">
+                    <a class="btn btn-default btn-xs" href="<?php echo BASE_URL . '/data/attachements/ilyas-toumlilt-thesis-livestream.ics'; ?>" role="button">
                         <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Download ICS calendar event
                     </a>
                     </p>
