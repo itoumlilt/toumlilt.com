@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 ### Changed
 - Made Thesis defense video public
+- Update Thesis defense blog post to archive video and documents
 ### Deprecated
 ### Removed
 ### Fixed
