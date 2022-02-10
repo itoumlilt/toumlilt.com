@@ -4,7 +4,7 @@
 
 mv htaccess.example .htaccess
 mv config.php.example config.php
-rm README.md LICENSE
+rm README.md LICENSE CHANGELOG.md
 
 # autodestroy
 rm $0
