@@ -1,18 +1,7 @@
 # toumlilt.com
 
-My personal website
-
-## Versions
-
-- v1.3.2 (stable)(current)
-- v1.3.1
-- v1.2.3
-- v1.2.2
-- v1.2.1 (stable php7.1)
-- v1.2
-- v1.1
-- v1.0.1
-- v1.0
+My personal website,
+hosted at ([www.toumlilt.com](www.toumlilt.com))
 
 ## Deployement
 
@@ -28,3 +17,16 @@ Note: default htaccess config requires SSL, or disable the http->https rewriteRu
 ## License
 
 This template is free under the Creative Commons Attribution 3.0 [License](https://creativecommons.org/licenses/by/3.0/).
+
+## Versions
+
+- v1.3.3 (stable)(current)
+- v1.3.2
+- v1.3.1
+- v1.2.3
+- v1.2.2
+- v1.2.1 (stable php7.1)
+- v1.2
+- v1.1
+- v1.0.1
+- v1.0

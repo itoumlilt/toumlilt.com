@@ -8,14 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 ### Changed
-- Made Thesis defense video public
-- Update Thesis defense blog post to archive video and documents
-- Update Thesis article baner image
 ### Deprecated
 ### Removed
 ### Fixed
 ### Security
 ### external libs
+
+## [1.3.3] - 2022-02-10
+### Changed
+- Made Thesis defense video public
+- Update Thesis defense blog post to archive video and documents
+- Update Thesis article baner image
 
 ## [1.3.2] - 2021-12-02
 ### Removed
