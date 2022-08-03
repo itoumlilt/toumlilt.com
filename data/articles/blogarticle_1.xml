@@ -3,7 +3,7 @@
 <blogarticle>
     <name>2017_06_27 Compas2017</name>
     <date>27/06/2017</date>
-    <etitle>﻿Vers une cohérence causale évolutive sans chaînes de ralentissements</etitle>
+    <etitle>Vers une cohérence causale évolutive sans chaînes de ralentissements</etitle>
     <esummary>Publié à Compas 2017, Sophia Antipolis le 27 juin 2017</esummary>
     <externallink>null</externallink>
     <githublink>null</githublink>
@@ -12,12 +12,12 @@
     <fulltext>
         <p>
             <h3 class="title">Résumé :</h3>
-            ﻿Pour augmenter les performances et la disponibilité, les bases de données sont généralement répliquées sur différents serveurs au sein de centres de données à travers le monde.
+            Pour augmenter les performances et la disponibilité, les bases de données sont généralement répliquées sur différents serveurs au sein de centres de données à travers le monde.
             Cependant, la réplication implique quelques problèmes de cohérence.
             La cohérence causale est un choix intéressant pour construire ce modèle de bases de données.
             Elle permet aux clients d'observer un état cohérent par rapport à leurs écritures, en incluant les opérations qu'ils ont précédemment observé, tout en minimisant les anomalies pour le programmeur. Cependant, les mises en œuvre actuelles de la cohérence causale sont susceptibles de connaitre des <i>ralentissements en chaîne</i> à l'échelle de plusieurs centres de données. Ce papier décrit la conception d'un système causalement cohérent, évolutif, et non exposé à l'impact que peut avoir un serveur lent ou défaillant, sur la disponibilité des données.<br/>
             <br/>
-            <b>Mots-clés :</b> ﻿Bases de données distribuées, géo-replication, cohérence causale, disponibilité sous partition.
+            <b>Mots-clés :</b> Bases de données distribuées, géo-replication, cohérence causale, disponibilité sous partition.
 
             <hr class="divider"/>
         </p>
@@ -25,7 +25,7 @@
         <h3 class="title">1. Introduction :</h3>
 
         <p>
-            ﻿Les bases de données distribuées sont l'un des piliers fondamentaux des services en ligne à large échelle aujourd'hui.
+            Les bases de données distribuées sont l'un des piliers fondamentaux des services en ligne à large échelle aujourd'hui.
             Pour atteindre les performances et la disponibilité, les bases de données sont généralement répliquées sur différents serveurs et sur des centres de données (DC) à travers le monde.
             Cependant, nous ne pouvons pas parler de réplication sans parler des problèmes de cohérence.
             Le choix du modèle de cohérence dans un système géo-répliqué est donc critique.
@@ -42,7 +42,7 @@
             Ainsi, une base de données causalement cohérente garantit qu'une écriture ne devient visible que lorsque toutes celles dont elle dépend causalement sont visibles, tout en évitant les longues latences associées aux synchronisations de la cohérence forte.
         </p>
         <p>
-            ﻿Le problème exposé dans ce papier et celui des "ralentissements en chaîne".
+            Le problème exposé dans ce papier et celui des "ralentissements en chaîne".
             En effet, les systèmes causaux actuels empêchent souvent une réplique d'appliquer une écriture W, jusqu'à ce que toutes les écritures précédent W causalement avaient été appliquées.
             Ainsi, la stabilisation du système, ou en d'autres termes, la propagation des mises à jour entre centres de données, génère une latence qui peut accroître selon l'activité du système.
             Par conséquent, un fragment lent ou défaillant, peut avoir un impact négatif sur l'ensemble du système, ce qui provoque une augmentation de la latence au niveau de la visibilité des mises à jour.<br/>
@@ -51,22 +51,22 @@
         <h3 class="title">2. Définition : Causalité</h3>
 
         <p>
-            ﻿La causalité est la relation de cause à effet qui lie deux événements [2].
+            La causalité est la relation de cause à effet qui lie deux événements [2].
             On dénote l'ordre causale par "&lt;".
             Pour deux transactions Tx et Ty, si Tx &lt; Ty, on dit que Ty dépend de Tx ou que Tx est une dépendance de Ty.<br/>
             Tx &lt; Ty si et seulement si l'une des trois règles suivantes est valide :
             <ul>
                 <li>
-                    ﻿File d'exécution : Tx et Ty sont deux opérations dans un seul thread d'exécution, et Tx se produit avant Ty.
+                    File d'exécution : Tx et Ty sont deux opérations dans un seul thread d'exécution, et Tx se produit avant Ty.
                 </li>
                 <li>
-                    ﻿Lecture : Tx est une opération d'écriture, Ty est une opération de lecture, et Ty lit la valeur écrite par Tx.
+                    Lecture : Tx est une opération d'écriture, Ty est une opération de lecture, et Ty lit la valeur écrite par Tx.
                 </li>
                 <li>
-                    ﻿Transitivité : Il existe une opération Tz telle que Tx &lt; Tz et Tz &lt; Ty.
+                    Transitivité : Il existe une opération Tz telle que Tx &lt; Tz et Tz &lt; Ty.
                 </li>
             </ul>
-            ﻿Une version A d'un objet a est causalement dépendante d'une version B d'un objet b si l'écriture de A dépend causalement de l'écriture de B.<br/>
+            Une version A d'un objet a est causalement dépendante d'une version B d'un objet b si l'écriture de A dépend causalement de l'écriture de B.<br/>
             Un centre de données est causalement cohérent si, lorsqu'une certaine version d'un objet est visible à un client, alors toutes ses dépendances causales sont aussi visibles.
             <br/>
         </p>
@@ -75,18 +75,18 @@
         <h3 class="title">3. Motivation</h3>
 
         <p>
-            ﻿Dans un système géo-répliqué, une défaillance sur un serveur affectera inévitablement les performances de ce serveur.<br/>
+            Dans un système géo-répliqué, une défaillance sur un serveur affectera inévitablement les performances de ce serveur.<br/>
             Une cascade de ralentissement se produit lorsque la défaillance se répand pour affecter d'autres partitions [6].
         </p>
         <p>
-            ﻿Les systèmes causalement cohérents récents, sont tous susceptibles d'avoir des ralentissements en chaîne.<br/>
+            Les systèmes causalement cohérents récents, sont tous susceptibles d'avoir des ralentissements en chaîne.<br/>
             Par exemple, dans Cure [3], les écritures répliquées portent des méta-données qui explicitent les dépendances causales.
             Le centre de données retarde ensuite l'application jusqu'à ce que ces dépendances soient appliquées localement.
             La visibilité d'une écriture dans un serveur peut alors devenir dépendante du délai de propagation d'une autre écriture.<br/>
         </p>
         <p>
             <img src="blogarticle_1_fig_1.png"/><br/>
-            ﻿La figure 1 montre un exemple simple de scénario déclenchant des ralentissements en chaine.
+            La figure 1 montre un exemple simple de scénario déclenchant des ralentissements en chaine.
             X et Y sont deux données contenues dans le centre de données DC1, Y dépend causalement de X, or seule Y a été propagée au DC2.
             La requête du client, qui demande à lire Y, est donc retardée par le fait que la donnée X dont dépend Y n'a pas été propagée par le DC1.<br/>
             Ce problème est encore plus important dans la pratique, puisque dans un système réel, on peut avoir un grand nombre de requêtes de lecture, sur un grand nombre de données répliquées sur plusieurs centres de données.
@@ -98,7 +98,7 @@
         <h3 class="title">4. Idée</h3>
 
         <p>
-            ﻿La cohérence causale exige dans le cas de la réplication d'une écriture, que l'ensemble des écritures dont elle dépend soient appliquées, ce qui renforce le modèle, mais laisse le système vulnérable aux <i>ralentissements en chaîne</i>.<br/>
+            La cohérence causale exige dans le cas de la réplication d'une écriture, que l'ensemble des écritures dont elle dépend soient appliquées, ce qui renforce le modèle, mais laisse le système vulnérable aux <i>ralentissements en chaîne</i>.<br/>
             Pour résoudre ce problème, nous souhaitons déplacer ce choix aux clients, et ainsi laisser les clients eux-mêmes déterminer s'il est sécurisé de lire une valeur sans avoir d'abord à appliquer toutes les écritures précédemment causales, et ainsi rendre les écritures immédiatement visibles.<br/>
             L'enjeu principal, cependant, est d'identifier un encodage de méta-données qui minimise à la fois la surcharge et la latence de lecture.
             En effet, le schéma général d'un système qui fait passer l'application de la cohérence causale aux opérations de lecture est simple : chaque client doit maintenir certaines méta-données relatives à l'état le plus récent du centre de données qu'il a observé.
@@ -109,7 +109,7 @@
         <h3 class="title">5. Modèle du système</h3>
 
         <p>
-            ﻿Notre système est une base de données clé-valeur géo-répliquée, où chaque réplique est située dans un data-center séparé avec une copie complète des données (fig 2).
+            Notre système est une base de données clé-valeur géo-répliquée, où chaque réplique est située dans un data-center séparé avec une copie complète des données (fig 2).
             Cette réplication complète permet de fournir disponibilité et réduire la latence.
             Chaque centre de données est séparé en plusieurs partitions, chaque partition peut stocker un ensemble de  plusieurs dizaines ou centaines de milliers de clés disjointes, placés sur le même hôte physique.
             Nous considérons que chaque centre de données utilise le même schéma de partitionnement.<br/>
@@ -125,7 +125,7 @@
         <h3 class="title">6. Protocole de transactions</h3>
 
         <p>
-            ﻿De nombreuses applications peuvent bénéficier de la capacité de lire et d'écrire plusieurs objets atomiquement.
+            De nombreuses applications peuvent bénéficier de la capacité de lire et d'écrire plusieurs objets atomiquement.
             Une transaction peut donc être exécutée sur n'importe quel centre de données et peut accéder aux éléments de l'une des répliques.
             Une transaction est engagée localement sur un serveur, puis, à un moment ultérieur, ses changements sont propagés de manière asynchrone vers d'autres sites et y sont appliqués.
             Les transactions sont ordonnées selon un ordre causal.
@@ -134,39 +134,39 @@
             Notre modèle fournit les garanties suivantes :<br/>
             <ul>
                 <li>
-                    ﻿Isolation: si deux écritures concurrentes ont lieu sur un même objet, seule une des deux sera prise en compte. Cette garantie est cruciale pour éliminer le danger des anomalies comme les modifications perdues.
+                    Isolation: si deux écritures concurrentes ont lieu sur un même objet, seule une des deux sera prise en compte. Cette garantie est cruciale pour éliminer le danger des anomalies comme les modifications perdues.
                 </li>
                 <li>
-                    ﻿Cohérence global d'un snapshot (instantané) : Un snapshot cohérent respecte deux propriétés :
+                    Cohérence global d'un snapshot (instantané) : Un snapshot cohérent respecte deux propriétés :
                     <ul>
                         <li>
-                            ﻿Atomicité : dans un snapshot cohérent, toutes ou aucune des modifications d'une transaction sont visibles.
+                            Atomicité : dans un snapshot cohérent, toutes ou aucune des modifications d'une transaction sont visibles.
                         </li>
                         <li>
-                            ﻿Causalité : si un snapshot contient des mises à jour de la transaction Ti, les mises à jour de toutes les transactions qui précèdent causalement Ti y sont également contenues.
+                            Causalité : si un snapshot contient des mises à jour de la transaction Ti, les mises à jour de toutes les transactions qui précèdent causalement Ti y sont également contenues.
                         </li>
                     </ul>
                 </li>
                 <li>
-                    ﻿Ordre des transactions : Deux transactions non concurrentes Ti et Tj sont ordonnées comme suit :
+                    Ordre des transactions : Deux transactions non concurrentes Ti et Tj sont ordonnées comme suit :
                     <ul>
                         <li>
-                            ﻿Ordre causal : Si Tj lit l'une des écritures effectuées par Ti, alors la transaction Ti précède causalement Tj (Ti &lt; Tj)
+                            Ordre causal : Si Tj lit l'une des écritures effectuées par Ti, alors la transaction Ti précède causalement Tj (Ti &lt; Tj)
                         </li>
                         <li>
-                            ﻿Ordre de mise à jour global par objet : Ti &lt; Tj si Tj crée une version plus récente pour l'un des objets modifiés par Ti, c'est à dire que Ti est pris en compte avant Tj.
+                            Ordre de mise à jour global par objet : Ti &lt; Tj si Tj crée une version plus récente pour l'un des objets modifiés par Ti, c'est à dire que Ti est pris en compte avant Tj.
                         </li>
                         <li>
-                            ﻿Ordre des mises à jour par partition : Ti &lt; Tj si Ti et Tj s'exécutent sur le même site, modifient une partition commune et Ti obtient le datage de sa modification avant Tj.
+                            Ordre des mises à jour par partition : Ti &lt; Tj si Ti et Tj s'exécutent sur le même site, modifient une partition commune et Ti obtient le datage de sa modification avant Tj.
                         </li>
                         <li>
-                            ﻿L'ordre des transactions est transitif, c'est à dire que si Ti &lt; Tj et que Tj &lt; Tk, alors Ti &lt; Tk.
+                            L'ordre des transactions est transitif, c'est à dire que si Ti &lt; Tj et que Tj &lt; Tk, alors Ti &lt; Tk.
                         </li>
                         <li>
-                            ﻿Ordre total des transactions : Là où PSI [16] ordonne totalement toutes les transactions qui modifient une réplique, exigeant que cet ordre soit respecté lors de la réplication sur d'autres sites, ce qui peut donc provoquer le ralentissement de certaines transactions dépendantes de celles se trouvant sur un serveur lent ou défaillant. Notre modèle supprime ces contraintes inutiles. Plutôt que d'ordonner totalement toutes les transactions qui se trouvaient sur la meme réplique, notre protocole exige seulement que les transactions soient répliquées de manière à respecter les dépendances en lecture/écriture et l'ordre des transactions qui appartiennent à la même session du client.
+                            Ordre total des transactions : Là où PSI [16] ordonne totalement toutes les transactions qui modifient une réplique, exigeant que cet ordre soit respecté lors de la réplication sur d'autres sites, ce qui peut donc provoquer le ralentissement de certaines transactions dépendantes de celles se trouvant sur un serveur lent ou défaillant. Notre modèle supprime ces contraintes inutiles. Plutôt que d'ordonner totalement toutes les transactions qui se trouvaient sur la meme réplique, notre protocole exige seulement que les transactions soient répliquées de manière à respecter les dépendances en lecture/écriture et l'ordre des transactions qui appartiennent à la même session du client.
                         </li>
                         <li>
-                            ﻿Ces contraintes sont suffisantes pour assurer des dépendances sémantiques pertinentes. Par exemple, dans le cas d'un réseau social, si Alice supprime Bob de sa liste d'amis, puis charge ensuite ses photos depuis une autre transaction, Bob ne pourra pas lire les photos quelque soit la réplique depuis laquelle il demande sa lecture.
+                            Ces contraintes sont suffisantes pour assurer des dépendances sémantiques pertinentes. Par exemple, dans le cas d'un réseau social, si Alice supprime Bob de sa liste d'amis, puis charge ensuite ses photos depuis une autre transaction, Bob ne pourra pas lire les photos quelque soit la réplique depuis laquelle il demande sa lecture.
                         </li>
                     </ul>
                 </li>
@@ -177,7 +177,7 @@
         <h3 class="title">7. Travaux connexes</h3>
 
         <p>
-            ﻿Les travaux récents ont mis l'accent sur l'amélioration des conceptions AP (disponibilité sous partition) avec une sémantique plus forte [4, 14].
+            Les travaux récents ont mis l'accent sur l'amélioration des conceptions AP (disponibilité sous partition) avec une sémantique plus forte [4, 14].
             Ces solutions offrent une variété d'interfaces transactionnelles limitées mais intéressantes, qui visent à faciliter le développement des applications.
             COPS [13] a introduit le concept des transactions causalement cohérentes en "lecture-seule" (<i>read-only transactions</i>). Il trace la cohérence causale grâce aux dépendances explicites, puis l'applique de façon pessimiste en vérifiant ces dépendances avant d'appliquer les écritures distantes sur une réplique.
             Ce concept a été ensuite adopté par ChainReaction [13] et Orbe [8] qui utilisent des filtres de Bloom pour réduire les dépendances.
@@ -194,7 +194,7 @@
         <h3 class="title">8. Conclusion</h3>
 
         <p>
-            ﻿Cet article identifie les ralentissements en chaîne comme une limitation fondamentale à l'application de la cohérence causale en tant que propriété globale d'une base de données géo-répliquée.
+            Cet article identifie les ralentissements en chaîne comme une limitation fondamentale à l'application de la cohérence causale en tant que propriété globale d'une base de données géo-répliquée.
             Notre système délègue plutôt cette responsabilité au client, ainsi le centre de données applique les mises à jours dès qu'il les reçoit.
             Les clients attendent uniquement la propagation des écritures par lesquelles ils sont réellement intéressés.
             Le protocole de transactions proposé par notre système assure que les transactions sont lues à partir d'un snapshot cohérent tout en préservant l'atomicité, il garantit donc les fortes propriétés de PSI tout en évitant les ralentissements qui peuvent compromettre son passage à l'échelle.
@@ -207,32 +207,32 @@
         <h3 class="title">Bibliographie :</h3>
 
         <p>
-            <br/>1. Abadi (D.). – Consistency tradeoffs in modern distributed database system design : Cap is only part of the story. Computer, vol. 45, n2, 2012, pp. 37–42.<br/>
-            <br/>2. Ahamad (M.), Neiger (G.), Burns (J. E.), Kohli (P.) et Hutto (P. W.). – Causal memory : Definitions, implementation, and programming. Distributed Computing, vol. 9, n1, 1995, pp. 37–49.<br/>
-            <br/>3. Akkoorath (D. D.), Tomsic (A. Z.), Bravo (M.), Li (Z.), Crain (T.), Bieniusa (A.), Preguiça (N.) et Shapiro (M.). – Cure : Strong semantics meets high availability and low latency. – In Distributed Computing Systems (ICDCS), 2016 IEEE 36th International Conference on, pp. 405–414. IEEE, 2016.<br/>
-            <br/>4. Almeida (S.), Leitão (J.) et Rodrigues (L.). – Chainreaction : a causal+ consistent datastore based on chain replication. – In Proceedings of the 8th ACM European Conference on Computer Systems, pp. 85–98. ACM, 2013.<br/>
-            <br/>5. Antidote. – Antidote db - http ://syncfree.github.io/antidote/, 2015.<br/>
-            <br/>6. Birman (K.), Chockler (G.) et van Renesse (R.). – Toward a cloud computing research
-            agenda. ACM SIGACt News, vol. 40, n2, 2009, pp. 68–80.<br/>
+            <br/>1. Abadi (D.). - Consistency tradeoffs in modern distributed database system design : Cap is only part of the story. Computer, vol. 45, n2, 2012, pp. 37-42.<br/>
+            <br/>2. Ahamad (M.), Neiger (G.), Burns (J. E.), Kohli (P.) et Hutto (P. W.). - Causal memory : Definitions, implementation, and programming. Distributed Computing, vol. 9, n1, 1995, pp. 37-49.<br/>
+            <br/>3. Akkoorath (D. D.), Tomsic (A. Z.), Bravo (M.), Li (Z.), Crain (T.), Bieniusa (A.), Preguiça (N.) et Shapiro (M.). - Cure : Strong semantics meets high availability and low latency. - In Distributed Computing Systems (ICDCS), 2016 IEEE 36th International Conference on, pp. 405-414. IEEE, 2016.<br/>
+            <br/>4. Almeida (S.), Leitão (J.) et Rodrigues (L.). - Chainreaction : a causal+ consistent datastore based on chain replication. - In Proceedings of the 8th ACM European Conference on Computer Systems, pp. 85-98. ACM, 2013.<br/>
+            <br/>5. Antidote. - Antidote db - http ://syncfree.github.io/antidote/, 2015.<br/>
+            <br/>6. Birman (K.), Chockler (G.) et van Renesse (R.). - Toward a cloud computing research
+            agenda. ACM SIGACt News, vol. 40, n2, 2009, pp. 68-80.<br/>
             <br/>7. DeCandia (G.), Hastorun (D.), Jampani (M.), Kakulapati (G.), Lakshman (A.), Pilchin (A.),
-            Sivasubramanian (S.), Vosshall (P.) et Vogels (W.). – Dynamo : amazon’s highly available
-            key-value store. ACM SIGOPS operating systems review, vol. 41, n6, 2007, pp. 205–220.
-            <br/><br/>8. Du (J.), Elnikety (S.), Roy (A.) et Zwaenepoel (W.). – Orbe : Scalable causal consistency using dependency matrices and physical clocks. – In Proceedings of the 4th annual Symposium
+            Sivasubramanian (S.), Vosshall (P.) et Vogels (W.). - Dynamo : amazon's highly available
+            key-value store. ACM SIGOPS operating systems review, vol. 41, n6, 2007, pp. 205-220.
+            <br/><br/>8. Du (J.), Elnikety (S.), Roy (A.) et Zwaenepoel (W.). - Orbe : Scalable causal consistency using dependency matrices and physical clocks. - In Proceedings of the 4th annual Symposium
             on Cloud Computing, p. 11. ACM, 2013.
-            <br/><br/>9. Du (J.), Iorgulescu (C.), Roy (A.) et Zwaenepoel (W.). – Gentlerain : Cheap and scalable
-            causal consistency with physical clocks. – In Proceedings of the ACM Symposium on Cloud
-            Computing, pp. 1–13. ACM, 2014.
-            <br/><br/>10. Gilbert (S.) et Lynch (N.). – Brewer’s conjecture and the feasibility of consistent, available,
-            partition-tolerant web services. Acm Sigact News, vol. 33, n2, 2002, pp. 51–59.
-            <br/><br/>11. Lakshman (A.) et Malik (P.). – Cassandra : a decentralized structured storage system. ACM SIGOPS Operating Systems Review, vol. 44, n2, 2010, pp. 35–40.
-            <br/><br/>12. Lamport (L.). – Time, clocks, and the ordering of events in a distributed system. Communi- cations of the ACM, vol. 21, n7, 1978, pp. 558–565.
-            <br/><br/>13. Lloyd (W.), Freedman (M. J.), Kaminsky (M.) et Andersen (D. G.). – Don’t settle for even- tual : scalable causal consistency for wide-area storage with cops. – In Proceedings of the Twenty-Third ACM Symposium on Operating Systems Principles, pp. 401–416. ACM, 2011.
-            <br/><br/>14. Lloyd (W.), Freedman (M. J.), Kaminsky (M.) et Andersen (D. G.). – Stronger semantics for low-latency geo-replicated storage. – In NSDI, pp. 313–328, 2013.
-            <br/><br/>15. mongodb. – Mongodb - https ://www.mongodb.com, 2009.
-            <br/><br/>16. Padhye (V.), Rajappan (G.) et Tripathi (A.). – Transaction management using causal snap-
-            shot isolation in partially replicated databases. – In Reliable Distributed Systems (SRDS),
-            2014 IEEE 33rd International Symposium on, pp. 105–114. IEEE, 2014.
-            <br/><br/>17. Shapiro (M.), Preguiça (N.), Baquero (C.) et Zawirski (M.). – A comprehensive study of convergent and commutative replicated data types. – Thèse de PhD, Inria–Centre Paris-
+            <br/><br/>9. Du (J.), Iorgulescu (C.), Roy (A.) et Zwaenepoel (W.). - Gentlerain : Cheap and scalable
+            causal consistency with physical clocks. - In Proceedings of the ACM Symposium on Cloud
+            Computing, pp. 1-13. ACM, 2014.
+            <br/><br/>10. Gilbert (S.) et Lynch (N.). - Brewer's conjecture and the feasibility of consistent, available,
+            partition-tolerant web services. Acm Sigact News, vol. 33, n2, 2002, pp. 51-59.
+            <br/><br/>11. Lakshman (A.) et Malik (P.). - Cassandra : a decentralized structured storage system. ACM SIGOPS Operating Systems Review, vol. 44, n2, 2010, pp. 35-40.
+            <br/><br/>12. Lamport (L.). - Time, clocks, and the ordering of events in a distributed system. Communi- cations of the ACM, vol. 21, n7, 1978, pp. 558-565.
+            <br/><br/>13. Lloyd (W.), Freedman (M. J.), Kaminsky (M.) et Andersen (D. G.). - Don't settle for even- tual : scalable causal consistency for wide-area storage with cops. - In Proceedings of the Twenty-Third ACM Symposium on Operating Systems Principles, pp. 401-416. ACM, 2011.
+            <br/><br/>14. Lloyd (W.), Freedman (M. J.), Kaminsky (M.) et Andersen (D. G.). - Stronger semantics for low-latency geo-replicated storage. - In NSDI, pp. 313-328, 2013.
+            <br/><br/>15. mongodb. - Mongodb - https ://www.mongodb.com, 2009.
+            <br/><br/>16. Padhye (V.), Rajappan (G.) et Tripathi (A.). - Transaction management using causal snap-
+            shot isolation in partially replicated databases. - In Reliable Distributed Systems (SRDS),
+            2014 IEEE 33rd International Symposium on, pp. 105-114. IEEE, 2014.
+            <br/><br/>17. Shapiro (M.), Preguiça (N.), Baquero (C.) et Zawirski (M.). - A comprehensive study of convergent and commutative replicated data types. - Thèse de PhD, Inria-Centre Paris-
             Rocquencourt ; INRIA, 2011.
         </p>
     </fulltext>
@@ -243,7 +243,7 @@
             La cohérence causale est un choix intéressant pour construire ce modèle de bases de données.
             Elle permet aux clients d'observer un état cohérent par rapport à leurs écritures, en incluant les opérations qu'ils ont précédemment observé, tout en minimisant les anomalies pour le programmeur. Cependant, les mises en œuvre actuelles de la cohérence causale sont susceptibles de connaitre des <i>ralentissements en chaîne</i> à l'échelle de plusieurs centres de données. Ce papier décrit la conception d'un système causalement cohérent, évolutif, et non exposé à l'impact que peut avoir un serveur lent ou défaillant, sur la disponibilité des données.<br/>
             <br/>
-            <b>Mots-clés :</b> ﻿Bases de données distribuées, géo-replication, cohérence causale, disponibilité sous partition.
+            <b>Mots-clés :</b> Bases de données distribuées, géo-replication, cohérence causale, disponibilité sous partition.
         </p>
     </shorttext>
     <veryshorttext>
