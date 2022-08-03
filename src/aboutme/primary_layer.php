@@ -46,7 +46,6 @@ function HV_aboutme_primary_layer() {
         <?php
         echo HV_aboutme_pl_description();
         echo HV_main_pl_work_experience();
-        echo HV_main_pl_lab_contact();
         ?>
     </div><!--//primary-->
     <!-- ====================== END MAIN PRIMARY LAYER ====================== -->

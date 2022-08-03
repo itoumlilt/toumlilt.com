@@ -141,7 +141,6 @@ function HV_thesis_primary_layer()
         <?php
         echo HV_thesis_pl_livestream_event();
         echo HV_thesis_pl_related_projects();
-        echo HV_main_pl_lab_contact();
         ?>
     </div>
     <!--//primary-->

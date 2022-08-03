@@ -50,41 +50,6 @@ function HV_main_pl_about_me()
     return ob_get_clean();
 }
 
-function HV_main_pl_lab_contact()
-{
-    ob_start();
-?>
-    <!-- ******************* MAIN PL LAB CONTACT ******************** -->
-    <section class="about section">
-        <div class="section-inner">
-            <h2 class="heading">Lab Contact</h2>
-            <div class="content">
-                <p>
-                    <b>Address :</b><br />
-                    Ilyas Toumlilt<br />
-                    Campus Pierre et Marie Curie<br />
-                    Sorbonne Université - LIP6<br />
-                    Case Courrier 169<br />
-                    Tower 26-00, Floor 2, Office 234<br />
-                    4 Place Jussieu<br />
-                    75252 PARIS CEDEX 05<br />
-                    FRANCE<br />
-                </p>
-                <p>
-                    <b>Phone:</b> +33 (0)1 44 27 88 17<br />
-                    <b>Email:</b> ilyas.toumlilt (at) lip6.fr
-                </p>
-            </div>
-            <!--//content-->
-        </div>
-        <!--//section-inner-->
-    </section>
-    <!--//section-->
-    <!-- ******************* END MAIN PL LAB CONTACT ******************** -->
-<?php
-    return ob_get_clean();
-}
-
 function HV_main_pl_my_github()
 {
     ob_start();
@@ -299,7 +264,6 @@ function HV_main_primary_layer()
         echo HV_main_pl_latest_projects();
         echo HV_main_pl_work_experience();
         echo HV_main_pl_my_github();
-        echo HV_main_pl_lab_contact();
         ?>
     </div>
     <!--//primary-->
