@@ -16,27 +16,29 @@ function HV_main_pl_about_me()
     <!-- ******************* MAIN PL ABOUT ME ******************** -->
     <section class="about section">
         <div class="section-inner">
-            <h2 class="heading">About Me</h2>
+            <h2 class="heading">Intro</h2>
             <div class="content">
                 <p>Hello World! Welcome to my personal website.</p>
-                <p>I'm currently a PhD Student and Teching Assistant in computer science
-                    at <a href="https://www.sorbonne-universite.fr/" target="_blank">Sorbonne University</a>
-                    (previously UPMC).
-                    I am part of the <a href="https://team.inria.fr/delys/fr/" target="_blank">
-                        Delys INRIA team</a> at Laboratoire d'Informatique de Paris 6
-                    (<a href="https://lip6.fr" target="_blank">LIP6</a>), under the supervision
-                    of <a href="https://pages.lip6.fr/Marc.Shapiro/" target="_blank">Marc Shapiro</a>.
+                <p>
+                    I'm a Systems Software Engineer and a PhD in Distributed Systems;
+                    My R&D topics concern the design of highly-available cloud and edge storage systems, data replication and consistency protocols, and the implementation of the Linux Kernel.
+                    I made several Open Source contributions around these topics.
                 </p>
                 <p>
-                    My research is focused on the design of highly available distributed systems and edge computing protocols. In collaboration with the <a href="https://www.lightkone.eu/" target="_blank">LightKone EU Project</a>.
+                    I teach Master and Licence Operating Systems lectures at
+                    <a href="https://www.sorbonne-universite.fr/" target="_blank">Sorbonne University</a>.
                 </p>
                 <p>
-                    I'm also a tech enthusiast, knowledgeable about Operating Systems and... a track and field athlete.
+                    I'm also a tech enthusiast,
+                    knowledgeable about Blockchains
+                    and a track and field athlete.
                 </p>
-                <a class="btn btn-cta-secondary" href="<?php echo URL_ABOUT_ME; ?>" target="_blank">
-                    <i class="fas fa-external-link-alt"></i>
-                    More details
-                </a>
+                <p>
+                    <a class="btn btn-cta-secondary" href="<?php echo URL_ABOUT_ME; ?>" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        More details about me
+                    </a>
+                </p>
             </div>
             <!--//content-->
         </div>
