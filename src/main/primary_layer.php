@@ -93,18 +93,6 @@ function HV_main_pl_latest_projects()
                 echo article_xpath_to_wide_html(parse_article_xml(article_id_to_filepath(4)), false);
                 ?>
                 <hr class="divider">
-                <?php
-                echo article_xpath_to_wide_html(parse_article_xml(article_id_to_filepath(3)), false);
-                ?>
-                <hr class="divider">
-                <?php
-                echo article_xpath_to_wide_html(parse_article_xml(article_id_to_filepath(2)), false);
-                ?>
-                <hr class="divider">
-                <?php
-                echo article_xpath_to_wide_html(parse_article_xml(article_id_to_filepath(1)), false);
-                ?>
-                <hr class="divider">
                 <!-- //item: The concordant platform -->
                 <div class="item row">
                     <a class="col-md-4 col-sm-4 col-xs-12" href="https://concordant.io" target="_blank">
@@ -158,6 +146,13 @@ function HV_main_pl_latest_projects()
                     <!--//desc-->
                 </div>
                 <!--//item-->
+
+                <hr class="divider">
+                <h4 class="title">
+                    <a href="<?php echo URL_BLOG; ?>">
+                        <i class="fas fa-external-link-alt"></i> See more articles and projects ...
+                    </a>
+                </h4>
 
             </div>
             <!--//content-->
