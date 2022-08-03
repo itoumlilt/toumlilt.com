@@ -3,7 +3,10 @@
 <blogarticle>
     <name>2017_06_27 Compas2017</name>
     <date>27/06/2017</date>
-    <etitle>Vers une cohérence causale évolutive sans chaînes de ralentissements</etitle>
+    <etitle>
+        <span class="label label-primary">FR</span>
+        Vers une cohérence causale évolutive sans chaînes de ralentissements
+    </etitle>
     <esummary>Publié à Compas 2017, Sophia Antipolis le 27 juin 2017</esummary>
     <externallink>null</externallink>
     <githublink>null</githublink>
