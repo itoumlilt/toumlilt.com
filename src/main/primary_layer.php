@@ -150,7 +150,7 @@ function HV_main_pl_latest_projects()
                 <hr class="divider">
                 <h4 class="title">
                     <a href="<?php echo URL_BLOG; ?>">
-                        <i class="fas fa-external-link-alt"></i> See more articles and projects ...
+                        <i class="fas fa-external-link-alt"></i> See older articles and projects ...
                     </a>
                 </h4>
 

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<blogarticle>
+    <name>2021_12_21 Thesis Defense</name>
+    <date>21/12/2021</date>
+    <etitle>PhD Thesis Defense</etitle>
+    <esummary>(Archive) Livestream video and documents</esummary>
+    <externallink>null</externallink>
+    <githublink>null</githublink>
+    <smallimg>/blogarticle_8_small.png</smallimg>
+    <wideimg>/blogarticle_8_wide.png</wideimg>
+    <fulltext>
+        <div class="alert alert-info" role="alert">
+            The livestream video will be accessible, after the PhD Defense, at the end of this blog post
+        </div>
+        <p>
+            <h3 class="title">
+                 Description
+            </h3>
+            <p>
+            My thesis defense,
+            completed within the <a href="https://lip6.fr" target="_blank">LIP6</a>
+                <a href="https://team.inria.fr/delys/fr/" target="_blank">Delys INRIA team</a> 
+            and titled
+            "Colony: A Hybrid Consistency System for Highly-Available Collaborative Edge Computing".
+                <br/>
+            Defended on Tuesday 21 December 2021 at 13:00 (Paris Time).
+                <br/>
+            This article contains an archive of the video presentation,
+            the thesis manuscript and related blog posts.
+                <br/>
+            </p>
+            <h3 class="title">
+                 Abstract
+            </h3>
+            <p>
+                Edge applications, such as gaming, cooperative engineering, or in-the-field information sharing, enjoy immediate response, autonomy and availability by distributing and replicating data at the edge. However, application developers and users demand the highest possible consistency guarantees, and specific support for group collaboration. To address this challenge, Colony guarantees Transactional Causal Plus Consistency (TCC+) globally, strengthened to Snapshot Isolation within edge groups. To help with scalability, fault tolerance and security, its logical communication topology is forest-like, with replicated roots in the core cloud, but with the flexibility to migrate a node or a group. Despite this hybrid approach, applications enjoy the same semantics everywhere in the topology. Our experiments show that local caching and peer groups improve throughput and response time significantly, performance is not affected in offline mode, and that migration is seamless.
+            </p>
+
+            <h3 class="title">
+                 Related Documents
+            </h3>
+            <p>
+                My Thesis Manuscript is accessible from <a href="https://hal.inria.fr/tel-03538565/" target="_blank">HAL Open Archive</a>
+                <br/>
+                Other related blog posts are available in
+                <a href="https://toumlilt.com/thesis" target="_blank">my thesis page</a>
+            </p>
+
+            <h3 class="title">
+                    Thesis Defense Video
+            </h3>
+            <p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bXCFtlgt69s" title="YouTube video player" frameborder="0" allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen">Youtube</iframe>
+            </p>
+        </p>
+
+    </fulltext>
+    <shorttext>
+        <p>
+                        My thesis defense,
+                        completed within the <a href="https://lip6.fr" target="_blank">LIP6</a>
+            <a href="https://team.inria.fr/delys/fr/" target="_blank">Delys INRIA team</a> 
+                        and titled
+                        "Colony: A Hybrid Consistency System for Highly-Available Collaborative Edge Computing".
+            <br/>
+                        Defended on Tuesday 21 December 2021 at 13:00 (Paris Time).
+            <br/>
+                        This article contains an archive of the video presentation,
+                        the thesis manuscript and related blog posts.
+            <br/>
+        </p>
+    </shorttext>
+    <veryshorttext>
+        <p>
+                        Causal Consistency, Collaborative Computing, Edge Computing, CRDTs, Peer-to-Peer Systems.
+        </p>
+    </veryshorttext>
+</blogarticle>

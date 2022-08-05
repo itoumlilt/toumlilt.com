@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<blogarticle>
+    <name>2021_04_24 AntidoteDB</name>
+    <date>24/04/2021</date>
+    <etitle>
+        AntidoteDB
+        <span class="label label-theme">open source</span>
+    </etitle>
+    <esummary>A planet scale, highly available, transactional database</esummary>
+    <externallink>https://www.antidotedb.eu/</externallink>
+    <githublink>https://github.com/antidotedb/antidote</githublink>
+    <smallimg>/blogarticle_6_small.png</smallimg>
+    <wideimg>/blogarticle_6_wide.png</wideimg>
+    <fulltext>
+        <p>
+            AntidoteDB is a highly available geo-replicated key-value database. AntidoteDB provides features that help programmers to write correct applications while having the same performance and horizontal scalability as AP/NoSQL databases. Furthermore, AntidoteDB operations are based on the principle of synchronization-free execution by using Conflict-free replicated datatypes (CRDTs).
+        </p>
+        <p>
+            This project is an Open Source collaboration from my thesis at Sorbonne University,
+            on the <a href="https://www.lightkone.eu/">LightKone</a> and the 
+            <a href="https://pages.lip6.fr/syncfree/">SyncFree</a>
+            European projects.
+        </p>
+    </fulltext>
+    <shorttext>
+        <p>
+            AntidoteDB is a highly available geo-replicated key-value database. AntidoteDB provides features that help programmers to write correct applications while having the same performance and horizontal scalability as AP/NoSQL databases. Furthermore, AntidoteDB operations are based on the principle of synchronization-free execution by using Conflict-free replicated datatypes (CRDTs).
+        </p>
+        <p>
+            This project is an Open Source collaboration from my thesis at Sorbonne University,
+            on the <a href="https://www.lightkone.eu/">LightKone</a> and the 
+            <a href="https://pages.lip6.fr/syncfree/">SyncFree</a>
+            European projects.
+        </p>
+    </shorttext>
+    <veryshorttext>
+        <p>
+            A planet scale, highly available, transactional database
+        </p>
+    </veryshorttext>
+</blogarticle>
