@@ -8,13 +8,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - Added
+  - config folder with config files examples
+  - dist-prod and dist-dev folders, with default basic config
+  - Makefile to build and clean dist folders
+  - CI/CD for Github Actions
+  - CI/CD documentation
 - Changed
   - Update main intro text
   - CHANGELOG compact format
 - Deprecated
+  - Flat folders structure, now using separate src and dist-*
+  - shared .htaccess
 - Removed
   - Lab Contact section
-  - Rremove old articles from main page and add link to reach them
+  - Remove old articles from main page and add link to reach them
+  - setup-prod script -> replaced with Makefile
 - Fixed
 - Security
 - external libs

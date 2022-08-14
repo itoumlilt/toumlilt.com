@@ -1,4 +1,10 @@
 # config files are pushed as examples that has to be
 # updated when deployed in production
-config.php
+# config.php
 .htaccess
+
+dist-dev/*
+!dist-dev/config.php
+
+dist-prod/*
+!dist-prod/config.php

@@ -1,0 +1,71 @@
+server {
+
+    root /var/www/toumlilt.com/html;
+    index index.php index.html index.htm;
+
+    # Using my custom format "main" (see nginx.conf)
+    # for this log, compatible w/awstats
+    access_log /var/log/nginx/toumlilt.com.access.log main;
+    error_log /var/log/nginx/toumlilt.com.error.log;
+
+    server_name toumlilt.com www.toumlilt.com;
+
+	if ($host = www.toumlilt.com) {
+		return 301 https://toumlilt.com$request_uri;
+	}
+
+	# website specific rules
+	location = /index {
+		rewrite ^(.*)$ /index.php;
+	}
+
+	location = /blog {
+		rewrite ^(.*)$ /www/articles/articles.php;
+	}
+
+	location = /thesis {
+		rewrite ^(.*)$ /www/thesis/thesis.php;
+	}
+
+	location /thesis {
+		rewrite ^/thesis-defense-livestream$ /www/thesis/thesis.php;
+	}
+
+	location /about {
+  		rewrite ^/about-me$ /www/aboutme/aboutme.php;
+	}
+
+	# default rules
+    location / {
+        try_files $uri $uri.html $uri/ @extensionless-php;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+    }
+
+    location /static-share {
+        root /var/www/toumlilt.com;
+    }
+
+    location @extensionless-php {
+        rewrite ^(.*)$ $1.php last;
+    }
+
+    listen 443 ssl; # managed by Certbot
+}
+server {
+    if ($host = www.toumlilt.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = toumlilt.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    server_name toumlilt.com www.toumlilt.com;
+    listen 80;
+    return 404; # managed by Certbot
+}
