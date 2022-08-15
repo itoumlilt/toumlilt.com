@@ -8,3 +8,5 @@ dist-dev/*
 
 dist-prod/*
 !dist-prod/config.php
+
+.vscode
