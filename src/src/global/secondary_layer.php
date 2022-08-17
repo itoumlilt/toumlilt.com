@@ -126,7 +126,7 @@ function htmlview_sl_credits()
             <div class="content">
                 <ul class="list-unstyled">
                     <li><a href="http://getbootstrap.com/" target="_blank"><i class="fas fa-external-link-alt"></i> Bootstrap 3.2</a></li>
-                    <li><a href="https://fontawesome.com/" target="_blank"><i class="fas fa-external-link-alt"></i> FontAwesome 5.7.2</a></li>
+                    <li><a href="https://fontawesome.com/" target="_blank"><i class="fas fa-external-link-alt"></i> FontAwesome 6.1.2</a></li>
                     <li><a href="http://jquery.com/" target="_blank"><i class="fas fa-external-link-alt"></i> jQuery</a></li>
                     <li><a href="http://caseyscarborough.com/projects/github-activity/" target="_blank"><i class="fas fa-external-link-alt"></i> GitHub Activity Stream</a></li>
                     <li><a href="https://github.com/sdepold/jquery-rss" target="_blank"><i class="fas fa-external-link-alt"></i> jQuery RSS</a></li>
