@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<blogarticle>
+    <name>2022_06_25 PhD Ceremony</name>
+    <date>25/06/2022</date>
+    <etitle>PhD Graduation</etitle>
+    <esummary>A summary list of my PhD thesis contributions</esummary>
+    <externallink>null</externallink>
+    <githublink>null</githublink>
+    <smallimg>/blogarticle_10_wide.png</smallimg>
+    <wideimg>/blogarticle_10_wide.png</wideimg>
+    <fulltext>
+        <p>
+            I am currently stuck in the PhD graduation ceremony at Sorbonne University, where the tradition is that each of the 2xx PhDs of the class goes on stage to get his diploma, his sash and take a picture with the directors... So I take advantage of this long moment of waiting to make a last article to summarize my contributions of these 4 years of thesis.
+            <hr class="divider"/>
+            <h2 class="heading">
+                Main Publications
+            </h2>
+
+            <h3 class="title">
+                Thesis Manuscript
+            </h3>
+            <p>
+                Colony: a Hybrid Consistency System for Highly-Available Collaborative Edge Computing.
+            </p>
+            <p>
+                <a class="more-link" href="https://tel.archives-ouvertes.fr/tel-03727724v2" target="_blank">
+                    <i class="fas fa-external-link-alt">.</i> Open access on HAL</a>
+                <br/>
+                <a class="more-link" href="https://hal.inria.fr/tel-03727724v2/bibtex" target="_blank">
+                    <i class="fas fa-external-link-alt">.</i> Bibtex cite</a>
+                <br/>
+            </p>
+
+            <h3 class="title">
+                Highly-available and consistent group collaboration at the edge with colony
+            </h3>
+            <p>
+                Middleware 2021: 22nd International Middleware Conference, Dec 2021, Québec / Virtual, Canada. pp.336-351,
+            </p>
+            <p>
+                <a class="more-link" href="https://hal.inria.fr/hal-03353663" target="_blank">
+                    <i class="fas fa-external-link-alt">.</i> Open access on HAL</a>
+                <br/>
+                <a class="more-link" href="https://dl.acm.org/doi/abs/10.1145/3464298.3493405" target="_blank">
+                    <i class="fas fa-external-link-alt">.</i> ACM Proceedings</a>
+                <br/>
+                <a class="more-link" href="https://hal.inria.fr/hal-03353663v3/bibtex" target="_blank">
+                    <i class="fas fa-external-link-alt">.</i> Bibtex cite</a>
+            </p>
+
+            <h3 class="title">
+                Vers une cohérence causale évolutive sans chaînes de ralentissements
+            </h3>
+            <p>
+                Compas 2017: Conférence d'informatique en Parallélisme, Architecture et Système, Jun 2017, Nice Sophia-Antipolis, France.
+            </p>
+            <p>
+                <a class="more-link" href="https://hal.archives-ouvertes.fr/hal-01860334/" target="_blank">
+                    <i class="fas fa-external-link-alt">.</i> Open access on HAL</a>
+                <br/>
+                <a class="more-link" href="https://hal.archives-ouvertes.fr/hal-01860334v1/bibtex" target="_blank">
+                    <i class="fas fa-external-link-alt">.</i> Bibtex cite</a>
+            </p>
+
+            <hr class="divider"/>
+            <h2 class="heading">
+                Open Source projects
+            </h2>
+
+            <!--//item: Colony -->
+            <div class="item row">
+                <a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/itoumlilt/Colony" target="_blank">
+                    <img class="img-responsive project-image" src="assets/images/blogarticles/blogarticle_10_img_2.png" alt="project name" />
+                </a>
+                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                    <h3 class="title">
+                        <a href="https://github.com/itoumlilt/Colony" target="_blank">ColonyDB</a>
+                    </h3>
+                    <p>
+                            My Thesis research prototype.
+                        <br/>
+                            A local-first Edge datastore, with Peer-to-Peer groups strong consistency collaboration, CRDT API and cloud backend.
+                    </p>
+                    <p>
+                        <a class="more-link" href="https://github.com/itoumlilt/Colony" target="_blank">
+                            <i class="fas fa-external-link-alt">.</i> View on Github</a>
+                    </p>
+                </div>
+                <!--//desc-->
+            </div>
+            <!--//item-->
+
+            <!--//item: AntidoteDB -->
+            <div class="item row">
+                <a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/itoumlilt/antidote" target="_blank">
+                    <img class="img-responsive project-image" src="assets/images/blogarticles/blogarticle_10_img_5.png" alt="project name"/>
+                </a>
+                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                    <h3 class="title">
+                        <a href="https://github.com/itoumlilt/antidote" target="_blank">AntidoteDB</a>
+                    </h3>
+                    <p>
+                            AntidoteDB is a highly available geo-replicated key-value database. AntidoteDB provides features that help programmers to write correct applications while having the same performance and horizontal scalability as AP/NoSQL databases. Furthermore, AntidoteDB operations are based on the principle of synchronization-free execution by using Conflict-free replicated datatypes (CRDTs).
+                    </p>
+                    <p>
+                        <a class="more-link" href="https://github.com/itoumlilt/antidote" target="_blank">
+                            <i class="fas fa-external-link-alt">.</i> View on Github</a>
+                    </p>
+                </div>
+                <!--//desc-->
+            </div>
+            <!--//item-->
+
+            <!--//item: C-CRDT Lib -->
+            <div class="item row">
+                <a class="col-md-4 col-sm-4 col-xs-12" href="hhttps://github.com/itoumlilt/c-crdtlib" target="_blank">
+                    <img class="img-responsive project-image" src="assets/images/blogarticles/blogarticle_10_img_6.png" alt="project name"/>
+                </a>
+                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                    <h3 class="title">
+                        <a href="https://github.com/itoumlilt/c-crdtlib" target="_blank">CRDT Library</a>
+                    </h3>
+                    <p>
+                        The Concordant Conflict-Free Replicated Datatypes library.
+                    </p>
+                    <p>
+                        <a class="more-link" href="https://github.com/itoumlilt/c-crdtlib" target="_blank">
+                            <i class="fas fa-external-link-alt">.</i> View on Github</a>
+                    </p>
+                </div>
+                <!--//desc-->
+            </div>
+            <!--//item-->
+
+            <!--//item: CRDT Spreadsheet -->
+            <div class="item row">
+                <a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/itoumlilt/CRDT-Spreasheet" target="_blank">
+                    <img class="img-responsive project-image" src="assets/images/blogarticles/blogarticle_10_img_4.png" alt="project name"/>
+                </a>
+                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                    <h3 class="title">
+                        <a href="https://github.com/itoumlilt/CRDT-Spreasheet" target="_blank">CRDT Collaborative Spreadsheet</a>
+                    </h3>
+                    <p>
+                        A Collaborative CRDT-based Spreadsheet demo app, built using my collaborative local-first service on top of PouchDB.
+                    </p>
+                    <p>
+                        <a class="more-link" href="https://github.com/itoumlilt/CRDT-Spreasheet" target="_blank">
+                            <i class="fas fa-external-link-alt">.</i> View on Github</a>
+                    </p>
+                </div>
+                <!--//desc-->
+            </div>
+            <!--//item-->
+
+            <!--//item: MD Editor -->
+            <div class="item row">
+                <a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/itoumlilt/crdt-md-editor" target="_blank">
+                    <img class="img-responsive project-image" src="assets/images/blogarticles/blogarticle_10_img_3.png" alt="project name"/>
+                </a>
+                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                    <h3 class="title">
+                        <a href="https://github.com/itoumlilt/crdt-md-editor" target="_blank">CRDT Markdown Editor</a>
+                    </h3>
+                    <p>
+                            Collaborative text editing application using two eventual consitency backends: revision-based and CRDT-based. This demo shows that with a revision based approach, the user loses updates, either if updates are executed concurrently online, or if multiple users edit the document offline.
+                    </p>
+                    <p>
+                        <a class="more-link" href="https://github.com/itoumlilt/crdt-md-editor" target="_blank">
+                            <i class="fas fa-external-link-alt">.</i> View on Github</a>
+                    </p>
+                </div>
+                <!--//desc-->
+            </div>
+            <!--//item-->
+
+            <p>
+                <a class="more-link" href="https://github.com/itoumlilt?tab=repositories" target="_blank">
+                    <i class="fas fa-external-link-alt">.</i> More projects on my Github</a>
+            </p>
+
+            <hr class="divider"/>
+            <h2 class="heading">
+                Collaborations
+            </h2>
+
+            <h3 class="title">
+                RainbowFS ANR Project
+            </h3>
+            <p>
+                RainbowFS is a collaborative research project funded by French National Agency for Research (ANR), this project founded my thesis grant and the collaboration behind the Colony paper.
+                <br/>
+                The aim of RainbowFS is to investigate an approach to distributed storage that ensures consistency semantics tailored to the application, while retaining scalability and availability.
+            </p>
+            <p>
+                <a class="more-link" href="https://pages.lip6.fr/syncfree/index.html" target="_blank">
+                    <i class="fas fa-external-link-alt">.</i> RainbowFS Website</a>
+            </p>
+
+            <h3 class="title">
+                LightKone EU Consortium
+            </h3>
+            <p>
+                The EU project LightKone aims to develop a scientifically sound and industrially validated model for doing general-purpose computation on edge networks.
+            </p>
+            <p>
+                <a class="more-link" href="https://lightkone.eu" target="_blank">
+                    <i class="fas fa-external-link-alt">.</i> LightKone Website</a>
+            </p>
+
+            <h3 class="title">
+                SyncFree EU Project
+            </h3>
+            <p>
+                The SyncFree project aims to develop both theoretical and practical understanding of large-scale synchronisation-free programming.
+                AntidoteDB is one of this projects main contributions.
+            </p>
+            <p>
+                <a class="more-link" href="https://pages.lip6.fr/syncfree/index.html" target="_blank">
+                    <i class="fas fa-external-link-alt">.</i> SyncFree Website</a>
+            </p>
+
+            <hr class="divider"/>
+            <h2 class="heading">
+                Teaching
+            </h2>
+
+            <p>
+                During my thesis, I taught in the following courses:
+                <ul>
+                    <li>Programming inside the Linux Kernel (master 1)</li>
+                    <li>Multicore Kernels and Virtualisation (master 2)</li>
+                    <li>Security and System Administration (master 1)</li>
+                    <li>Introduction to Operating Systems (licence 2)</li>
+                    <li>Introduction to Java (licence 2)</li>
+                </ul>
+            </p>
+
+        </p>
+    </fulltext>
+    <shorttext>
+        <p>
+            I am currently stuck in the PhD graduation ceremony at Sorbonne University, where the tradition is that each of the 2xx PhDs of the class goes on stage to get his diploma, his sash and take a picture with the directors... So I take advantage of this long moment of waiting to make a last article to summarize my contributions of these 4 years of thesis.
+        </p>
+    </shorttext>
+    <veryshorttext>
+        <p>
+            A last research article to summarize my contributions of these 4 years of thesis.
+        </p>
+    </veryshorttext>
+</blogarticle>

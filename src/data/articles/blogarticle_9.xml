@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<blogarticle>
+    <name>2022_04_01 The Concordant.io Platform</name>
+    <date>01/04/2022</date>
+    <etitle>
+        The Concordant.io Platform
+        <span class="label label-theme">open source</span>
+        <span class="label label-primary">project</span>
+    </etitle>
+    <esummary>More power to your edge app</esummary>
+    <externallink>https://concordant.io/</externallink>
+    <githublink>https://github.com/concordant</githublink>
+    <smallimg>/blogarticle_9_small.png</smallimg>
+    <wideimg>/blogarticle_9_wide.png</wideimg>
+    <fulltext>
+        <p>
+            <h3 class="title">
+                Concordant.io: The next generation
+            </h3>
+            <p>
+                Concordant turns the traditional BaaS design on its head. Concordant is local-first; it enjoys fast response and is always available. It seamlessly supports online and offline mode for apps, and is designed for collaboration. However, Concordant can leverage the cloud when advantageous: for stable storage, notification services, or data analytics, among others.
+            </p>
+            <p>
+                Concordant simplifies the development of new mobile applications, or enriching an existing cloud-based application with edge and mobile capabilities.
+            </p>
+            <p>
+                Concordant's unique features empower the developer of edge and mobile apps, while making development easier than ever. Let's take a look of what's under the hood.
+            </p>
+            <h3 class="title">
+                Local-first Design
+            </h3>
+            <script type="application/javascript">
+                document.write('<img src="' + window.location.protocol + '//' + window.location.host + '/assets/images/blogarticles/blogarticle_9_fig_1.png" alt="figure local-first" style="width: 100%"/>
+' )
+            </script>
+            <img src="/assets/images/blogarticles/blogarticle_9_fig_1.png" alt="figure local-first" style="width: 100%"/>
+            <p>
+                Thanks to its local-first design, Concordant provides a smooth experience to users. Data on the device remains available and consistent, even across device restarts, and even when connectivity is poor. The app on the device does not need to wait for a cloud server. This asynchronous data- sharing model guarantees seamless transition between online and offline periods. Close-by devices exchange data directly, without depending on a pre-existing infrastructure. Data is synchronised and backed up in order of priority, in order to make the best of available bandwidth, even over flaky networks.
+            </p>
+            <h3 class="title">
+                CRDT data model
+            </h3>
+            <script type="application/javascript">
+                document.write('<img src="' + window.location.protocol + '//' + window.location.host + '/assets/images/blogarticles/blogarticle_9_fig_2.svg" alt="figure CRDT data model" style="width: 100%"/>
+' )
+            </script>
+            <img src="/assets/images/blogarticles/blogarticle_9_fig_2.svg" alt="figure CRDT data model" style="width: 100%"/>
+            <p>
+                Concordant uses the CRDT data model. With CRDTs, data located on a device can always be modified, even in the presence of failures and disconnection. CRDTs implement automatic conflict resolution, using mathematically-proven rules. CRDTs are an industry-tested technique that has been adopted in multiple commercial products. Concordant offers an extensive set of efficient CRDT data types, with resolution policies adapted to your app. CRDTs ensure that, even when multiple users update the same data, it converges on all devices, concordant with business logic and with user expectations.
+            </p>
+            <h3 class="title">
+                Consistency beyond CRDTs
+            </h3>
+            <p>
+                CRDTs provide the foundation, convergence; but guaranteeing the correctness of an application may require more. Concordant provides consistency beyond CRDTs, and enforces correctness across objects, with built-in support for: highly available transactions, providing atomic updates while remaining available in the presence of failures and disconnection; referential integrity, making sure that cross-object references remain valid despite concurrent updates; check constraints, guaranteeing that the value of a data item remains valid at all times; and causal consistency, ensuring that devices observe all updates in the correct order.
+            </p>
+            <p>
+                Concordant does not impose a single, universal (and overkill) model of consistency, but adapts to the requirements of your app.
+            </p>
+            <h3 class="title">
+                Edge Presence
+            </h3>
+            <p>
+                Concordant supports peer-to-peer collaboration between devices in close proximity, for instance over Bluetooth or Wi-Fi Direct. The group can work together on the move, without depending on some local infrastructure (often underpowered) to connect to the cloud. Furthermore, Concordant's edge technology can create a local point of presence (PoP) for the group on a PC or a micro-data-center, to replicate the app's database and to connect mobile devices, in particular those that lack peer-to-peer capability.
+            </p>
+            <p>
+                Concordant also powers C-PoP, a portable PoP appliance that enables users to move along with their data halo. With C-PoP, nearby devices automatically find and share data together even without a pre-existing infrastructure.
+            </p>
+            <p>
+                <b>Building on this expertise, Concordant is the platform that helps create innovative edge apps with power, speed, and availability.</b>
+            </p>
+            <p>
+                <a href="/data/attachements/visionpaper-concordant-2022.pdf" class="btn btn-primary" role="button">
+                    <span class="glyphicon glyphicon-download" aria-hidden="true">.</span> Download the full Concordant Vision Paper
+                </a>
+            </p>
+        </p>
+    </fulltext>
+    <shorttext>
+        <p>
+           Build mobile, edge, and collaborative applications that just work, anywhere across the edge-cloud spectrum, seamlessly whether connected or not. Choose your deployment, in the cloud or on-premise; Concordant maintains app consistency and keeps it up and running. Develop applications quickly, with a single code base for multiple devices. Reduce time to market, and focus on your customers' needs.
+        </p>
+    </shorttext>
+    <veryshorttext>
+        <p>
+            Concordant is an innovative Backend-as-a-Service (BaaS) platform that makes it easy to develop powerful edge apps.
+        </p>
+    </veryshorttext>
+</blogarticle>

@@ -86,66 +86,24 @@ function HV_main_pl_latest_projects()
             <h2 class="heading">Latest Projects & Blog posts</h2>
             <div class="content">
                 <?php
-                echo article_xpath_to_wide_html(parse_article_xml(article_id_to_filepath(5)), false);
+                echo article_xpath_to_wide_html(parse_article_xml(article_id_to_filepath(10)), false);
                 ?>
                 <hr class="divider">
                 <?php
-                echo article_xpath_to_wide_html(parse_article_xml(article_id_to_filepath(4)), false);
+                echo article_xpath_to_wide_html(parse_article_xml(article_id_to_filepath(9)), false);
                 ?>
                 <hr class="divider">
-                <!-- //item: The concordant platform -->
-                <div class="item row">
-                    <a class="col-md-4 col-sm-4 col-xs-12" href="https://concordant.io" target="_blank">
-                        <img class="img-responsive project-image" src="assets/images/projects/project-concordant.png" alt="project name">
-                    </a>
-                    <div class="desc col-md-8 col-sm-8 col-xs-12">
-                        <h3 class="title"><a href="https://concordant.io" target="_blank">The Concordant Platform</a> <span class="label label-theme">open source</span></h3>
-                        <p>
-                            Build mobile, edge, and collaborative applications that just work, anywhere across the edge-cloud spectrum, seamlessly whether connected or not. Choose your deployment, in the cloud or on-premise; Concordant maintains app consistency and keeps it up and running. Develop applications quickly, with a single code base for multiple devices. Reduce time to market, and focus on your customers' needs.
-                        </p>
-                        <p><a class="more-link" href="https://concordant.io" target="_blank"><i class="fas fa-external-link-alt"></i> Find out more</a></p>
-                    </div>
-                    <!--//desc-->
-                </div>
-                <!--//item-->
-
-                <!--//item: MD Editor -->
-                <div class="item row">
-                    <a class="col-md-4 col-sm-4 col-xs-12" href="https://github.com/itoumlilt/crdt-md-editor" target="_blank">
-                        <img class="img-responsive project-image" src="assets/images/projects/project-crdt-mded.png" alt="project name">
-                    </a>
-                    <div class="desc col-md-8 col-sm-8 col-xs-12">
-                        <h3 class="title">
-                            <a href="https://github.com/itoumlilt/crdt-md-editor" target="_blank">CRDT Markdown Editor</a>
-                            <span class="label label-theme">open source</span>
-                        </h3>
-                        <p>
-                            Collaborative text editing application using two eventual consitency backends: revision-based and CRDT-based. This demo shows that with a revision based approach, the user loses updates, either if updates are executed concurrently online, or if multiple users edit the document offline. To have an adequate semantics, the user needs to provide custom, non-trivial, code to merge the updates executed by each user. With the CRDT-based backend, update convergence is available out-of-the-box.
-                        </p>
-                        <p><a class="more-link" href="https://github.com/itoumlilt/crdt-md-editor" target="_blank"><i class="fas fa-external-link-alt"></i> Find out more</a></p>
-                    </div>
-                    <!--//desc-->
-                </div>
-                <!--//item-->
-
-                <!-- //item: antidoteDB -->
-                <div class="item row">
-                    <a class="col-md-4 col-sm-4 col-xs-12" href="https://www.antidotedb.eu/" target="_blank">
-                        <img class="img-responsive project-image" src="assets/images/projects/project-antidotedb.png" alt="project name">
-                    </a>
-                    <div class="desc col-md-8 col-sm-8 col-xs-12">
-                        <h3 class="title">
-                            <a href="https://www.antidotedb.eu/" target="_blank">AntidoteDB</a>
-                            <span class="label label-theme">open source</span>
-                        </h3>
-                        <p>
-                            AntidoteDB is a highly available geo-replicated key-value database. AntidoteDB provides features that help programmers to write correct applications while having the same performance and horizontal scalability as AP/NoSQL databases. Furthermore, AntidoteDB operations are based on the principle of synchronization-free execution by using Conflict-free replicated datatypes (CRDTs).
-                        </p>
-                        <p><a class="more-link" href="https://www.antidotedb.eu/" target="_blank"><i class="fas fa-external-link-alt"></i> Find out more</a></p>
-                    </div>
-                    <!--//desc-->
-                </div>
-                <!--//item-->
+                <?php
+                echo article_xpath_to_small_html(parse_article_xml(article_id_to_filepath(8)), false);
+                ?>
+                <hr class="divider">
+                <?php
+                echo article_xpath_to_small_html(parse_article_xml(article_id_to_filepath(7)), false);
+                ?>
+                <hr class="divider">
+                <?php
+                echo article_xpath_to_small_html(parse_article_xml(article_id_to_filepath(6)), false);
+                ?>
 
                 <hr class="divider">
                 <h4 class="title">
