@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - CI/CD for Github Actions
   - CI/CD documentation
   - Thesis and contributions articles
+  - Web profiles links to secondary layer
 - Changed
   - Update main intro text
   - CHANGELOG compact format

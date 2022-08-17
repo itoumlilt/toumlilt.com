@@ -115,6 +115,145 @@ function htmlview_sl_langages()
     return ob_get_clean();
 }
 
+function htmlview_sl_profils()
+{
+    ob_start();
+?>
+    <!-- ******************* SL PROFILS ******************** -->
+    <aside class="credits aside section">
+        <div class="section-inner">
+            <h2 class="heading">Web Profils</h2>
+            <div class="content">
+                <ul class="list-unstyled">
+                    <!-- Github -->
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <a href="https://github.com/itoumlilt" target="_blank">
+                                    Github
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Gitlab -->
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <i class="fa-brands fa-gitlab"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <a href="https://gitlab.com/itoumlilt" target="_blank">
+                                    Gitlab
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Google Scholar -->
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <i class="fa-brands fa-google"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <a href="https://scholar.google.fr/citations?user=067J9hgAAAAJ&hl=en" target="_blank">
+                                    Google Scholar
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Instagram -->
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <a href="https://www.instagram.com/ilyas.tw/" target="_blank">
+                                    Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- LinkedIn -->
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <a href="https://www.linkedin.com/in/ilyastoumlilt/" target="_blank">
+                                    LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Medium -->
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <i class="fa-brands fa-medium"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <a href="https://itoumlilt.medium.com/" target="_blank">
+                                    Medium
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- ReasearchGate -->
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1">
+                            <i class="fa-brands fa-researchgate"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <a href="https://www.researchgate.net/profile/Ilyas-Toumlilt" target="_blank">
+                                    Research Gate
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Strava -->
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <i class="fa-brands fa-strava"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <a href="https://www.strava.com/athletes/22914252" target="_blank">
+                                    Strava
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Twitter -->
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <a href="https://twitter.com/ilyasToumlilt" target="_blank">
+                                    Twitter
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//section-inner-->
+    </aside>
+    <!--//section-->
+    <!-- ******************* END SL PROFILS ******************** -->
+<?php
+    return ob_get_clean();
+}
+
 function htmlview_sl_credits()
 {
     ob_start();
@@ -313,11 +452,12 @@ function htmlview_default_secondary_layer()
     <div class="secondary col-md-4 col-sm-12 col-xs-12">
         <?php
         echo htmlview_sl_basic_information();
+        echo HV_sl_latest_blog_posts();
+        echo htmlview_sl_profils();
+        echo HV_sl_favourite_music();
         echo htmlview_sl_education();
         // echo HV_sl_skills();
         echo HV_sl_conferences();
-        echo HV_sl_latest_blog_posts();
-        echo HV_sl_favourite_music();
         // echo htmlview_sl_langages();
         echo htmlview_sl_credits();
         ?>
