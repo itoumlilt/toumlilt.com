@@ -1,4 +1,5 @@
 <?php
+
 /**
  */
 
@@ -98,30 +99,26 @@ function article_id_to_URL($id)
 function article_xpath_to_wide_html($article_xpath, $full_text = false)
 {
     ob_start();
-    ?>
+?>
     <!-- _________________ <?php echo $article_xpath['name']; ?> ________________ -->
     <div class="item featured text-center">
         <h3 class="title">
-            <a href="<?php echo article_id_to_URL($article_xpath['id']); ?>"
-               target="_blank">
+            <a href="<?php echo article_id_to_URL($article_xpath['id']); ?>" target="_blank">
                 <?php echo $article_xpath['etitle']; ?>
             </a>
         </h3>
         <?php
         if ($article_xpath['esummary'] != "null") {
-            ?>
+        ?>
             <p class="summary">
                 <?php echo $article_xpath['esummary']; ?>
             </p>
-            <?php
+        <?php
         }
         ?>
         <div class="featured-image">
-            <a href="<?php echo article_id_to_URL($article_xpath['id']); ?>"
-               target="_blank">
-                <img class="img-responsive project-image"
-                     src="<?php echo $article_xpath['wideimg']; ?>"
-                     alt="<?php echo $article_xpath['name']; ?>"/>
+            <a href="<?php echo article_id_to_URL($article_xpath['id']); ?>" target="_blank">
+                <img class="img-responsive project-image" src="<?php echo $article_xpath['wideimg']; ?>" alt="<?php echo $article_xpath['name']; ?>" />
             </a>
             <div class="ribbon">
                 <?php
@@ -138,44 +135,42 @@ function article_xpath_to_wide_html($article_xpath, $full_text = false)
             else
                 echo $article_xpath['shorttext'];
             ?>
-        </div><!--//desc-->
+        </div>
+        <!--//desc-->
         <?php
         if ($article_xpath['githublink'] != "null") {
-            ?>
-            <a class="btn btn-cta-secondary"
-               href="<?php echo $article_xpath['githublink']; ?>"
-               target="_blank">
-                <i class="fas fa-github"></i>
+        ?>
+            <a class="btn btn-cta-secondary" href="<?php echo $article_xpath['githublink']; ?>" target="_blank">
+                <i class="fa-brands fa-github"></i>
                 View on Github
             </a>
-            <?php
+        <?php
         }
         if ($article_xpath['externallink'] != "null") {
-            ?>
-            <a class="btn btn-cta-secondary"
-               href="<?php echo $article_xpath['externallink']; ?>"
-               target="_blank">
+        ?>
+            <a class="btn btn-cta-secondary" href="<?php echo $article_xpath['externallink']; ?>" target="_blank">
                 <i class="fas fa-external-link-alt"></i>
                 More details
             </a>
-            <?php
+        <?php
         }
-        if($article_xpath['githublink'] == "null"
-        && $article_xpath['externallink'] == "null"
-        && !$full_text) {
-            ?>
-            <a class="btn btn-cta-secondary"
-               href="<?php echo article_id_to_URL($article_xpath['id']); ?>"
-               target="_blank">
+        if (
+            $article_xpath['githublink'] == "null"
+            && $article_xpath['externallink'] == "null"
+            && !$full_text
+        ) {
+        ?>
+            <a class="btn btn-cta-secondary" href="<?php echo article_id_to_URL($article_xpath['id']); ?>" target="_blank">
                 <i class="fas fa-external-link-alt"></i>
                 More details
             </a>
-            <?php
+        <?php
         }
         ?>
-    </div><!--//item-->
+    </div>
+    <!--//item-->
     <!-- _________________ END <?php echo $article_xpath['name']; ?> ________________ -->
-    <?php
+<?php
     return ob_get_clean();
 }
 
@@ -188,54 +183,45 @@ function article_xpath_to_wide_html($article_xpath, $full_text = false)
 function article_xpath_to_small_html($article_xpath)
 {
     ob_start();
-    ?>
+?>
     <!-- _________________ <?php echo $article_xpath['name']; ?> ________________ -->
     <div class="item row">
-        <a class="col-md-4 col-sm-4 col-xs-12"
-           href="<?php echo article_id_to_URL($article_xpath['id']); ?>"
-           target="_blank">
-            <img class="img-responsive project-image"
-                 src="<?php echo $article_xpath['smallimg']; ?>"
-                 alt="<?php echo $article_xpath['name']; ?>"/>
+        <a class="col-md-4 col-sm-4 col-xs-12" href="<?php echo article_id_to_URL($article_xpath['id']); ?>" target="_blank">
+            <img class="img-responsive project-image" src="<?php echo $article_xpath['smallimg']; ?>" alt="<?php echo $article_xpath['name']; ?>" />
         </a>
         <div class="desc col-md-8 col-sm-8 col-xs-12">
             <h3 class="title">
-                <a href="<?php echo article_id_to_URL($article_xpath['id']); ?>"
-                   target="_blank">
+                <a href="<?php echo article_id_to_URL($article_xpath['id']); ?>" target="_blank">
                     <?php echo $article_xpath['etitle']; ?>
                 </a>
             </h3>
             <?php echo $article_xpath['shorttext']; ?>
             <?php
             if ($article_xpath["githublink"] != null) {
-                ?>
-                <p><a class="more-link"
-                      href="<?php echo $article_xpath['githublink']; ?>"
-                      target="_blank"><i class="fas fa-external-link-alt">
+            ?>
+                <p><a class="more-link" href="<?php echo $article_xpath['githublink']; ?>" target="_blank"><i class="fa-brands fa-github">
                         </i> View on github</a>
                 </p>
-                <?php
+            <?php
             }
             if ($article_xpath["externallink"] != null) {
-                ?>
-                <p><a class="more-link"
-                      href="<?php echo $article_xpath['externallink']; ?>"
-                      target="_blank"><i class="fas fa-external-link-alt">
+            ?>
+                <p><a class="more-link" href="<?php echo $article_xpath['externallink']; ?>" target="_blank"><i class="fas fa-external-link-alt">
                         </i> External link</a>
                 </p>
-                <?php
+            <?php
             }
 
             ?>
-            <p><a class="more-link"
-                  href="<?php echo article_id_to_URL($article_xpath['id']); ?>"
-                  ><i class="fas fa-external-link-alt">
+            <p><a class="more-link" href="<?php echo article_id_to_URL($article_xpath['id']); ?>"><i class="fas fa-external-link-alt">
                     </i> More details ...</a>
             </p>
-        </div><!--//desc-->
-    </div><!--//item-->
+        </div>
+        <!--//desc-->
+    </div>
+    <!--//item-->
     <!-- _________________ END <?php echo $article_xpath['name']; ?> ________________ -->
-    <?php
+<?php
     return ob_get_clean();
 }
 
@@ -273,13 +259,14 @@ function ids_to_small_HTML($ids)
 function no_article_html()
 {
     ob_start();
-    ?>
+?>
     <!-- _________________ NO ARTICLE ________________ -->
     <div class="item featured text-center">
         No article ... Stay tuned !
-    </div><!--//item-->
+    </div>
+    <!--//item-->
     <!-- _________________ END NO ARTICLE ________________ -->
-    <?php
+<?php
     return ob_get_clean();
 }
 
@@ -289,40 +276,38 @@ function no_article_html()
 function articles_pages_nav($page, $nb_pages)
 {
     ob_start();
-    ?>
+?>
     <nav aria-label="Page navigation">
         <ul class="pagination pagination-lg">
-            <li <?php echo ($page==1) ? "class='disabled'" : ""; ?> >
-                <a href="<?php echo URL_BLOG . "?np=1"; ?>"
-                   aria-label="Previous">
+            <li <?php echo ($page == 1) ? "class='disabled'" : ""; ?>>
+                <a href="<?php echo URL_BLOG . "?np=1"; ?>" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
             <?php
             for ($i = 1; $i <= $nb_pages; $i++) {
-                ?>
+            ?>
                 <li class="<?php echo ($page == $i) ? "active" : ""; ?>">
                     <a href="<?php echo URL_BLOG . "?np=" . $i; ?>">
                         <?php echo $i; ?>
                         <?php if ($page == $i) {
-                            ?>
+                        ?>
                             <span class="sr-only">(current)</span>
-                            <?php
+                        <?php
                         }
                         ?>
                     </a>
                 </li>
-                <?php
+            <?php
             }
             ?>
-            <li <?php echo ($page==$nb_pages) ? "class='disabled'" : ""; ?> >
-                <a href="<?php echo URL_BLOG . "?np=" . $nb_pages; ?>"
-                   aria-label="Next">
+            <li <?php echo ($page == $nb_pages) ? "class='disabled'" : ""; ?>>
+                <a href="<?php echo URL_BLOG . "?np=" . $nb_pages; ?>" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                 </a>
             </li>
         </ul>
     </nav>
-    <?php
+<?php
     return ob_get_clean();
 }

@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Makefile to build and clean dist folders
   - CI/CD for Github Actions
   - CI/CD documentation
+  - Thesis and contributions articles
 - Changed
   - Update main intro text
   - CHANGELOG compact format
@@ -26,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed
 - Security
 - external libs
+  - Update Font Awesome 5.7.2 -> 6.1.2
 
 ## [1.3.3] - 2022-02-10
 

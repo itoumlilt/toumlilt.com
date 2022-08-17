@@ -62,7 +62,7 @@ function get_header_banner_html()
             </a>
             <div class="profile-content pull-left">
                 <h1 class="name">Ilyas Toumlilt</h1>
-                <h2 class="desc">Distributed and Operating Systems PhD Student</h2>
+                <h2 class="desc">PhD, Distributed and Operating Systems Engineer</h2>
                 <ul class="social list-inline">
                     <li><a href="<?php echo URL_LINKEDIN;?>" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                     <li><a href="<?php echo URL_TWITTER;?>" target="_blank"><i class="fab fa-twitter"></i></a></li>

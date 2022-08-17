@@ -71,7 +71,8 @@ This template is free under the Creative Commons Attribution 3.0 [License](https
 
 ## Versions
 
-- v1.3.3 (stable)(current)
+- v1.4 (beta)(php 8.0)
+- v1.3.3 (stable php7.4)(current)
 - v1.3.2
 - v1.3.1
 - v1.2.3
