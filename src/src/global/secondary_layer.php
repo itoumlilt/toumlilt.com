@@ -52,14 +52,14 @@ function htmlview_sl_education()
             <div class="content">
                 <div class="item">
                     <!-- PhD -->
-                    <h3 class="title"><i class="fas fa-graduation-cap"></i> PhD Student - Distributed and Operating Systems</h3>
-                    <h4 class="university">Sorbonne Université, LIP6, INRIA <span class="year">(2017 - today)</span></h4>
+                    <h3 class="title"><i class="fas fa-graduation-cap"></i> PhD - Distributed and Operating Systems</h3>
+                    <h4 class="university">Sorbonne University, LIP6, INRIA <span class="year">(2017 - 2021)</span></h4>
                     <!-- Master -->
                     <h3 class="title"><i class="fas fa-graduation-cap"></i> Master - Distributed Systems and Applications</h3>
-                    <h4 class="university">Sorbonne Université (previously UPMC) <span class="year">(2014-2016)</span></h4>
+                    <h4 class="university">Sorbonne University (previously UPMC) <span class="year">(2014-2016)</span></h4>
                     <!-- Licence -->
                     <h3 class="title"><i class="fas fa-graduation-cap"></i> Licence - Computer Science</h3>
-                    <h4 class="university">Sorbonne Université (previously UPMC) <span class="year">(2011-2014)</span></h4>
+                    <h4 class="university">Sorbonne University (previously UPMC) <span class="year">(2011-2014)</span></h4>
                 </div>
                 <!--//item-->
             </div>
@@ -95,7 +95,7 @@ function htmlview_sl_langages()
                     <!--//item-->
                     <li class="item">
                         <span class="title"><strong>English:</strong></span>
-                        <span class="level">Professional Proficiency <br class="visible-xs" /><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
+                        <span class="level">Professional Proficiency <br class="visible-xs" /><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half"></i> </span>
                     </li>
                     <!--//item-->
                     <li class="item">
@@ -318,7 +318,7 @@ function htmlview_default_secondary_layer()
         echo HV_sl_conferences();
         echo HV_sl_latest_blog_posts();
         echo HV_sl_favourite_music();
-        echo htmlview_sl_langages();
+        // echo htmlview_sl_langages();
         echo htmlview_sl_credits();
         ?>
     </div>

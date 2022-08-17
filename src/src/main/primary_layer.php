@@ -131,30 +131,36 @@ function HV_main_pl_work_experience()
         <div class="section-inner">
             <h2 class="heading">Work Experience</h2>
             <div class="content">
-                <!--//item: PhD Student -->
+                <!--//item: Concordant -->
                 <div class="item">
-                    <h3 class="title">PhD Student - <span class="place">Sorbonne Université, LIP6, INRIA</span> <span class="year">(Jan 2017 - Present)</span></h3>
+                    <h3 class="title">Co-Founder, CTO - <span class="place"><a href="https://concordant.io" target="_blank">Concordant.io</a></span> <span class="year">(Sep 2019 - Mar 2022)</span></h3>
                     <p>
-                        My research work is on the design of highly available distributed systems, principally consistency protocols in case of replication between Datacenters and Edge Computing devices. Part of the LightKone EU Project.
-                        Advisor: Marc Shapiro
+                        Started from a year doctoral internship, a start-up and entrepreneurship experience in the <a href="https://www.inria.fr/en/inria-startup-studio" target="_blank">Inria Startup Studio</a> incubator, building a local-first and large-scale data store from my thesis results. Then leading the project tech developpement in parallel to my thesis.
+                    </p>
+                    <p>
+                    <a class="more-link" href="https://concordant.io" target="_blank">
+                            <i class="fas fa-external-link-alt">.</i> Concordant Website</a>
                     </p>
                 </div>
                 <!--//item-->
-                <!--//item: Thesis Internship -->
+                <!--//item: PhD Student -->
                 <div class="item">
-                    <h3 class="title">Thesis Internship, Senior Software Developer - <span class="place">Concordant</span> <span class="year">(Sep 2019 - Aug 2020)</span></h3>
+                    <h3 class="title">PhD Student - <span class="place"><a href="https://www.sorbonne-universite.fr/" target="_blank">Sorbonne University, LIP6, INRIA</a></span> <span class="year">(Jan 2017 - Dec 2021)</span></h3>
                     <p>
-                        Doctoral internship, start-up and entrepreneurship experience in the Inria Startup Studio incubator.
+                        <i>Thesis:</i> Highly-available and consistent group collaboration at the edge with Colony.
                     </p>
                     <p>
-                        Design and development of an innovative Mobile Backend-as-a-Service platform that facilitates the develop- ment of powerful mobile edge applications deployed independently of the Cloud.
-                        First experience building a new startup product, the Concordant platform.
+                        My research work is on the design of highly available distributed systems, principally consistency protocols in case of replication between Datacenters and Edge Computing devices. Part of the RainbowFS French project and the LightKone EU Consortium.
+                    </p>
+                    <p>
+                        <a class="more-link" href="/src/blog?article=10" target="_blank">
+                            <i class="fas fa-external-link-alt">.</i> More about my thesis contributions</a>
                     </p>
                 </div>
                 <!--//item-->
                 <!--//item: Teaching Assistant -->
                 <div class="item">
-                    <h3 class="title">Teaching Assistant - <span class="place">Sorbonne Université</span> <span class="year">(Jan 2017 - Present)</span></h3>
+                    <h3 class="title">Operating Systems Teacher - <span class="place"><a href="https://www.sorbonne-universite.fr/" target="_blank">Sorbonne University</a></span> <span class="year">(Jan 2017 - Dec 2021)</span></h3>
                     <p>
                         I teach the following courses:<br />
                         - <a href="https://moodle-sciences.upmc.fr/moodle-2020/course/info.php?id=4539&lang=en" target="_blank"> Programming inside the Linux Kernel (master 1).</a>(2021)<br />
@@ -167,7 +173,9 @@ function HV_main_pl_work_experience()
                 <!--//item-->
                 <!--//item: Master 2 Internship-->
                 <div class="item">
-                    <h3 class="title">Master Internship - <span class="place"><a href="http://www.lip6.fr/" target="_blank">LIP6, Regal Team </a></span> <span class="year">(Feb 2016 - August 2016)</span></h3>
+                    <h3 class="title">
+                        Master Research Intern - <span class="place"><a href="http://www.lip6.fr/" target="_blank">LIP6, Regal Team </a></span> <span class="year">(Feb 2016 - August 2016)</span>
+                    </h3>
                     <p>
                         First development experience within the Linux Kernel, providing a mechanism to properly and efficiently size the cache available in a container, by offering different heuristics to improve page age approximation, at an acceptable cost.
                     </p>
@@ -175,23 +183,17 @@ function HV_main_pl_work_experience()
                 <!--//item-->
                 <!--//item: Master 1 Internship-->
                 <div class="item">
-                    <h3 class="title">Summer Internship - <span class="place"><a href="http://www.lip6.fr/" target="_blank">LIP6, Whisper Team </a></span> <span class="year">(June 2015 - August 2015)</span></h3>
+                    <h3 class="title">Experiments assistant Intern - <span class="place"><a href="http://www.lip6.fr/" target="_blank">LIP6, Whisper Team </a></span> <span class="year">(June 2015 - August 2015)</span></h3>
                     <p>
-                        First embedded systems experience, calculation and optimisation of software load distribution on an automotive SabreLite MX6 board.
+                        Calculation and optimisation of software load distribution on an automotive SabreLite MX6 board.
                     </p>
-                </div>
-                <!--//item-->
-                <!--//item: COM Internship-->
-                <div class="item">
-                    <h3 class="title">Internship - <span class="place">COM</span> <span class="year">(June 2014 - August 2014)</span></h3>
-                    <p>Automating forms processing of market studies, from a web based application.</p>
                 </div>
                 <!--//item-->
 
                 <p>
                     <a class="btn btn-cta-secondary" href="<?php echo URL_LINKEDIN; ?>" target="_blank">
                         <i class="fas fa-external-link-alt"></i>
-                        More on LinkedIn
+                        More on my LinkedIn
                     </a>
                 </p>
 
@@ -215,7 +217,7 @@ function HV_main_primary_layer()
         <?php
         echo HV_main_pl_about_me();
         echo HV_main_pl_latest_projects();
-        echo HV_main_pl_work_experience();
+        //echo HV_main_pl_work_experience();
         echo HV_main_pl_my_github();
         ?>
     </div>
