@@ -17,5 +17,8 @@ jobs:
           host='toumlilt.com'
           hosts="$(dig +short "$host" | grep -v '\.$' | sed -z 's|\n|,|g')$host"
           ssh-keyscan -H "$hosts" > ~/.ssh/known_hosts
+          cat ~/.ssh/known_hosts
       - name: Deploy with rsync
-        run: rsync -rav --delete dist-dev/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST}}:${{ secrets.REMOTE_DEV_TARGET }}
+        run: |
+          sudo apt-get install rsync
+          rsync -rav --delete dist-dev/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST}}:${{ secrets.REMOTE_DEV_TARGET }}
