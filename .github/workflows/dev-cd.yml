@@ -10,23 +10,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Install Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
-    - name: Install npm dependencies
-      run: npm install
-    - name: Run build task
-      run: npm run build --if-present
-    - name: Deploy to Server
-      uses: easingthemes/ssh-deploy@main
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-        REMOTE_USER: ${{ secrets.REMOTE_USER }}
-        REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
-        ARGS: "-rltgoDzvO" # "-avzr --delete"
-        SOURCE: "dist-dev/"
-        TARGET: ${{ secrets.REMOTE_DEV_TARGET }}
-        EXCLUDE: "/dist/, /node_modules/"
+      - name: Create SSH key
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+      - name: Deploy with rsync
+        run: rsync -rav --delete dist-dev/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST}}:${{ secrets.REMOTE_DEV_TARGET }}
+        
