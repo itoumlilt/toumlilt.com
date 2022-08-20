@@ -1,5 +1,5 @@
 name: CI-toumlilt.com
-on: [push]
+on: [push, workflow_call]
 jobs:
   build-prod:
     runs-on: ubuntu-latest
