@@ -8,10 +8,18 @@ jobs:
         uses: actions/checkout@v3
       - name: Build prod app
         run: make build-prod
+      - name: Cache dist-prod
+        uses: actions/cache@v3
+        path: ./dist-prod
+        key: ${{ runner.os }}-dist-prod-${{ github.sha }}
   build-dev:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: Build prod app
+      - name: Build dev app
         run: make build-dev
+      - name: Cache dist-dev
+        uses: actions/cache@v3
+        path: ./dist-dev
+        key: ${{ runner.os }}-dist-dev-${{ github.sha }}
