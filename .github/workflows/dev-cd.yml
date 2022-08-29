@@ -4,7 +4,6 @@ on:
     branches: [dev]
 
 jobs:
-  # This workflow contains a single job called "build"
   ci:
     uses: ./.github/workflows/ci.yml
   deploy:
@@ -27,13 +26,3 @@ jobs:
           SOURCE: "dist-dev/"
           TARGET: ${{ secrets.REMOTE_DEV_TARGET }}
           EXCLUDE: ""
-        # - name: Create SSH key
-        #   run: |
-        #     install -m 600 -D /dev/null ~/.ssh/id_rsa
-        #     echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        #     host='toumlilt.com'
-        #     hosts="$(dig +short "$host" | grep -v '\.$' | sed -z 's|\n|,|g')$host"
-        #     ssh-keyscan -H "$hosts" > ~/.ssh/known_hosts
-        #     cat ~/.ssh/known_hosts
-        # - name: Deploy with rsync
-        #   run: rsync -rav --delete dist-dev/ ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST}}:${{ secrets.REMOTE_DEV_TARGET }}
