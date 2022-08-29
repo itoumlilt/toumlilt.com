@@ -13,8 +13,9 @@ jobs:
     steps:
       - name: Restore dist-dev from cache
         uses: actions/cache@v3
-        path: ./dist-dev
-        key: ${{ runner.os }}-dist-dev-${{ github.sha }}
+        with:
+          path: ./dist-dev
+          key: ${{ runner.os }}-dist-dev-${{ github.sha }}
       - name: Deploy prod using ssh-deploy
         uses: easingthemes/ssh-deploy@main
         env:
