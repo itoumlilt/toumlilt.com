@@ -25,7 +25,7 @@ jobs:
           REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
           ARGS: "-rltgoDzvO" # "-avzr --delete"
           SOURCE: "dist-dev/"
-          TARGET: ${{ secrets.REMOTE_TARGET }}
+          TARGET: ${{ secrets.REMOTE_DEV_TARGET }}
           EXCLUDE: ""
         # - name: Create SSH key
         #   run: |
