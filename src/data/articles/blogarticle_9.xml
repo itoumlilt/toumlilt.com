@@ -30,11 +30,7 @@
             <h3 class="title">
                 Local-first Design
             </h3>
-            <script type="application/javascript">
-                document.write('<img src="' + window.location.protocol + '//' + window.location.host + '/assets/images/blogarticles/blogarticle_9_fig_1.png" alt="figure local-first" style="width: 100%"/>
-' )
-            </script>
-            <img src="/assets/images/blogarticles/blogarticle_9_fig_1.png" alt="figure local-first" style="width: 100%"/>
+            <img src="/assets/images/blogarticles/blogarticle_9_fig_1.svg" alt="figure local-first" style="width: 100%"/>
             <p>
                 Thanks to its local-first design, Concordant provides a smooth experience to users. Data on the device remains available and consistent, even across device restarts, and even when connectivity is poor. The app on the device does not need to wait for a cloud server. This asynchronous data- sharing model guarantees seamless transition between online and offline periods. Close-by devices exchange data directly, without depending on a pre-existing infrastructure. Data is synchronised and backed up in order of priority, in order to make the best of available bandwidth, even over flaky networks.
             </p>
