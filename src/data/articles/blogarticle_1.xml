@@ -88,7 +88,7 @@
             La visibilité d'une écriture dans un serveur peut alors devenir dépendante du délai de propagation d'une autre écriture.<br/>
         </p>
         <p>
-            <img src="/assets/images/blogarticles/blogarticle_1_fig_1.png" alt="figure"/><br/>
+            <img src="/assets/images/blogarticles/blogarticle_1_fig_1.png" alt="figure" style="width: 100%"/><br/>
             La figure 1 montre un exemple simple de scénario déclenchant des ralentissements en chaine.
             X et Y sont deux données contenues dans le centre de données DC1, Y dépend causalement de X, or seule Y a été propagée au DC2.
             La requête du client, qui demande à lire Y, est donc retardée par le fait que la donnée X dont dépend Y n'a pas été propagée par le DC1.<br/>
@@ -121,7 +121,7 @@
             Les clients de notre système sont co-situés dans le même data-center que l'une des répliques.
             Chaque client lit à partir de sa réplique locale et peut éventuellement écrire dans une réplique distante.
             L'API client applique la cohérence causale pour les lectures et les méta-données aux écritures.
-            <img src="/assets/images/blogarticles/blogarticle_1_fig_1.png" alt="figure"/><br/>
+            <img src="/assets/images/blogarticles/blogarticle_1_fig_1.png" alt="figure" style="width: 100%"/><br/>
             <br/>
         </p>
 
