@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - setup-prod script -> replaced with Makefile
 - Fixed
   - Images in articles
+  - Broken links
 - Security
 - external libs
   - Update Font Awesome 5.7.2 -> 6.1.2

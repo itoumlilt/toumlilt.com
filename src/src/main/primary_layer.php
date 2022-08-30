@@ -153,7 +153,7 @@ function HV_main_pl_work_experience()
                         My research work is on the design of highly available distributed systems, principally consistency protocols in case of replication between Datacenters and Edge Computing devices. Part of the RainbowFS French project and the LightKone EU Consortium.
                     </p>
                     <p>
-                        <a class="more-link" href="/src/blog?article=10" target="_blank">
+                        <a class="more-link" href="/blog?article=10" target="_blank">
                             <i class="fas fa-external-link-alt">.</i> More about my thesis contributions</a>
                     </p>
                 </div>
