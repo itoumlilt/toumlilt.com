@@ -8,6 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - Added
+- Changed
+- Deprecated
+- Removed
+- Fixed
+- Security
+- external libs
+
+## [1.4] - 2022-08-30
+
+- Added
   - config folder with config files examples
   - dist-prod and dist-dev folders, with default basic config
   - Makefile to build and clean dist folders
@@ -28,7 +38,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed
   - Images in articles
   - Broken links
-- Security
 - external libs
   - Update Font Awesome 5.7.2 -> 6.1.2
 
