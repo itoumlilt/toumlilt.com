@@ -1,0 +1,11 @@
+.git
+.github
+.vscode
+
+dist-dev
+dist-prod/*
+!dist-prod/config.php
+
+README.md
+CHANGELOG.md
+LICENSE
