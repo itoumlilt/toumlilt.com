@@ -82,11 +82,11 @@ Production Caddy redirects preserve the old public URLs:
 
 CI runs `npm ci`, `npm run check`, and `npm run build`.
 
-CD runs the server-side deploy script:
+CD uploads the generated `dist/` artifact to the server-side deploy script:
 
 ```bash
 /opt/stacks/toumlilt-com/deploy.sh
 ```
 
-That script pulls `/opt/src/toumlilt.com`, rebuilds the Docker image, and
-restarts the Caddy-only Compose stack.
+The VPS does not build the Astro project. It only receives static files under
+`/srv/toumlilt-com/site` and restarts the Caddy-only Compose stack.

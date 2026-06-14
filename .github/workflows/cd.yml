@@ -15,8 +15,11 @@ jobs:
     needs: ci
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - name: Download static artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: toumlilt-com-dist
+          path: dist
       - name: Setup SSH
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -33,7 +36,7 @@ jobs:
           REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
         run: |
-          ssh -i ~/.ssh/toumlilt-com-deploy \
+          tar -C dist -czf - . | ssh -i ~/.ssh/toumlilt-com-deploy \
             -p "${REMOTE_PORT:-22}" \
             "$REMOTE_USER@$REMOTE_HOST" \
             '/opt/stacks/toumlilt-com/deploy.sh'
