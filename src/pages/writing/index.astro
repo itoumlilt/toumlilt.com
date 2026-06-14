@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import PostCard from '../../components/PostCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { sortWritingByDate } from '../../lib/collections';
+
+const posts = sortWritingByDate(await getCollection('writing', ({ data }) => !data.draft));
+---
+
+<BaseLayout title="Blog" description="A reverse-chronological list of articles, research notes, and project writeups by Ilyas Toumlilt.">
+  <section class="page-heading blog-heading">
+    <div class="section-inner">
+      <p class="eyebrow">Blog</p>
+      <h1>Articles</h1>
+      <p>A reverse-chronological list of articles, research notes, and project writeups.</p>
+    </div>
+  </section>
+  <section class="band blog-archive-band">
+    <div class="section-inner writing-list blog-list">
+      {
+        posts.map((post) => (
+          <PostCard
+            post={post}
+            compact={true}
+            showKind={true}
+            showBadges={false}
+            showSecondaryActions={false}
+            subtleReadMore={true}
+          />
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

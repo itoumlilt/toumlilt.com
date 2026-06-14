@@ -1,0 +1,22 @@
+---
+import type { Project } from '../data/projects';
+
+type Props = {
+  project: Project;
+};
+
+const { project } = Astro.props;
+---
+
+<article class="project-card">
+  <a class="project-media" href={project.href}>
+    <img src={project.image} alt="" loading="lazy" />
+  </a>
+  <div>
+    <h2><a href={project.href}>{project.name}</a></h2>
+    <p>{project.summary}</p>
+    <ul class="tag-list" aria-label={`${project.name} tags`}>
+      {project.tags.map((tag) => <li>{tag}</li>)}
+    </ul>
+  </div>
+</article>

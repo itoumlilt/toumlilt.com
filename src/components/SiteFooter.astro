@@ -1,0 +1,21 @@
+---
+import { profile } from '../data/profile';
+---
+
+<footer class="site-footer">
+  <p class="footer-credit">
+    <span>Handcrafted with</span>
+    <span class="svg-icon footer-credit-icon" style="--icon-url: url('/assets/icons/solid/heart.svg')" role="img" aria-label="love"></span>
+    <span>and some</span>
+    <span class="svg-icon footer-credit-icon" style="--icon-url: url('/assets/icons/solid/mug-saucer.svg')" role="img" aria-label="coffee"></span>
+    <span>by {profile.name}</span>
+  </p>
+  <div class="footer-links">
+    <a class="footer-icon-link" href={`mailto:${profile.email}`} aria-label="Email Ilyas Toumlilt">
+      <span class="svg-icon footer-action-icon" style="--icon-url: url('/assets/icons/solid/envelope.svg')" aria-hidden="true"></span>
+    </a>
+    <a class="footer-icon-link" href="https://github.com/itoumlilt/toumlilt.com" aria-label="Source code">
+      <span class="svg-icon footer-action-icon" style="--icon-url: url('/assets/icons/brands/github.svg')" aria-hidden="true"></span>
+    </a>
+  </div>
+</footer>

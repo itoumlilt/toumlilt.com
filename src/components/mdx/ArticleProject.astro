@@ -1,0 +1,42 @@
+---
+type Props = {
+  title: string;
+  href?: string;
+  image?: string;
+  imageAlt?: string;
+  actionLabel?: string;
+};
+
+const { title, href, image, imageAlt = '', actionLabel = 'View project' } = Astro.props;
+---
+
+<section class="article-project">
+  {
+    image && (
+      <a class="article-project-media" href={href} target={href ? '_blank' : undefined} rel={href ? 'noreferrer' : undefined}>
+        <img src={image} alt={imageAlt} loading="lazy" />
+      </a>
+    )
+  }
+  <div class="article-project-body">
+    <h3>
+      {
+        href ? (
+          <a href={href} target="_blank" rel="noreferrer">{title}</a>
+        ) : (
+          title
+        )
+      }
+    </h3>
+    <div class="article-project-copy">
+      <slot />
+    </div>
+    {
+      href && (
+        <p>
+          <a class="more-link" href={href} target="_blank" rel="noreferrer">{actionLabel}</a>
+        </p>
+      )
+    }
+  </div>
+</section>

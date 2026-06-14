@@ -1,0 +1,71 @@
+---
+legacy:
+  id: 9
+title: "The Concordant.io Platform"
+description: "Concordant is a startup born from distributed systems research, turning local-first data, edge collaboration, and consistency guarantees into a developer platform."
+date: 2022-07-01
+heroImage: "/assets/images/blogarticles/blogarticle_9_wide.png"
+heroCaption: "Concordant's original platform illustration for local-first edge applications."
+thumbnail: "/assets/images/blogarticles/blogarticle_9_small.png"
+kind: "project"
+tags: ["open source", "startup", "edge computing"]
+badges: ["open source", "project"]
+links:
+  external: null
+  github: "https://github.com/concordant"
+references:
+  - label: "Concordant Vision Paper"
+    href: "/data/attachements/visionpaper-concordant-2022.pdf"
+    description: "Full paper describing the platform vision and architecture."
+home:
+  excerpt: "Concordant brings local-first data, edge collaboration, CRDTs, and stronger consistency guarantees into a developer platform for mobile and collaborative applications."
+draft: false
+---
+
+Concordant is a startup born from our distributed systems research team, created to turn research ideas into a product developers can actually use. Its objective is simple to state and hard to build: help teams create mobile, edge, and collaborative applications that keep working even when the network is slow, intermittent, or temporarily unavailable.
+
+A traditional Backend-as-a-Service, or BaaS, gives application developers cloud-hosted building blocks such as storage, synchronization, authentication, and notifications. That model is useful, but it usually assumes that the cloud is the center of the application and that devices can reach it when they need to make progress. Concordant starts from a different question: what does a Backend-as-a-Service look like if local devices, nearby collaborators, and edge deployments are first-class parts of the system?
+
+Our answer is a local-first platform. Data should live close to users, remain available on the device, synchronize when connectivity returns, and still preserve the application invariants that matter. The cloud remains useful for backup, analytics, notifications, and wider coordination, but it is no longer the only place where the application can make progress.
+
+### Why Concordant exists
+
+Building this kind of application by hand is difficult. Developers have to reason about offline writes, concurrent edits, conflict resolution, synchronization, partial failures, and different deployment environments. Those are distributed systems problems, but most application teams do not want to become distributed systems teams just to ship a collaborative product.
+
+Concordant packages that complexity behind a developer platform. The idea is to let an application keep a single programming model while running across phones, tablets, laptops, edge nodes, and cloud services. A user can keep working offline, collaborate with nearby devices, and later synchronize with the wider system.
+
+### Local-first design
+
+![figure local-first](/assets/images/blogarticles/blogarticle_9_fig_1.svg)
+
+Local-first means that the application keeps useful state on the device, not only in a remote database. The user can open the app, read data, create updates, and continue working even if the cloud is unreachable. When connectivity improves, those updates can be synchronized with other replicas.
+
+For Concordant, local-first is also about collaboration at the edge. Devices close to each other can exchange data directly instead of waiting for a round trip through a distant cloud service. That matters in environments where connectivity is unreliable, expensive, or simply not fast enough to support a smooth user experience.
+
+### CRDT data model
+
+![figure CRDT data model](/assets/images/blogarticles/blogarticle_9_fig_2.svg)
+
+Concordant uses CRDTs, short for Conflict-free Replicated Data Types, as one of its foundations. A CRDT is a data type designed so that several replicas can be updated independently and later merged without manual conflict resolution. In practice, this means users can edit data while offline or while collaborating with nearby peers, and the system can still converge toward a shared state.
+
+CRDTs are not magic, but they are a powerful tool when the application can express its data in terms of well-defined merge rules. Concordant exposes CRDT-based objects and policies so developers can build collaborative features without writing a custom synchronization protocol for every data structure.
+
+### Consistency beyond CRDTs
+
+CRDTs give a strong convergence story, but application correctness often needs more than convergence. A collaborative app may need several objects to change together, references to remain valid, or updates to be observed in an order that makes sense to users.
+
+This is where Concordant goes beyond a simple sync layer. The platform explores highly available transactions, referential integrity, check constraints, and causal consistency. The point is not to impose one universal consistency model everywhere, but to give developers a way to choose the guarantees their application actually needs.
+
+Highly available, in this context, means the system keeps accepting useful operations even when some nodes are disconnected or failures occur. The difficult part is doing that without silently breaking the rules of the application. Concordant makes those tradeoffs explicit and reusable.
+
+### Edge presence
+
+Concordant also targets edge deployments. In some settings, the best place to coordinate data is neither a phone nor a central cloud region, but a nearby machine: a laptop, a gateway, an on-premise server, or a small micro-data-center.
+
+The platform can use such a local point of presence to replicate data, connect devices that cannot talk directly to each other, and bridge local collaboration with cloud services. We are also experimenting with C-PoP, a portable point-of-presence appliance that lets a group move with its data and keep nearby devices synchronized without depending on pre-existing infrastructure.
+
+### What we want to make easier
+
+The broader ambition is to let teams build one application for multiple deployment realities: online and offline, local and cloud, single user and collaborative group, mobile device and edge node. Developers should not have to redesign their application every time the network topology changes.
+
+Concordant turns several years of research on replication, consistency, and edge collaboration into a practical platform. The startup does not remove the hard problems, but it gives the team a product-shaped way to attack them: APIs, data types, deployment choices, and guarantees that application developers can reason about.

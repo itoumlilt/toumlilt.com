@@ -1,0 +1,29 @@
+{
+  "name": "toumlilt-com",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "fetch:github": "node scripts/fetch-github-activity.mjs",
+    "build": "npm run fetch:github && ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check && vitest run",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^6.0.1",
+    "astro": "^6.4.2",
+    "octokit": "^5.0.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@types/node": "^22.15.29",
+    "fast-xml-parser": "^5.2.5",
+    "typescript": "^5.8.3",
+    "vitest": "^4.1.8"
+  },
+  "overrides": {
+    "yaml": "^2.8.3"
+  }
+}

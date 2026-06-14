@@ -10,3 +10,10 @@ dist-prod/*
 !dist-prod/config.php
 
 .vscode
+
+node_modules/
+.astro/
+dist/
+src/data/generated/github-activity.json
+playwright-report/
+test-results/

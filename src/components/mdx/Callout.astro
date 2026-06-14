@@ -1,0 +1,11 @@
+---
+type Props = {
+  tone?: 'info';
+};
+
+const { tone = 'info' } = Astro.props;
+---
+
+<aside class:list={['article-callout', `tone-${tone}`]}>
+  <slot />
+</aside>

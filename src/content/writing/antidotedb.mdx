@@ -1,0 +1,49 @@
+---
+legacy:
+  id: 6
+title: "AntidoteDB"
+description: "The geo-replicated database behind the first edge prototype of my thesis work, and one of the open-source systems I contributed to during my PhD."
+date: 2021-04-24
+heroImage: "/assets/images/blogarticles/blogarticle_6_wide.png"
+thumbnail: "/assets/images/blogarticles/blogarticle_6_small.png"
+kind: "project"
+tags: ["open source", "database", "distributed systems"]
+badges: ["open source"]
+links:
+  external: "https://www.antidotedb.eu/"
+  github: "https://github.com/antidotedb/antidote"
+references:
+  - label: "EdgeAnt: pushing AntidoteDB to the Edge"
+    href: "/writing/edgeant-pushing-antidotedb-to-the-edge/"
+    description: "The early thesis prototype that extended AntidoteDB toward edge clients."
+  - label: "Colony paper"
+    href: "/writing/colony-middleware-paper/"
+    description: "The later thesis work on highly available and consistent group collaboration at the edge."
+home:
+  excerpt: "AntidoteDB is the highly available geo-replicated database that anchored the first implementation path of my thesis work. Before Colony became its own edge collaboration prototype, the research started by extending AntidoteDB toward edge clients through EdgeAnt."
+draft: false
+---
+
+AntidoteDB is a highly available, geo-replicated key-value database built for applications that need availability and stronger programming guarantees at the same time. It combines ideas that were central to my PhD work: CRDTs, causal consistency, transactions over replicated data, and synchronization-free execution whenever possible.
+
+It was also one of the open-source systems I contributed to during my thesis at Sorbonne University, in the context of the [LightKone](https://www.lightkone.eu/) and [SyncFree](https://pages.lip6.fr/syncfree/) European projects. AntidoteDB was not just a database I used from the outside: it was part of the research environment where I learned how highly available storage systems are built, tested, and pushed toward real applications.
+
+### From AntidoteDB to the edge
+
+The first implementation direction for my thesis was not a separate system. It started as an edge extension of AntidoteDB called [EdgeAnt](/writing/edgeant-pushing-antidotedb-to-the-edge/).
+
+The idea was to keep AntidoteDB as the cloud and data-center backbone, then push part of its guarantees closer to users. Edge clients would keep a partial local replica of the data they needed, execute useful operations locally, continue working during disconnections, and synchronize with AntidoteDB when connectivity returned.
+
+That direction mattered because edge applications do not only need lower latency. They also need a programming model that remains understandable when users move, disconnect, reconnect through another data center, or collaborate with nearby devices. EdgeAnt explored how AntidoteDB's causal consistency and CRDT-based model could be extended to that setting without forcing every application developer to reimplement a distributed protocol.
+
+### How it led to Colony
+
+That AntidoteDB-based work became the first practical step toward [Colony](/writing/colony-middleware-paper/), the main research prototype of my thesis.
+
+Colony kept the same broad ambition: make highly available edge applications easier to build while preserving meaningful consistency guarantees. But the problem became more explicit around collaborative groups. Instead of only extending a cloud database toward individual edge clients, Colony added support for peer-to-peer groups, stronger consistency inside those groups, migration, and a topology that could bridge local collaboration with cloud-backed coordination.
+
+In that sense, AntidoteDB was one of the foundations of the thesis path. It provided the database model, the implementation culture, and the open-source research codebase from which the edge work could start.
+
+### Why this repository matters
+
+The GitHub repository is therefore more than a project link. It points to a database I contributed to, a research community I was part of, and the system that shaped the first edge implementation of my thesis before the work evolved into Colony.

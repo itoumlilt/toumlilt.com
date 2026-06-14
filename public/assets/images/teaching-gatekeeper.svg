@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">U Shall Not Pass teaching gatekeeper</title>
+  <desc id="desc">A playful geek wizard professor in a robe, glasses, sneakers, and laptop blocks the path with a glowing staff.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafb"/>
+      <stop offset="0.55" stop-color="#dbe4e9"/>
+      <stop offset="1" stop-color="#b9c8d1"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="32%" r="46%">
+      <stop offset="0" stop-color="#fff8c8" stop-opacity="0.92"/>
+      <stop offset="0.42" stop-color="#f5d27a" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#8b6aa5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#3d454e" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" rx="42" fill="url(#bg)"/>
+  <circle cx="602" cy="273" r="330" fill="url(#glow)"/>
+  <path d="M0 715 C180 650 311 740 470 684 C642 623 802 619 966 685 C1079 730 1147 713 1200 690 L1200 900 L0 900 Z" fill="#cfd8df"/>
+  <path d="M123 754 C290 707 342 793 536 738 C711 689 824 709 1034 756" fill="none" stroke="#a9b8c3" stroke-width="7" stroke-linecap="round" opacity="0.55"/>
+
+  <g filter="url(#shadow)">
+    <path d="M461 707 C463 585 488 457 518 332 C535 259 578 212 621 212 C665 212 711 260 724 337 C748 475 760 596 765 707 Z" fill="#5d4b75"/>
+    <path d="M526 331 C545 283 583 249 622 249 C660 249 696 283 711 335 C672 354 569 356 526 331 Z" fill="#766095"/>
+    <path d="M476 707 L756 707 C731 749 682 773 617 773 C550 773 502 749 476 707 Z" fill="#3f3f56"/>
+
+    <path d="M524 236 C556 153 588 105 620 80 C652 106 685 154 718 237 C672 222 577 221 524 236 Z" fill="#7f659d"/>
+    <path d="M548 220 C573 206 663 206 693 220 L716 252 C662 232 584 232 524 252 Z" fill="#4c415f"/>
+    <circle cx="620" cy="263" r="72" fill="#f2c99d"/>
+    <path d="M545 262 C570 225 592 213 621 213 C657 214 681 235 695 263 C663 250 604 250 545 262 Z" fill="#efeef2"/>
+    <path d="M548 289 C569 366 673 365 693 291 C675 349 568 351 548 289 Z" fill="#f6f3ef"/>
+    <path d="M558 316 C587 384 655 386 684 318 C667 430 581 430 558 316 Z" fill="#f6f3ef"/>
+    <path d="M570 259 C585 251 599 251 612 258 M629 258 C646 250 661 251 676 260" fill="none" stroke="#45465a" stroke-width="8" stroke-linecap="round"/>
+    <path d="M586 277 H610 M630 277 H654 M610 277 C618 271 623 271 630 277" fill="none" stroke="#45465a" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="599" cy="276" r="18" fill="none" stroke="#45465a" stroke-width="6"/>
+    <circle cx="642" cy="276" r="18" fill="none" stroke="#45465a" stroke-width="6"/>
+    <path d="M614 292 C615 302 627 302 628 292" fill="none" stroke="#805e44" stroke-width="5" stroke-linecap="round"/>
+    <path d="M596 319 C613 329 630 329 648 319" fill="none" stroke="#875248" stroke-width="5" stroke-linecap="round"/>
+
+    <path d="M526 402 L442 522 L382 469 L501 344 Z" fill="#6b5589"/>
+    <path d="M716 400 L807 519 L866 463 L740 344 Z" fill="#6b5589"/>
+    <path d="M382 469 C350 449 330 458 318 482 C351 493 372 496 392 488 Z" fill="#f2c99d"/>
+    <path d="M866 463 C898 442 921 452 930 477 C897 489 876 490 855 481 Z" fill="#f2c99d"/>
+
+    <rect x="503" y="475" width="236" height="148" rx="18" fill="#2e3344"/>
+    <rect x="523" y="496" width="196" height="106" rx="8" fill="#f1f5f8"/>
+    <path d="M594 552 L619 529 L644 552 L619 575 Z" fill="#8b6aa5"/>
+    <path d="M521 623 H720 L745 658 H496 Z" fill="#222635"/>
+    <rect x="561" y="640" width="116" height="10" rx="5" fill="#636a7f"/>
+
+    <path d="M453 707 L433 800 H493 L531 707 Z" fill="#30394d"/>
+    <path d="M711 707 L747 800 H808 L787 707 Z" fill="#30394d"/>
+    <path d="M425 795 H506 C516 795 522 803 522 813 C522 823 515 829 504 829 H410 C402 829 396 823 396 815 C396 804 407 795 425 795 Z" fill="#8b6aa5"/>
+    <path d="M733 795 H814 C833 795 844 804 844 815 C844 823 837 829 828 829 H735 C724 829 717 823 717 813 C717 803 723 795 733 795 Z" fill="#8b6aa5"/>
+  </g>
+
+  <g>
+    <path d="M301 162 L331 777" stroke="#4b3d5f" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="294" cy="139" r="42" fill="#f7d77e" stroke="#5d4b75" stroke-width="12"/>
+    <circle cx="294" cy="139" r="86" fill="none" stroke="#f7d77e" stroke-width="9" stroke-dasharray="2 22" opacity="0.7"/>
+    <path d="M269 145 C294 114 323 125 326 151 C300 169 279 166 269 145 Z" fill="#fff3c8" opacity="0.8"/>
+  </g>
+
+  <g transform="translate(119 585)">
+    <rect width="413" height="124" rx="18" fill="#ffffff" stroke="#c9d3dc" stroke-width="4"/>
+    <path d="M0 40 H413" stroke="#c9d3dc" stroke-width="4"/>
+    <circle cx="34" cy="20" r="8" fill="#ea6a5f"/>
+    <circle cx="61" cy="20" r="8" fill="#f2bf4c"/>
+    <circle cx="88" cy="20" r="8" fill="#67bd6a"/>
+    <text x="206" y="83" text-anchor="middle" fill="#45465a" font-family="Avenir Next, Avenir, Segoe UI, sans-serif" font-size="34" font-weight="800">U SHALL NOT PASS!</text>
+  </g>
+
+  <g fill="#8b6aa5" opacity="0.16">
+    <path d="M873 172 h90 v18 h-90 zM982 172 h41 v18 h-41 zM873 207 h150 v18 h-150 zM873 242 h70 v18 h-70 zM962 242 h61 v18 h-61 z"/>
+    <circle cx="924" cy="123" r="9"/>
+    <circle cx="969" cy="123" r="9"/>
+    <circle cx="1014" cy="123" r="9"/>
+  </g>
+</svg>

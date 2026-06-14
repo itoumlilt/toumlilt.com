@@ -1,0 +1,132 @@
+---
+legacy:
+  id: 10
+title: "PhD Graduation"
+description: "A summary list of my PhD thesis contributions"
+date: 2022-06-25
+heroImage: "/assets/images/blogarticles/blogarticle_10_wide.png"
+heroCaption: "PhD graduation ceremony at Sorbonne University, June 2022."
+thumbnail: "/assets/images/blogarticles/blogarticle_10_wide.png"
+kind: "article"
+tags: ["phd", "research"]
+badges: []
+links:
+  external: null
+  github: null
+home:
+  excerpt: "A ceremony-day look back at four years of PhD work: thesis manuscript, publications, open-source prototypes, research collaborations, and teaching."
+draft: false
+---
+
+import ArticleProject from '../../components/mdx/ArticleProject.astro';
+
+Today is PhD graduation day at Sorbonne University. The ceremony is a mix of solemn ritual and happy chaos: diplomas, sashes, official photos, applause, and a room full of people waiting for their turn on stage.
+
+Since the class is large enough to make waiting part of the program, I am taking this moment to look back at what the past four years produced: a thesis manuscript, publications, open-source prototypes, research collaborations, and a fair amount of teaching.
+
+Most of that work revolved around highly available collaborative systems at the edge, with Colony as the main research prototype: a hybrid-consistency datastore for peer-to-peer collaboration, CRDT-style APIs, and cloud-backed coordination.
+
+---
+
+## Main Publications
+
+### Thesis Manuscript
+
+Colony: a Hybrid Consistency System for Highly-Available Collaborative Edge Computing.
+
+[Open access on HAL](https://tel.archives-ouvertes.fr/tel-03727724v2)
+
+[Bibtex cite](https://hal.inria.fr/tel-03727724v2/bibtex)
+
+### Highly-available and consistent group collaboration at the edge with colony
+
+Middleware 2021: 22nd International Middleware Conference, Dec 2021, Québec / Virtual, Canada. pp.336-351,
+
+[Open access on HAL](https://hal.inria.fr/hal-03353663)
+
+[ACM Proceedings](https://dl.acm.org/doi/abs/10.1145/3464298.3493405)
+
+[Bibtex cite](https://hal.inria.fr/hal-03353663v3/bibtex)
+
+### Vers une cohérence causale évolutive sans chaînes de ralentissements
+
+Compas 2017: Conférence d'informatique en Parallélisme, Architecture et Système, Jun 2017, Nice Sophia-Antipolis, France.
+
+[Open access on HAL](https://hal.archives-ouvertes.fr/hal-01860334/)
+
+[Bibtex cite](https://hal.archives-ouvertes.fr/hal-01860334v1/bibtex)
+
+---
+
+## Open Source projects
+
+<ArticleProject title="ColonyDB" href="https://github.com/itoumlilt/Colony" image="/assets/images/blogarticles/blogarticle_10_img_2.png" imageAlt="project name" actionLabel="View on GitHub">
+
+My Thesis research prototype.
+
+A local-first Edge datastore, with Peer-to-Peer groups strong consistency collaboration, CRDT API and cloud backend.
+
+</ArticleProject>
+
+<ArticleProject title="AntidoteDB" href="https://github.com/itoumlilt/antidote" image="/assets/images/blogarticles/blogarticle_10_img_5.png" imageAlt="project name" actionLabel="View on GitHub">
+
+AntidoteDB is a highly available geo-replicated key-value database. AntidoteDB provides features that help programmers to write correct applications while having the same performance and horizontal scalability as AP/NoSQL databases. Furthermore, AntidoteDB operations are based on the principle of synchronization-free execution by using Conflict-free replicated datatypes (CRDTs).
+
+</ArticleProject>
+
+<ArticleProject title="CRDT Library" href="https://github.com/itoumlilt/c-crdtlib" image="/assets/images/blogarticles/blogarticle_10_img_6.png" imageAlt="project name" actionLabel="View on GitHub">
+
+The Concordant Conflict-Free Replicated Datatypes library.
+
+</ArticleProject>
+
+<ArticleProject title="CRDT Collaborative Spreadsheet" href="https://github.com/itoumlilt/CRDT-Spreasheet" image="/assets/images/blogarticles/blogarticle_10_img_4.png" imageAlt="project name" actionLabel="View on GitHub">
+
+A Collaborative CRDT-based Spreadsheet demo app, built using my collaborative local-first service on top of PouchDB.
+
+</ArticleProject>
+
+<ArticleProject title="CRDT Markdown Editor" href="https://github.com/itoumlilt/crdt-md-editor" image="/assets/images/blogarticles/blogarticle_10_img_3.png" imageAlt="project name" actionLabel="View on GitHub">
+
+Collaborative text editing application using two eventual consitency backends: revision-based and CRDT-based. This demo shows that with a revision based approach, the user loses updates, either if updates are executed concurrently online, or if multiple users edit the document offline.
+
+</ArticleProject>
+
+[More projects on my Github](https://github.com/itoumlilt?tab=repositories)
+
+---
+
+## Collaborations
+
+### RainbowFS ANR Project
+
+RainbowFS is a collaborative research project funded by French National Agency for Research (ANR), this project founded my thesis grant and the collaboration behind the Colony paper.
+
+The aim of RainbowFS is to investigate an approach to distributed storage that ensures consistency semantics tailored to the application, while retaining scalability and availability.
+
+[RainbowFS Website](https://pages.lip6.fr/syncfree/index.html)
+
+### LightKone EU Consortium
+
+The EU project LightKone aims to develop a scientifically sound and industrially validated model for doing general-purpose computation on edge networks.
+
+[LightKone Website](https://lightkone.eu)
+
+### SyncFree EU Project
+
+The SyncFree project aims to develop both theoretical and practical understanding of large-scale synchronisation-free programming.
+AntidoteDB is one of this projects main contributions.
+
+[SyncFree Website](https://pages.lip6.fr/syncfree/index.html)
+
+---
+
+## Teaching
+
+During my thesis, I taught in the following courses:
+
+- [Programming inside the Linux Kernel (master 1).](https://moodle-sciences.upmc.fr/moodle-2020/course/info.php?id=4539)(2021)
+- [Multicore Kernels and Virtualisation (master 2)](http://www-master.ufr-info-p6.jussieu.fr:8080/ue/2014/description.php?code_ue=5I453), memory garbage collection part. (2018, 2019, 2020)
+- [Security and System Administration (master 1).](http://www-master.ufr-info-p6.jussieu.fr:8080/ue/2014/description.php?code_ue=4I405)(2017, 2018, 2019)
+- [Introduction to operating systems (licence 2).](http://www-licence.ufr-info-p6.jussieu.fr/lmd/licence/2018/ue/2I010-2019fev/) (2019)
+- [Introduction to Java langage (licence 2).](http://www-connex.lip6.fr/~guigue/wikihomepage/pmwiki.php?n=Course.CourseLI230) (2018)

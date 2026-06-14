@@ -1,0 +1,55 @@
+---
+legacy:
+  id: 8
+title: "PhD Thesis Defense"
+description: "(Archive) Livestream video and documents"
+date: 2021-12-21
+heroImage: "/assets/images/blogarticles/blogarticle_8_wide.png"
+thumbnail: "/assets/images/blogarticles/blogarticle_8_small.png"
+kind: "article"
+tags: ["phd", "archive"]
+badges: []
+links:
+  external: null
+  github: null
+home:
+  excerpt: "My thesis defense, completed within the LIP6 Delys INRIA team and titled \"Colony: A Hybrid Consistency System for Highly-Available Collaborative Edge Computing\". Defended on Tuesday 21 December 2021 at 13:00 (Paris Time). This article contains an archive of the video presentation, the thesis manuscript and related blog posts."
+draft: false
+---
+
+import Callout from '../../components/mdx/Callout.astro';
+import VideoEmbed from '../../components/mdx/VideoEmbed.astro';
+
+<Callout>
+
+The livestream video will be accessible, after the PhD Defense, at the end of this blog post
+
+</Callout>
+
+### Description
+
+My thesis defense,
+completed within the [LIP6](https://lip6.fr)
+[Delys INRIA team](https://team.inria.fr/delys/fr/)
+and titled
+"Colony: A Hybrid Consistency System for Highly-Available Collaborative Edge Computing".
+
+Defended on Tuesday 21 December 2021 at 13:00 (Paris Time).
+
+This article contains an archive of the video presentation,
+the thesis manuscript and related blog posts.
+
+### Abstract
+
+Edge applications, such as gaming, cooperative engineering, or in-the-field information sharing, enjoy immediate response, autonomy and availability by distributing and replicating data at the edge. However, application developers and users demand the highest possible consistency guarantees, and specific support for group collaboration. To address this challenge, Colony guarantees Transactional Causal Plus Consistency (TCC+) globally, strengthened to Snapshot Isolation within edge groups. To help with scalability, fault tolerance and security, its logical communication topology is forest-like, with replicated roots in the core cloud, but with the flexibility to migrate a node or a group. Despite this hybrid approach, applications enjoy the same semantics everywhere in the topology. Our experiments show that local caching and peer groups improve throughput and response time significantly, performance is not affected in offline mode, and that migration is seamless.
+
+### Related Documents
+
+My Thesis Manuscript is accessible from [HAL Open Archive](https://hal.inria.fr/tel-03538565/)
+
+Other related blog posts are available in
+[my thesis page](https://toumlilt.com/thesis)
+
+### Thesis Defense Video
+
+<VideoEmbed src="https://www.youtube.com/embed/bXCFtlgt69s" title="YouTube video player" />

@@ -1,0 +1,48 @@
+---
+import { profile } from '../data/profile';
+
+type IntroPart = {
+  text: string;
+  href?: string;
+};
+
+const sortedLinks = [...profile.homeIntroLinks].sort((a, b) => b.label.length - a.label.length);
+
+const splitIntroParagraph = (paragraph: string): IntroPart[] => {
+  const parts: IntroPart[] = [];
+  let cursor = 0;
+
+  while (cursor < paragraph.length) {
+    const next = sortedLinks
+      .map((link) => ({ link, index: paragraph.indexOf(link.label, cursor) }))
+      .filter((candidate) => candidate.index >= 0)
+      .sort((a, b) => a.index - b.index)[0];
+
+    if (!next) {
+      parts.push({ text: paragraph.slice(cursor) });
+      break;
+    }
+
+    if (next.index > cursor) {
+      parts.push({ text: paragraph.slice(cursor, next.index) });
+    }
+
+    parts.push({ text: next.link.label, href: next.link.href });
+    cursor = next.index + next.link.label.length;
+  }
+
+  return parts;
+};
+---
+
+{
+  profile.homeIntro.map((paragraph) => (
+    <p>
+      {
+        splitIntroParagraph(paragraph).map((part) => (
+          part.href ? <a href={part.href}>{part.text}</a> : part.text
+        ))
+      }
+    </p>
+  ))
+}

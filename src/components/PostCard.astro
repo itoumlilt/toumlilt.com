@@ -1,0 +1,64 @@
+---
+import { formatDisplayDate, getWritingSlug } from '../lib/collections';
+import type { WritingEntry } from '../lib/collections';
+
+type Props = {
+  post: WritingEntry;
+  featured?: boolean;
+  compact?: boolean;
+  linkMedia?: boolean;
+  linkTitle?: boolean;
+  showKind?: boolean;
+  showBadges?: boolean;
+  showSecondaryActions?: boolean;
+  subtleReadMore?: boolean;
+};
+
+const {
+  post,
+  featured = false,
+  compact = false,
+  linkMedia = true,
+  linkTitle = true,
+  showKind = false,
+  showBadges = true,
+  showSecondaryActions = true,
+  subtleReadMore = false,
+} = Astro.props;
+const image = featured ? post.data.heroImage : post.data.thumbnail ?? post.data.heroImage;
+const href = `/writing/${getWritingSlug(post)}/`;
+const kindLabel = post.data.kind === 'project' ? 'Project writeup' : 'Article';
+---
+
+<article class:list={['post-card', { featured, compact }]}>
+  {
+    image && linkMedia && (
+      <a class="post-card-media" href={href} aria-label={`Read ${post.data.title}`}>
+        <img src={image} alt="" loading={featured ? 'eager' : 'lazy'} />
+      </a>
+    )
+  }
+  {image && !linkMedia && <div class="post-card-media" aria-hidden="true"><img src={image} alt="" loading="lazy" /></div>}
+  <div class="post-card-body">
+    <p class:list={['eyebrow', { 'post-card-meta': showKind }]}>
+      <span>{formatDisplayDate(post.data.date)}</span>
+      {showKind && <span>{kindLabel}</span>}
+    </p>
+    <div class="post-card-title-row">
+      <h2>{linkTitle ? <a href={href}>{post.data.title}</a> : post.data.title}</h2>
+      {showBadges && post.data.badges.length > 0 && (
+        <ul class="content-badges" aria-label="Article labels">
+          {post.data.badges.map((badge) => <li>{badge}</li>)}
+        </ul>
+      )}
+    </div>
+    <p>{post.data.description}</p>
+    <div class="action-row">
+      <a class:list={['read-more-link', { 'post-card-read-link': subtleReadMore }]} href={href}>
+        Read More
+      </a>
+      {showSecondaryActions && post.data.links.github && <a href={post.data.links.github}>GitHub</a>}
+      {showSecondaryActions && post.data.links.external && <a href={post.data.links.external}>External</a>}
+    </div>
+  </div>
+</article>

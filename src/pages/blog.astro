@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { legacyArticleSlugs } from '../lib/legacy-routes';
+---
+
+<BaseLayout title="Redirecting" description="Compatibility page for the old blog URL.">
+  <section class="page-heading">
+    <div class="section-inner">
+      <p class="eyebrow">Moved</p>
+      <h1>Writing moved</h1>
+      <p>The writing archive now lives at <a href="/writing/">/writing/</a>.</p>
+    </div>
+  </section>
+  <script is:inline define:vars={{ legacyArticleSlugs }}>
+    const article = new URLSearchParams(window.location.search).get('article');
+    const slug = article ? legacyArticleSlugs[article] : undefined;
+    window.location.replace(slug ? `/writing/${slug}/` : '/writing/');
+  </script>
+</BaseLayout>

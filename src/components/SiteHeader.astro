@@ -1,0 +1,65 @@
+---
+const navItems = [
+  { href: '/', label: 'Home', icon: '/assets/icons/solid/house.svg' },
+  { href: '/writing/', label: 'Blog', icon: '/assets/icons/solid/pen-nib.svg' },
+  { href: '/teaching/', label: 'Teaching', icon: '/assets/icons/solid/graduation-cap.svg' },
+  { href: '/projects/', label: 'Projects', icon: '/assets/icons/solid/diagram-project.svg' },
+  { href: '/about/', label: 'About Me', icon: '/assets/icons/solid/address-card.svg' },
+];
+
+const currentPath = Astro.url.pathname;
+
+const isCurrentItem = (item: typeof navItems[number]) => {
+  const itemPath = item.href.split('#')[0];
+
+  if (item.href.includes('#')) {
+    return false;
+  }
+
+  return itemPath === '/'
+    ? currentPath === '/'
+    : currentPath.startsWith(itemPath);
+};
+
+const currentItem = navItems.find(isCurrentItem) ?? navItems[0];
+const mobileMenuItems = navItems.filter((item) => item.href !== '/' && item.href !== currentItem.href);
+---
+
+<header class="site-header">
+  <nav class="desktop-nav" aria-label="Main navigation">
+    {
+      navItems.map((item) => {
+        const isCurrent = isCurrentItem(item);
+
+        return (
+          <a href={item.href} aria-current={isCurrent ? 'page' : undefined}>
+            <span class="svg-icon nav-icon" style={`--icon-url: url('${item.icon}')`} aria-hidden="true" />
+            <span>{item.label}</span>
+          </a>
+        );
+      })
+    }
+  </nav>
+
+  <div class="mobile-header-bar">
+    <a class="mobile-home-link" href="/" aria-label="Go to home page" aria-current={currentPath === '/' ? 'page' : undefined}>
+      <span class="svg-icon nav-icon" style="--icon-url: url('/assets/icons/solid/house.svg')" aria-hidden="true" />
+    </a>
+    <span class="mobile-page-title">{currentItem.label}</span>
+    <details class="mobile-menu">
+      <summary aria-label="Open navigation menu">
+        <span class="svg-icon nav-icon" style="--icon-url: url('/assets/icons/solid/bars.svg')" aria-hidden="true" />
+      </summary>
+      <nav class="mobile-menu-panel" aria-label="Mobile navigation">
+        {
+          mobileMenuItems.map((item) => (
+            <a href={item.href}>
+              <span class="svg-icon nav-icon" style={`--icon-url: url('${item.icon}')`} aria-hidden="true" />
+              <span>{item.label}</span>
+            </a>
+          ))
+        }
+      </nav>
+    </details>
+  </div>
+</header>

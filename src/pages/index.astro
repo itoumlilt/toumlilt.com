@@ -1,0 +1,189 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCard from '../components/ContactCard.astro';
+import GitHubActivityCard from '../components/GitHubActivityCard.astro';
+import IntroText from '../components/IntroText.astro';
+import LatestBlogPostsCard from '../components/LatestBlogPostsCard.astro';
+import WebProfilesCard from '../components/WebProfilesCard.astro';
+import githubActivityConfig from '../data/github-activity.config.json';
+import { homePage } from '../data/homepage';
+import { profile } from '../data/profile';
+import { formatDisplayDate, getWritingSlug, sortWritingByDate } from '../lib/collections';
+import { loadGitHubActivityFeed } from '../lib/github-activity';
+import { splitLatestPosts } from '../lib/homepage';
+
+const posts = sortWritingByDate(await getCollection('writing', ({ data }) => !data.draft));
+const { expandedPosts, compactPosts } = splitLatestPosts(posts, homePage.latestPosts);
+const githubActivityFeed = loadGitHubActivityFeed(githubActivityConfig);
+const formatRibbonDate = (date: Date) => new Intl.DateTimeFormat('en-GB', {
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric',
+}).format(date);
+---
+
+<BaseLayout description={profile.intro}>
+  <section class="dashboard-band">
+    <div class="section-inner dashboard-grid">
+      <div class="primary-stack">
+        <article class="dashboard-card intro-card">
+          <h2>Intro</h2>
+          <IntroText />
+          <a class="button-link button-solid" href="/about/">
+            <span class="svg-icon button-icon" style="--icon-url: url('/assets/icons/solid/arrow-up-right-from-square.svg')" aria-hidden="true" />
+            More details about me
+          </a>
+        </article>
+
+        <article class="dashboard-card latest-card">
+          <h2>Latest Projects &amp; Blog posts</h2>
+          {
+            expandedPosts.map((post, index) => {
+              const href = `/writing/${getWritingSlug(post)}/`;
+              const image = post.data.heroImage ?? post.data.thumbnail;
+              const ribbonDate = formatRibbonDate(post.data.date);
+              const imageLoading = index === 0 ? 'eager' : 'lazy';
+
+              return (
+              <div class="featured-entry">
+                <div class="featured-heading">
+                  <div class="featured-title-row">
+                    <h3 set:html={post.data.title} />
+                    {post.data.badges.length > 0 && (
+                      <ul class="content-badges" aria-label="Article labels">
+                        {post.data.badges.map((badge) => <li>{badge}</li>)}
+                      </ul>
+                    )}
+                  </div>
+                  <p class="featured-summary">{post.data.description}</p>
+                </div>
+                {image && (
+                  <div class="featured-image">
+                    <a href={href} aria-label={`Read ${post.data.title}`}>
+                      <img src={image} alt="" loading={imageLoading} />
+                    </a>
+                    <span class="ribbon" aria-label={`Published ${ribbonDate}`}>
+                      <time class="text" datetime={post.data.date.toISOString().slice(0, 10)}>{ribbonDate}</time>
+                    </span>
+                  </div>
+                )}
+                <p class="featured-excerpt">{post.data.home.excerpt}</p>
+                <div class="featured-actions">
+                  {post.data.links.github && (
+                    <a class="button-link button-solid" href={post.data.links.github} target="_blank" rel="noreferrer">
+                      <span class="svg-icon button-icon" style="--icon-url: url('/assets/icons/brands/github.svg')" aria-hidden="true" />
+                      View on GitHub
+                    </a>
+                  )}
+                  <a class="button-link button-solid" href={href}>
+                    <span class="svg-icon button-icon" style="--icon-url: url('/assets/icons/solid/arrow-up-right-from-square.svg')" aria-hidden="true" />
+                    More details
+                  </a>
+                </div>
+              </div>
+              );
+            })
+          }
+
+          {
+            compactPosts.length > 0 && (
+              <div class="latest-feed" aria-label="Recent writing and projects">
+                {
+                  compactPosts.map((post) => {
+                    const href = `/writing/${getWritingSlug(post)}/`;
+                    const image = post.data.thumbnail ?? post.data.heroImage;
+
+                    return (
+                      <a class="feed-entry" href={href}>
+                        {image && <img src={image} alt="" loading="lazy" />}
+                        <div>
+                          <h3 set:html={post.data.title} />
+                          <p>{post.data.description}</p>
+                          <small>{formatDisplayDate(post.data.date)}</small>
+                        </div>
+                      </a>
+                    );
+                  })
+                }
+              </div>
+            )
+          }
+
+          <h3 class="see-more-title">
+            <a href="/writing/">
+              <span class="svg-icon inline-icon" style="--icon-url: url('/assets/icons/solid/arrow-up-right-from-square.svg')" aria-hidden="true" />
+              See older articles and projects ...
+            </a>
+          </h3>
+        </article>
+
+        <GitHubActivityCard
+          feed={githubActivityFeed}
+          displayLimit={githubActivityConfig.displayLimit}
+          showContributionChart={githubActivityConfig.showContributionChart}
+        />
+      </div>
+
+      <aside class="dashboard-stack">
+        <ContactCard />
+        <LatestBlogPostsCard />
+        <WebProfilesCard />
+
+        <section class="dashboard-card side-card">
+          <h2>Favourite coding music</h2>
+          <p class="rss-note">
+            <span class="svg-icon inline-icon" style="--icon-url: url('/assets/icons/solid/headphones.svg')" aria-hidden="true" />
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Youtube Link</a>
+          </p>
+        </section>
+
+        <section class="dashboard-card side-card">
+          <h2>Education</h2>
+          <ul class="education-list">
+            {
+              profile.education.map((item) => (
+                <li>
+                  <span class="svg-icon inline-icon" style="--icon-url: url('/assets/icons/solid/graduation-cap.svg')" aria-hidden="true" />
+                  <div>
+                    <strong>{item.title}</strong>
+                    <span>{item.school} ({item.years})</span>
+                  </div>
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+
+        <section class="dashboard-card side-card">
+          <h2>Conferences &amp; Workshops</h2>
+          <ul class="side-link-list">
+            {
+              profile.conferences.map((event) => (
+                <li>
+                  <span class="svg-icon inline-icon" style="--icon-url: url('/assets/icons/solid/calendar.svg')" aria-hidden="true" />
+                  <a href={event.href}>{event.label}</a>
+                  <span>({event.location})</span>
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+
+        <section class="dashboard-card side-card">
+          <h2>Credits</h2>
+          <ul class="side-link-list">
+            {
+              profile.credits.map((credit) => (
+                <li>
+                  <span class="svg-icon inline-icon" style="--icon-url: url('/assets/icons/solid/arrow-up-right-from-square.svg')" aria-hidden="true" />
+                  <a href={credit.href}>{credit.label}</a>
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

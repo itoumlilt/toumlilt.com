@@ -1,0 +1,49 @@
+---
+import ProfileHero from '../components/ProfileHero.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import '../styles/global.css';
+
+type Props = {
+  title?: string;
+  description?: string;
+  image?: string | null;
+};
+
+const {
+  title = 'Ilyas Toumlilt',
+  description = 'Systems software engineer and PhD in distributed systems.',
+  image = '/assets/images/profile.png',
+} = Astro.props;
+
+const pageTitle = title === 'Ilyas Toumlilt' ? title : `${title} - Ilyas Toumlilt`;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://toumlilt.com').toString();
+const socialImage = new URL(image ?? '/assets/images/profile.png', Astro.site ?? 'https://toumlilt.com').toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/assets/images/favicon.ico" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <SiteHeader />
+    <ProfileHero />
+    <main>
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

@@ -1,0 +1,43 @@
+---
+legacy:
+  id: 4
+title: "CRDT Markdown Editor"
+description: "A collaborative Markdown editor demo built to showcase Concordant's local-first CRDT model for text editing."
+date: 2021-04-24
+heroImage: "/assets/images/blogarticles/blogarticle_4_wide.png"
+thumbnail: "/assets/images/blogarticles/blogarticle_4_small.png"
+kind: "project"
+tags: ["open source", "crdt", "concordant"]
+badges: ["open source"]
+links:
+  external: null
+  github: "https://github.com/itoumlilt/crdt-md-editor"
+references:
+  - label: "The Concordant.io Platform"
+    href: "/writing/the-concordant-platform/"
+    description: "The startup platform these collaborative demos were built to illustrate."
+  - label: "CRDT Collaborative Spreadsheet"
+    href: "/writing/crdt-collaborative-spreadsheet/"
+    description: "The companion demo for structured, cell-based collaborative data."
+home:
+  excerpt: "A collaborative Markdown editor demo built around the Concordant startup work. It compares a revision-based backend with a CRDT-based backend to show why local-first collaborative editing needs merge semantics built into the data model."
+draft: false
+---
+
+This Markdown editor was one of the demo applications I developed around the Concordant startup work. The goal was not only to build a small editor. It was to make the product idea visible: collaborative applications should keep working when users edit at the same time, go offline, reconnect later, and still expect their data to converge without hand-written conflict resolution code in every application.
+
+Markdown is a useful demo for that story because it looks simple at first. It is "just text." But collaborative text editing quickly exposes the hard part of distributed applications: two users can edit nearby parts of the same document, one user can continue offline, another can keep writing online, and a naive synchronization layer can easily overwrite one side of the work.
+
+### Comparing two backends
+
+The demo used two eventual consistency backends behind the same application interface: a revision-based backend and a CRDT-based backend.
+
+The revision-based version shows the failure mode clearly. When updates happen concurrently, the system can detect that versions diverged, but it does not know how to merge them with the semantics the user expects. Without application-specific merge code, one update may win and another may be lost.
+
+The CRDT-based version demonstrates the Concordant direction. Instead of treating conflicts as exceptional cases left to the application developer, the data type itself carries merge semantics. Independent updates can be applied on different replicas and later reconciled so the document converges.
+
+### Why it mattered for Concordant
+
+This demo helped connect the research vocabulary to something concrete. CRDTs, local-first storage, offline support, and convergence are easier to explain when a reader can imagine two people editing the same collaborative Markdown document from different replicas.
+
+For the Concordant platform, the important lesson was that collaborative behavior should be a reusable data-service feature, not a fragile custom layer rewritten inside every demo app. The editor was a small application, but it exercised the kind of developer experience Concordant was aiming for: build the product UI, choose the data semantics, and let the platform handle replication and convergence.

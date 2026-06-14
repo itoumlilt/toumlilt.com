@@ -1,84 +1,92 @@
 # toumlilt.com
 
-My personal website,
-hosted at ([https://toumlilt.com](https://toumlilt.com))
+Personal website for [https://toumlilt.com](https://toumlilt.com).
 
-## Build & Deploy
+The site is a static [Astro](https://astro.build/) project. It replaced the old
+PHP/XML/Bootstrap implementation, which is kept only as a migration reference in
+`legacy/php-site`.
 
-The website is static, you only need an Apache/Nginx server + PHP, and copy files to your servers target dir.
+## Stack
 
-A `Makefile` is provided to help copy the static files to `dist` folder without noise, and without writing the server specific `config.php` file.
+- Astro static output
+- TypeScript strict mode
+- MDX content collections for writing entries
+- Plain CSS in `src/styles/global.css`
+- Caddy runtime image built from `Dockerfile`
 
-Use `make build` to build both prod and dev versions.
-And `make clean` to remove all dist files except config.
+There is no PHP, database, jQuery, or Bootstrap runtime in the modernized site.
 
-### CI/CD Configuration
-
-CI/CD is done through Github Actions,
-check [.github/workflows/ci.yml](./.github/workflows/ci.yml)
-and [.github/workflows/cd.yml](./.github/workflows/cd.yml)
-for the build and deploy through SSH process.
-
-CI is executed at each push, and CD is processed at each push to master.
-
-In order to use SSH for deployement, you need to set some repository secret environment variables.
-Under this repository -> Settings -> Secrets -> Actions -> New Repository Secret
-
-- `SSH_PRIVATE_KEY`
-
-Private key part of an SSH key pair. The public key part should be added to the `authorized_keys` file on the server that receives the deployment.
-
-More info for SSH keys: [https://www.ssh.com/ssh/public-key-authentication](https://www.ssh.com/ssh/public-key-authentication)
-
-The keys should be generated using the PEM format. You can use this command
+## Development
 
 ```bash
-ssh-keygen -m PEM -t rsa -b 4096
+npm ci
+npm run check
+npm run dev
 ```
 
-- `REMOTE_HOST`
+Build locally:
 
-eg: toumlilt.com
+```bash
+npm run build
+npm run preview
+```
 
-- `REMOTE_USER`
+## Content
 
-eg: mydeployusername
+Writing entries live in `src/content/writing/*.mdx`.
 
-- `REMOTE_PORT`
+Each article uses Astro content collection frontmatter:
 
-eg: 22
+- `legacy.id` keeps compatibility with old `/blog?article=N` links.
+- `title`, `description`, `date`, `kind`, `tags`, and `badges` drive archive
+  and article metadata.
+- `heroImage`, `heroCaption`, and `thumbnail` control article and card media.
+- `links` and `references` render the references section at the end of articles.
+- `home.excerpt` controls expanded homepage previews.
+- The article body is regular MDX.
 
-- `REMOTE_TARGET`
+The original XML articles can be re-read from
+`legacy/php-site/src/data/articles` and were migrated with:
 
-eg: `/var/www/html/`
+```bash
+node scripts/migrate-legacy-articles.mjs
+```
 
-### Server configuration
+That script is kept as migration tooling; current articles are maintained
+directly as MDX.
 
-Please find nginx and apache config examples in the [config](./config) folder.
+Static assets used by the new site are under `public/assets/images` and
+`public/data`.
 
-You also need to set up `config.php` env variables (under `./src` but also `./dist`) to match your servers URI and files path.
+## Routes
 
-Note: default htaccess config requires SSL, or disable the http->https rewriteRule.
+Current first-class routes:
 
-## Author
+- `/`
+- `/writing/`
+- `/writing/<slug>/`
+- `/projects/`
+- `/teaching/`
+- `/thesis/`
+- `/about/`
 
-- Original Design template : Xiaoying Riley at 3rd Wave Media Ltd. [original template link](http://themes.3rdwavemedia.com/)
-- Improved by : Ilyas Toumlilt ([www.toumlilt.com](www.toumlilt.com))
+Production Caddy redirects preserve the old public URLs:
 
-## License
+- `/index` -> `/`
+- `/blog` -> `/writing/`
+- `/blog?article=N` -> matching writing slug
+- `/about-me` -> `/about/`
+- `/thesis-defense-livestream` -> `/thesis/`
 
-This template is free under the Creative Commons Attribution 3.0 [License](https://creativecommons.org/licenses/by/3.0/).
+## Deployment
 
-## Versions
+CI runs `npm ci`, `npm run check`, and `npm run build`.
 
-- v1.4 (stable php 8.0)(current)
-- v1.3.3 (stable php7.4)
-- v1.3.2
-- v1.3.1
-- v1.2.3
-- v1.2.2
-- v1.2.1 (stable php7.1)
-- v1.2
-- v1.1
-- v1.0.1
-- v1.0
+CD runs the server-side deploy script:
+
+```bash
+/opt/stacks/toumlilt-com/deploy.sh
+```
+
+That script pulls `/opt/src/toumlilt.com`, rebuilds the Docker image, and
+restarts the Caddy-only Compose stack.

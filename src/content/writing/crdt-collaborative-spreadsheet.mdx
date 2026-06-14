@@ -1,0 +1,43 @@
+---
+legacy:
+  id: 5
+title: "CRDT Collaborative Spreadsheet"
+description: "A collaborative spreadsheet demo built to showcase Concordant's local-first CRDT model for structured application data."
+date: 2021-04-24
+heroImage: "/assets/images/blogarticles/blogarticle_5_wide.png"
+thumbnail: "/assets/images/blogarticles/blogarticle_5_small.png"
+kind: "project"
+tags: ["open source", "crdt", "concordant"]
+badges: ["open source"]
+links:
+  external: null
+  github: "https://github.com/itoumlilt/CRDT-Spreasheet"
+references:
+  - label: "The Concordant.io Platform"
+    href: "/writing/the-concordant-platform/"
+    description: "The startup platform these collaborative demos were built to illustrate."
+  - label: "CRDT Markdown Editor"
+    href: "/writing/crdt-collaborative-markdown-editor/"
+    description: "The companion demo for collaborative text editing."
+home:
+  excerpt: "A collaborative spreadsheet demo built around an early Concordant API. It uses the same application with revision-based and CRDT-based backends to show how structured collaborative data can converge without custom merge code."
+draft: false
+---
+
+This spreadsheet was one of the demo applications I developed to showcase the Concordant startup work. It complements the Markdown editor with a different kind of collaborative data: structured cells, independent updates, and user expectations that feel closer to business applications than to a text editor.
+
+The goal was to demonstrate that local-first collaboration is not limited to documents. A spreadsheet makes conflicts visible in another way: several users can update different cells, edit the same cell, work offline, and later reconnect. The application should preserve as much useful work as possible without asking every developer to design a custom merge protocol.
+
+### A Concordant API experiment
+
+The demo was built with an early draft of the Concordant API, through the C-Service interface. The same application could be backed by two eventual consistency strategies: revision-based storage and CRDT-based storage.
+
+The revision-based backend exposes the common problem. If two users update data concurrently, or if multiple users edit while offline, the system can end up with divergent revisions. At that point, the application has to decide what to keep and how to merge it. For a spreadsheet, that quickly becomes subtle: the right behavior may depend on the cell, the operation, and the user's intent.
+
+The CRDT-based backend shows the alternative Concordant wanted to make natural. Updates are represented through data types with well-defined merge behavior, so replicas can accept local operations and later converge. The application still owns its user experience, but it no longer has to reinvent the distributed data layer from scratch.
+
+### Why a spreadsheet demo
+
+The spreadsheet was useful because it sits between a toy example and a real collaborative product. It has a familiar interface, but the underlying data is structured enough to stress the platform API. It made the Concordant pitch more concrete: developers should be able to build collaborative applications with offline support, local responsiveness, and convergence as platform features.
+
+The demo was implemented on top of PouchDB for replication and offline support while the Concordant backend was still evolving. That made it a practical prototype: enough infrastructure to test the interaction model, while keeping the focus on the data semantics Concordant needed to provide.

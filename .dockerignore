@@ -2,9 +2,10 @@
 .github
 .vscode
 
-dist-dev
-dist-prod/*
-!dist-prod/config.php
+node_modules
+dist
+.astro
+legacy
 
 README.md
 CHANGELOG.md

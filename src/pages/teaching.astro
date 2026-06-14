@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Teaching" description="Teaching page restricted to student devices.">
+  <section class="teaching-gate-band" aria-labelledby="teaching-gate-title">
+    <div class="section-inner teaching-gate">
+      <figure class="teaching-gate-figure">
+        <img
+          src="/assets/images/teaching-gatekeeper.svg"
+          alt="A geek wizard professor blocking a path with a staff and laptop"
+          loading="eager"
+        />
+        <figcaption>
+          <strong id="teaching-gate-title">U Shall Not Pass!</strong>
+          <span>This page is only accessible for my students devices!</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,22 @@
+---
+import { profile } from '../data/profile';
+---
+
+<section class="dashboard-card contact-card">
+  <ul class="contact-list">
+    <li>
+      <span class="svg-icon contact-icon" style="--icon-url: url('/assets/icons/solid/envelope.svg')" aria-hidden="true"></span>
+      <a href={`mailto:${profile.email}`}>ilyas (at) toumlilt.com</a>
+    </li>
+    <li>
+      <span class="svg-icon contact-icon" style="--icon-url: url('/assets/icons/solid/phone.svg')" aria-hidden="true"></span>
+      {profile.phone}
+    </li>
+    <li>
+      <span class="svg-icon contact-icon" style="--icon-url: url('/assets/icons/solid/location-dot.svg')" aria-hidden="true"></span>
+      <address>
+        {profile.address.map((line) => <>{line}<br /></>)}
+      </address>
+    </li>
+  </ul>
+</section>

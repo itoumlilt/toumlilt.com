@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCard from '../components/ContactCard.astro';
+import IntroText from '../components/IntroText.astro';
+import LatestBlogPostsCard from '../components/LatestBlogPostsCard.astro';
+import WebProfilesCard from '../components/WebProfilesCard.astro';
+---
+
+<BaseLayout title="About" description="About Ilyas Toumlilt, systems software engineer and PhD in distributed systems.">
+  <section class="dashboard-band about-band">
+    <div class="section-inner dashboard-grid">
+      <div class="primary-stack">
+        <article class="dashboard-card intro-card">
+          <h2>Intro</h2>
+          <IntroText />
+        </article>
+
+        <article class="dashboard-card experience-card">
+          <h2>Experience</h2>
+
+          <div class="experience-list">
+            <section class="experience-item">
+              <h3>Founding team, CTO <span>-</span> <a href="https://github.com/concordant">Concordant</a> <small>(Sep 2019 - Mar 2022)</small></h3>
+              <p>
+                Concordant grew out of distributed systems research on local-first and edge data management. Within the founding team, I worked on turning thesis prototypes into a developer platform for collaborative applications, with a focus on replicated data, consistency guarantees, and the engineering bridge between research code and product constraints.
+              </p>
+              <a class="more-link" href="https://github.com/concordant">
+                <span class="svg-icon inline-icon" style="--icon-url: url('/assets/icons/solid/arrow-up-right-from-square.svg')" aria-hidden="true"></span>
+                Concordant GitHub organization
+              </a>
+            </section>
+
+            <section class="experience-item">
+              <h3>Doctoral Researcher <span>-</span> <a href="https://www.sorbonne-universite.fr/">Sorbonne University, LIP6, INRIA</a> <small>(Jan 2017 - Dec 2021)</small></h3>
+              <p><em>Thesis:</em> Highly-available and consistent group collaboration at the edge with Colony.</p>
+              <p>
+                My PhD focused on highly available distributed systems, especially replication and consistency protocols across cloud datacenters and edge devices.
+                This work was developed within the RainbowFS French project and the LightKone European consortium, and led to research prototypes, publications, and open-source contributions.
+              </p>
+              <a class="more-link" href="/writing/phd-graduation/">
+                <span class="svg-icon inline-icon" style="--icon-url: url('/assets/icons/solid/arrow-up-right-from-square.svg')" aria-hidden="true"></span>
+                More about my thesis contributions
+              </a>
+            </section>
+
+            <section class="experience-item" id="teaching">
+              <h3>Operating Systems Lecturer <span>-</span> <a href="https://www.sorbonne-universite.fr/">Sorbonne University</a> <small>(Jan 2017 - Dec 2021)</small></h3>
+              <p>I taught operating systems and systems programming courses, from Linux kernel programming and multicore virtualization to security, administration, and introductory OS concepts.</p>
+              <ul class="course-list">
+                <li><a href="https://moodle-sciences.upmc.fr/moodle-2020/course/info.php?id=4539&amp;lang=en">Programming inside the Linux Kernel (master 1)</a> (2021)</li>
+                <li><a href="http://www-master.ufr-info-p6.jussieu.fr:8080/ue/2014/description.php?code_ue=5I453">Multicore Kernels and Virtualisation (master 2)</a>, memory garbage collection part. (2018, 2019, 2020)</li>
+                <li><a href="http://www-master.ufr-info-p6.jussieu.fr:8080/ue/2014/description.php?code_ue=4I405">Security and System Administration (master 1)</a> (2017, 2018, 2019)</li>
+                <li><a href="http://www-licence.ufr-info-p6.jussieu.fr/lmd/licence/2018/ue/2I010-2019fev/">Introduction to operating systems (licence 2)</a> (2019)</li>
+                <li><a href="http://www-connex.lip6.fr/~guigue/wikihomepage/pmwiki.php?n=Course.CourseLI230">Introduction to Java langage (licence 2)</a> (2018)</li>
+              </ul>
+            </section>
+
+            <section class="experience-item">
+              <h3>Research Intern <span>-</span> <a href="http://www.lip6.fr/">LIP6, Regal Team</a> <small>(Feb 2016 - Aug 2016)</small></h3>
+              <p>
+                I worked inside the Linux kernel on memory accounting and cache sizing for containers, exploring heuristics to estimate page age efficiently and improve resource isolation at an acceptable runtime cost.
+              </p>
+            </section>
+
+            <section class="experience-item">
+              <h3>Experimental Systems Intern <span>-</span> <a href="http://www.lip6.fr/">LIP6, Whisper Team</a> <small>(Jun 2015 - Aug 2015)</small></h3>
+              <p>I worked on software load distribution experiments for an automotive SabreLite MX6 board, focusing on measurement, deployment, and optimization of embedded systems workloads.</p>
+            </section>
+          </div>
+
+          <a class="button-link button-solid" href="https://www.linkedin.com/in/ilyastoumlilt/">
+            <span class="svg-icon button-icon" style="--icon-url: url('/assets/icons/solid/arrow-up-right-from-square.svg')" aria-hidden="true"></span>
+            More on my LinkedIn
+          </a>
+        </article>
+      </div>
+
+      <aside class="dashboard-stack">
+        <ContactCard />
+        <LatestBlogPostsCard />
+        <WebProfilesCard />
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

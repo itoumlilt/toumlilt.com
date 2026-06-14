@@ -1,0 +1,20 @@
+---
+import ProjectCard from '../components/ProjectCard.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { projects } from '../data/projects';
+---
+
+<BaseLayout title="Projects" description="Selected distributed systems, CRDT, and local-first projects by Ilyas Toumlilt.">
+  <section class="page-heading">
+    <div class="section-inner">
+      <p class="eyebrow">Selected work</p>
+      <h1>Projects</h1>
+      <p>Research prototypes, open-source systems, and startup work around replicated data and collaboration.</p>
+    </div>
+  </section>
+  <section class="band">
+    <div class="section-inner project-grid">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+</BaseLayout>

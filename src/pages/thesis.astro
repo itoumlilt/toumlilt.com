@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+import PostCard from '../components/PostCard.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { sortWritingByDate } from '../lib/collections';
+
+const posts = sortWritingByDate(await getCollection('writing', ({ data }) => [1, 2, 3, 4, 8, 10].includes(data.legacy.id)));
+---
+
+<BaseLayout title="Thesis" description="PhD thesis archive for Colony, a hybrid consistency system for highly available collaborative edge computing.">
+  <section class="page-heading">
+    <div class="section-inner">
+      <p class="eyebrow">PhD archive</p>
+      <h1>Colony: a hybrid consistency system for collaborative edge computing</h1>
+      <p>
+        Thesis defense archive, related publications, and project notes from my distributed systems PhD work.
+      </p>
+    </div>
+  </section>
+  <section class="band">
+    <div class="section-inner two-column">
+      <div class="rich-text">
+        <iframe
+          class="video-frame"
+          src="https://www.youtube.com/embed/bXCFtlgt69s"
+          title="Thesis defense live video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+        <h2>Abstract</h2>
+        <p>
+          Edge applications such as gaming, cooperative engineering, and in-the-field information sharing
+          benefit from immediate response, autonomy, and availability by distributing and replicating data
+          at the edge. Colony guarantees Transactional Causal Plus Consistency globally, strengthened to
+          Snapshot Isolation within edge groups.
+        </p>
+        <p>
+          Its logical communication topology is forest-like, with replicated roots in the core cloud and
+          support for migration of nodes or groups. Applications keep the same semantics everywhere in the
+          topology while local caching and peer groups improve throughput and response time.
+        </p>
+      </div>
+      <aside class="panel">
+        <h2>Documents</h2>
+        <p>
+          <a href="https://tel.archives-ouvertes.fr/tel-03727724v2">Thesis manuscript on HAL</a>
+        </p>
+        <p>
+          <a href="/data/attachements/ilyas-toumlilt-thesis-livestream.ics">Archived calendar event</a>
+        </p>
+      </aside>
+    </div>
+  </section>
+  <section class="band surface">
+    <div class="section-inner">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">Related</p>
+          <h2>Thesis writing and projects</h2>
+        </div>
+      </div>
+      <div class="post-grid">
+        {posts.map((post) => <PostCard post={post} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

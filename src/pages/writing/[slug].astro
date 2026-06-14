@@ -1,0 +1,129 @@
+---
+import { getCollection, render } from 'astro:content';
+import PostCard from '../../components/PostCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatDisplayDate, getWritingSlug, sortWritingByDate } from '../../lib/collections';
+import type { WritingEntry } from '../../lib/collections';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('writing', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: getWritingSlug(post) },
+    props: { post },
+  }));
+}
+
+type Props = {
+  post: WritingEntry;
+};
+
+const { post } = Astro.props;
+const allPosts = sortWritingByDate(await getCollection('writing', ({ data }) => !data.draft));
+const nextPosts = allPosts.filter((candidate) => candidate.id !== post.id).slice(0, 3);
+const kindLabel = post.data.kind === 'project' ? 'Project writeup' : 'Article';
+const references = [
+  ...(post.data.links.external
+    ? [
+        {
+          href: post.data.links.external,
+          label: 'Project website',
+          description: 'Original website and product information.',
+        },
+      ]
+    : []),
+  ...(post.data.links.github
+    ? [
+        {
+          href: post.data.links.github,
+          label: 'Project source',
+          description: 'Code and public repositories related to this work.',
+        },
+      ]
+    : []),
+  ...post.data.references,
+];
+const hasReferences = references.length > 0;
+const hasArticleInfo = post.data.tags.length > 0 || post.data.badges.length > 0;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={post.data.title} description={post.data.description} image={post.data.heroImage}>
+  <article class="post-full">
+    <header class="post-header post-text-column">
+      <p class="post-meta-line">
+        <span>{kindLabel}</span>
+        <span>{formatDisplayDate(post.data.date)}</span>
+      </p>
+      <h1>{post.data.title}</h1>
+      <p class="post-deck">{post.data.description}</p>
+    </header>
+    {post.data.heroImage && (
+      <div class="post-media-block">
+        <div class="post-media-inner">
+          <figure class="post-hero-figure">
+            <img class="post-hero" src={post.data.heroImage} alt="" />
+            {post.data.heroCaption && <figcaption>{post.data.heroCaption}</figcaption>}
+          </figure>
+        </div>
+      </div>
+    )}
+    <div class="rich-text post-text-column">
+      <Content />
+    </div>
+    {hasReferences && (
+      <section class="post-references post-text-column" aria-labelledby="post-references-title">
+        <p class="eyebrow">References</p>
+        <h2 id="post-references-title">Further reading</h2>
+        <ul>
+          {references.map((reference) => (
+            <li>
+              <a href={reference.href}>{reference.label}</a>
+              {reference.description && <span>{reference.description}</span>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+    {hasArticleInfo && (
+      <footer class="post-article-info post-text-column">
+        <p class="eyebrow">Article info</p>
+        {post.data.tags.length > 0 && (
+          <p class="post-topic-list">
+            <span>Filed under</span>
+            {post.data.tags.map((tag) => <span>{tag}</span>)}
+          </p>
+        )}
+        {post.data.badges.length > 0 && (
+          <p class="post-topic-list">
+            <span>Labels</span>
+            {post.data.badges.map((badge) => <span>{badge}</span>)}
+          </p>
+        )}
+      </footer>
+    )}
+  </article>
+
+  <section class="band surface">
+    <div class="section-inner">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">More</p>
+          <h2>Related writing</h2>
+        </div>
+      </div>
+      <div class="post-grid">
+        {
+          nextPosts.map((candidate) => (
+            <PostCard post={candidate} showBadges={false} showSecondaryActions={false} subtleReadMore={true} />
+          ))
+        }
+      </div>
+      <div class="related-writing-footer">
+        <a class="button-link button-solid" href="/writing/">
+          <span class="svg-icon button-icon" style="--icon-url: url('/assets/icons/solid/book-open.svg')" aria-hidden="true" />
+          View all Blog Articles
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

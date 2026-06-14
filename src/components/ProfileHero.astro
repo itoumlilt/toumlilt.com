@@ -1,0 +1,30 @@
+---
+import { profile } from '../data/profile';
+---
+
+<section class="profile-hero">
+  <div class="section-inner profile-hero-grid">
+    <a class="profile-photo" href="/about/" aria-label="About Ilyas Toumlilt">
+      <img src="/assets/images/profile.png" alt="Ilyas Toumlilt" />
+    </a>
+    <div class="profile-title">
+      <h1>{profile.name}</h1>
+      <p>{profile.title}</p>
+      <ul class="social-dots" aria-label="Web profiles">
+        {
+          profile.links.map((link) => (
+            <li>
+              <a href={link.href} aria-label={link.label}>
+                <span class="svg-icon social-icon" style={`--icon-url: url('${link.icon}')`} aria-hidden="true" />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <a class="contact-button" href={`mailto:${profile.email}`}>
+      <span class="svg-icon button-icon" style="--icon-url: url('/assets/icons/solid/paper-plane.svg')" aria-hidden="true" />
+      Contact me
+    </a>
+  </div>
+</section>
