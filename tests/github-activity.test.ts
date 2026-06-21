@@ -66,14 +66,14 @@ describe('GitHub activity normalization', () => {
           action: 'closed',
           pull_request: {
             number: 8,
-            title: 'Broker service account override',
+            title: 'Improve homepage navigation',
             merged: true,
-            html_url: 'https://github.com/criteo-forks/strimzi-kafka-operator/pull/8',
+            html_url: 'https://github.com/example-forks/demo-operator/pull/8',
           },
         },
         repo: {
-          name: 'criteo-forks/strimzi-kafka-operator',
-          url: 'https://api.github.com/repos/criteo-forks/strimzi-kafka-operator',
+          name: 'example-forks/demo-operator',
+          url: 'https://api.github.com/repos/example-forks/demo-operator',
         },
       },
       {
@@ -93,11 +93,11 @@ describe('GitHub activity normalization', () => {
     ], { username: 'itoumlilt', displayLimit: 7 });
 
     expect(items[0].kind).toBe('pull_request');
-    expect(items[0].primaryUrl).toBe('https://github.com/criteo-forks/strimzi-kafka-operator/pull/8');
+    expect(items[0].primaryUrl).toBe('https://github.com/example-forks/demo-operator/pull/8');
     expect(summaryText(items[0])).toBe(
-      'itoumlilt merged pull request #8 at criteo-forks/strimzi-kafka-operator',
+      'itoumlilt merged pull request #8 at example-forks/demo-operator',
     );
-    expect(items[0].excerpt).toBe('Broker service account override');
+    expect(items[0].excerpt).toBe('Improve homepage navigation');
     expect(summaryText(items[1])).toBe(
       'itoumlilt opened pull request #9 at itoumlilt/toumlilt.com',
     );
@@ -113,17 +113,17 @@ describe('GitHub activity normalization', () => {
           action: 'created',
           review: {
             state: 'commented',
-            html_url: 'https://github.com/criteo-forks/strimzi-kafka-operator/pull/8#pullrequestreview-4334755254',
+            html_url: 'https://github.com/example-forks/demo-operator/pull/8#pullrequestreview-4334755254',
             body: null,
           },
           pull_request: {
             number: 8,
-            url: 'https://api.github.com/repos/criteo-forks/strimzi-kafka-operator/pulls/8',
+            url: 'https://api.github.com/repos/example-forks/demo-operator/pulls/8',
           },
         },
         repo: {
-          name: 'criteo-forks/strimzi-kafka-operator',
-          url: 'https://api.github.com/repos/criteo-forks/strimzi-kafka-operator',
+          name: 'example-forks/demo-operator',
+          url: 'https://api.github.com/repos/example-forks/demo-operator',
         },
       },
       {
@@ -133,30 +133,30 @@ describe('GitHub activity normalization', () => {
         payload: {
           action: 'created',
           comment: {
-            html_url: 'https://github.com/criteo-forks/strimzi-kafka-operator/pull/8#discussion_r3279322025',
-            body: 'Yes, this was intentional but it is not directly related to the ServiceAccount override.',
+            html_url: 'https://github.com/example-forks/demo-operator/pull/8#discussion_r3279322025',
+            body: 'Yes, this was intentional but it is not directly related to the navigation update.',
           },
           pull_request: {
             number: 8,
-            url: 'https://api.github.com/repos/criteo-forks/strimzi-kafka-operator/pulls/8',
+            url: 'https://api.github.com/repos/example-forks/demo-operator/pulls/8',
           },
         },
         repo: {
-          name: 'criteo-forks/strimzi-kafka-operator',
-          url: 'https://api.github.com/repos/criteo-forks/strimzi-kafka-operator',
+          name: 'example-forks/demo-operator',
+          url: 'https://api.github.com/repos/example-forks/demo-operator',
         },
       },
     ], { username: 'itoumlilt', displayLimit: 7 });
 
     expect(items[0].kind).toBe('pull_request');
     expect(summaryText(items[0])).toBe(
-      'itoumlilt reviewed pull request #8 at criteo-forks/strimzi-kafka-operator',
+      'itoumlilt reviewed pull request #8 at example-forks/demo-operator',
     );
     expect(items[1].kind).toBe('issue_comment');
     expect(summaryText(items[1])).toBe(
-      'itoumlilt commented on pull request #8 at criteo-forks/strimzi-kafka-operator',
+      'itoumlilt commented on pull request #8 at example-forks/demo-operator',
     );
-    expect(items[1].excerpt).toContain('ServiceAccount override');
+    expect(items[1].excerpt).toContain('navigation update');
   });
 
   it('normalizes issue comments with compact excerpts', () => {
@@ -169,27 +169,27 @@ describe('GitHub activity normalization', () => {
           action: 'created',
           issue: {
             number: 8,
-            html_url: 'https://github.com/criteo-forks/strimzi-kafka-operator/pull/8',
+            html_url: 'https://github.com/example-forks/demo-operator/pull/8',
             pull_request: {},
           },
           comment: {
-            html_url: 'https://github.com/criteo-forks/strimzi-kafka-operator/pull/8#issuecomment-1',
-            body: 'Yes, this was intentional but it is not directly related to the ServiceAccount override.',
+            html_url: 'https://github.com/example-forks/demo-operator/pull/8#issuecomment-1',
+            body: 'Yes, this was intentional but it is not directly related to the navigation update.',
           },
         },
         repo: {
-          name: 'criteo-forks/strimzi-kafka-operator',
-          url: 'https://api.github.com/repos/criteo-forks/strimzi-kafka-operator',
+          name: 'example-forks/demo-operator',
+          url: 'https://api.github.com/repos/example-forks/demo-operator',
         },
       },
     ], { username: 'itoumlilt', displayLimit: 7 });
 
     expect(item.kind).toBe('issue_comment');
-    expect(item.primaryUrl).toBe('https://github.com/criteo-forks/strimzi-kafka-operator/pull/8#issuecomment-1');
+    expect(item.primaryUrl).toBe('https://github.com/example-forks/demo-operator/pull/8#issuecomment-1');
     expect(summaryText(item)).toBe(
-      'itoumlilt commented on pull request #8 at criteo-forks/strimzi-kafka-operator',
+      'itoumlilt commented on pull request #8 at example-forks/demo-operator',
     );
-    expect(item.excerpt).toContain('ServiceAccount override');
+    expect(item.excerpt).toContain('navigation update');
   });
 
   it('normalizes create, star, and unknown events', () => {
