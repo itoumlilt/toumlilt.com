@@ -38,5 +38,4 @@ jobs:
         run: |
           tar -C dist -czf - . | ssh -i ~/.ssh/toumlilt-com-deploy \
             -p "${REMOTE_PORT:-22}" \
-            "$REMOTE_USER@$REMOTE_HOST" \
-            '/opt/stacks/toumlilt-com/deploy.sh'
+            "$REMOTE_USER@$REMOTE_HOST"
