@@ -8,8 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      CI_NPM_VERSION: 11.17.0
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -18,8 +16,6 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - name: Pin npm
-        run: corepack prepare "npm@${CI_NPM_VERSION}" --activate
       - name: Show toolchain
         run: |
           node --version
