@@ -2,9 +2,8 @@
 
 Personal website for [https://toumlilt.com](https://toumlilt.com).
 
-The site is a static [Astro](https://astro.build/) project. It replaced the old
-PHP/XML/Bootstrap implementation, which is kept only as a migration reference in
-`legacy/php-site`.
+The site is a static [Astro](https://astro.build/) project. Astro is the only
+maintained implementation in this repository.
 
 ## Stack
 
@@ -14,7 +13,7 @@ PHP/XML/Bootstrap implementation, which is kept only as a migration reference in
 - Plain CSS in `src/styles/global.css`
 - Caddy runtime image built from `Dockerfile`
 
-There is no PHP, database, jQuery, or Bootstrap runtime in the modernized site.
+There is no server-side application runtime or database.
 
 ## Development
 
@@ -44,16 +43,6 @@ Each article uses Astro content collection frontmatter:
 - `links` and `references` render the references section at the end of articles.
 - `home.excerpt` controls expanded homepage previews.
 - The article body is regular MDX.
-
-The original XML articles can be re-read from
-`legacy/php-site/src/data/articles` and were migrated with:
-
-```bash
-node scripts/migrate-legacy-articles.mjs
-```
-
-That script is kept as migration tooling; current articles are maintained
-directly as MDX.
 
 Static assets used by the new site are under `public/assets/images` and
 `public/data`.
