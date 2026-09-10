@@ -15,8 +15,8 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@astrojs/mdx": "^6.0.1",
-    "astro": "^6.4.2",
+    "@astrojs/mdx": "^8.0.1",
+    "astro": "^7.3.2",
     "octokit": "^5.0.5"
   },
   "devDependencies": {
