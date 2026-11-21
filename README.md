@@ -15,6 +15,14 @@ maintained implementation in this repository.
 
 There is no server-side application runtime or database.
 
+## Antigravity et travail sur plusieurs Mac
+
+Ce dépôt se clone et s'ouvre seul, sans dépôt racine commun. Lire le
+[guide d'installation et de synchronisation](docs/antigravity.md), les
+[consignes pour les assistants](AGENTS.md) et la [charte graphique](docs/design-system.md).
+Branche habituelle : `master` ; utiliser Node 22 (au minimum 22.12, inférieur à 23).
+Le push sur `master` déclenche la publication après CI.
+
 ## Development
 
 ```bash
