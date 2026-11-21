@@ -21,6 +21,11 @@ et `docs/design-system.md` avant toute modification visuelle.
 
 ## Travail et vérification
 
+- Mode local recommandé : `docker compose -f compose.dev.yaml up -d`, puis
+  `docker compose -f compose.dev.yaml exec site npm run check` et `npm run build`
+  via le même préfixe. Lire `docs/development.md` pour les ports, le rechargement
+  et les dépendances. Compatible Colima/Docker Desktop ; Node 22 reste dans le
+  conteneur. Ne pas utiliser cette configuration de développement sur le VPS.
 - Utiliser Node 22, au minimum 22.12 et inférieur à 23, et le registre npm public.
   Conserver `package-lock.json` ; ne pas importer d'outillage ou de registre d'entreprise.
 - Vérifier `git status --short --branch` avant de modifier ; conserver les travaux

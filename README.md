@@ -25,6 +25,22 @@ Le push sur `master` déclenche la publication après CI.
 
 ## Development
 
+Mode recommandé avec Colima ou Docker Desktop, Node 22 dans le conteneur et
+rechargement automatique, sur <http://localhost:4321> :
+
+```bash
+docker compose -f compose.dev.yaml up -d
+docker compose -f compose.dev.yaml logs -f site
+```
+
+Vérifier avec `docker compose -f compose.dev.yaml exec site npm run check`, puis
+la même commande avec `npm run build`. Arrêter avec
+`docker compose -f compose.dev.yaml down`.
+Voir [le guide de développement](docs/development.md) pour les volumes, la
+synchronisation et le dépannage. Le serveur local reste limité à ce Mac.
+
+Alternative sans conteneur, avec Node 22 installé sur le Mac :
+
 ```bash
 npm ci
 npm run check

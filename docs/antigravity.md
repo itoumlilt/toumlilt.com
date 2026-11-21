@@ -6,21 +6,11 @@ n'est nécessaire. Les autres dépôts peuvent être installés où l'on veut.
 
 ## Première installation sur un Mac
 
-Git, GitHub CLI et Node.js 22 (au minimum 22.12, inférieur à 23) sont nécessaires.
-Sur un Mac Apple Silicon avec Homebrew déjà installé, si Node 22 manque :
-
-```sh
-brew install node@22
-export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
-node --version
-npm --version
-```
-
-Ce PATH vaut pour le terminal courant. Si Node 26 sert à d'autres projets,
-ne pas le remplacer globalement : activer Node 22 dans chaque terminal de ce
-projet. Avec nvm déjà installé, `nvm install` puis `nvm use` lisent `.nvmrc`.
-Ne pas cumuler ces deux méthodes d'activation. Le terminal intégré d'Antigravity
-doit lui aussi afficher une version `v22.…` avant toute commande npm.
+Git, GitHub CLI, un moteur Docker (Colima ou Docker Desktop) et le client
+Docker Compose sont nécessaires. Le mode recommandé utilise Node 22 dans le
+conteneur : pas besoin de configurer Node sur le Mac. Voir le
+[guide de développement](development.md) pour les prérequis et l'alternative npm.
+Démarrer le moteur avant les commandes Compose.
 
 S'authentifier avec le compte GitHub personnel ayant accès au dépôt :
 
@@ -31,15 +21,16 @@ mkdir -p ~/repos/github
 cd ~/repos/github
 git clone --branch master https://github.com/itoumlilt/toumlilt.com.git
 cd toumlilt.com
-npm ci --no-audit --no-fund
-npm run dev -- --port 4321
+docker compose -f compose.dev.yaml up -d
+docker compose -f compose.dev.yaml logs -f site
 ```
 
 Si le dépôt est déjà cloné, utiliser sa copie existante et la synchroniser comme
-ci-dessous. Le site local est accessible à `http://localhost:4321`. Docker
-n'est pas requis pour modifier ou prévisualiser le site. Conserver `.npmrc` et
-le lockfile avec le registre npm public ; ne pas reprendre une configuration
-npm d'entreprise. Ne pas committer les dépendances ni les fichiers générés.
+ci-dessous. Après le message Astro « ready », le site local est accessible à
+`http://localhost:4321`. Les modifications des sources sont rechargées
+automatiquement. L'image Node et les volumes de dépendances sont indépendants
+sur chaque Mac. Conserver `.npmrc` et le lockfile avec le registre npm public.
+Ne pas committer les dépendances ni les fichiers générés.
 
 ## Consignes et charte
 
@@ -62,8 +53,9 @@ Pour contrôler l'installation, commencer par demander à l'assistant :
    et les comportements à conserver. Charger seulement les fichiers utiles.
 2. Réutiliser les données et composants existants, puis examiner le rendu local
    sur mobile et ordinateur. Le serveur local ne publie rien sur Internet.
-3. Exécuter `npm run check` pour les changements de code/contenu et `npm run build`
-   si ce build n'a pas déjà été exécuté par check. Une retouche documentaire seule
+3. Exécuter `docker compose -f compose.dev.yaml exec site npm run check` pour les
+   changements de code/contenu, puis la même commande avec `npm run build` si check
+   ne construit pas déjà le site. Une retouche documentaire seule
    nécessite une relecture et `git diff --check`, pas un build complet.
 4. Relire `git diff`, sélectionner les fichiers avec `git add`, committer puis
    pousser lorsque la publication associée est souhaitée. Le push peut déployer.
@@ -85,7 +77,9 @@ git status --short --branch
 git pull --ff-only
 ```
 
-Après un changement de dépendances, relancer `npm ci`. Avant de quitter le Mac :
+Après un changement de dépendances, relancer
+`docker compose -f compose.dev.yaml restart site` pour réinstaller depuis le
+lockfile. Avant de quitter le Mac :
 
 ```sh
 git diff
