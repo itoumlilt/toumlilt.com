@@ -47,3 +47,34 @@ Charger seulement les fichiers utiles à la tâche et les composants voisins.
 Ne pas parcourir systématiquement toutes les images, les dépendances ou tous les
 articles. Réutiliser la charte et les composants avant d'en créer de nouveaux.
 N'ajouter aucun service payant, appel d'API facturé ou achat de crédits sans demande.
+
+## Vérification obligatoire avant commit et push
+
+Traiter chaque nouveau commit comme susceptible d'être rendu public un jour,
+même si le dépôt est actuellement privé. Avant chaque commit, examiner la liste
+exacte des fichiers sélectionnés (`git diff --cached --name-status`), puis leur
+diff complet (`git diff --cached`). Avant chaque push, vérifier aussi les commits
+locaux à publier depuis la branche distante suivie, pas seulement le dernier diff.
+
+- Ne committer que des changements dont la publication future est autorisée.
+  Exclure les secrets, tokens, clés privées, mots de passe, URL d'accès signées,
+  sauvegardes réelles et fichiers de configuration contenant des valeurs privées.
+  Les exemples doivent employer des valeurs fictives et manifestement telles.
+- Exclure les données personnelles non destinées à une diffusion publique, les
+  exports de comptes, journaux et métadonnées sensibles. Examiner aussi les images,
+  documents, archives, fixtures et fichiers générés ; un diff texte ou un détecteur
+  de secrets ne suffit pas à contrôler leur contenu.
+- Ne pas incorporer de code, documentation, données, noms d'hôtes, registres ou
+  configurations confidentiels d'un employeur, client ou tiers. Utiliser des outils
+  publics et des exemples neutres ; vérifier aussi les URL résolues des lockfiles.
+- Pour tout ajout ou copie de code, texte, photo, logo, police ou autre ressource,
+  vérifier la provenance, le droit de redistribution, la licence et les attributions
+  nécessaires. Le fait qu'une ressource soit accessible en ligne ne suffit pas.
+  Conserver les mentions requises et ne pas inventer d'autorisation.
+- Si un élément est douteux, l'exclure du commit et signaler précisément ce qui
+  manque pour décider, sans afficher sa valeur sensible. Ne pas compter sur le
+  caractère privé du dépôt ou une suppression ultérieure pour le rendre acceptable.
+- Résumer le contrôle dans le compte rendu. Ce contrôle est une consigne pour
+  l'assistant, pas une protection automatique de Git ni un audit de tout l'historique.
+  Une fuite déjà committée doit être signalée pour correction adaptée ; ne pas
+  réécrire l'historique, changer la visibilité ou ajouter une licence sans demande.
