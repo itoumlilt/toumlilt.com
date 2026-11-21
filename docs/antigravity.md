@@ -44,11 +44,11 @@ npm d'entreprise. Ne pas committer les dépendances ni les fichiers générés.
 ## Consignes et charte
 
 - [AGENTS.md](../AGENTS.md) : contraintes, emplacement des données et publication.
-- [GEMINI.md](../GEMINI.md) : point d'entrée pour Gemini/Antigravity.
 - [Charte graphique](design-system.md) : palette, typographie, composants et contrôle
   du rendu. Le CSS et les composants locaux sont la référence exécutable.
 
-Antigravity découvre les fichiers `AGENTS.md` et `GEMINI.md` à la racine du projet.
+Antigravity découvre `AGENTS.md` à la racine du projet : c'est l'unique point
+d'entrée des consignes de ce dépôt.
 Les guides détaillés sont référencés plutôt qu'inclus intégralement dans les
 consignes permanentes. [Documentation officielle des règles](https://antigravity.google/docs/rules/).
 Pour contrôler l'installation, commencer par demander à l'assistant :
